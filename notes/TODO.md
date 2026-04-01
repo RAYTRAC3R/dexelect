@@ -47,3 +47,5 @@
 
 - toggle for "gen 2 or gen 1 pokemon only" in gen 2 generation? and onward
   - or not a toggle, but a list of 'allowed generations' e.g. [1,2,3]
+
+- add ko-fi support link or link to support page on website into tool footer/header

@@ -1,0 +1,118 @@
+--------
+1: START
+--------
+route 101 (walk, starter)
+route 102 (walk, surf, fish)
+route 103 (walk, surf, fish)
+petalburg city (surf, fish)
+route 104 (walk, surf, fish)
+petalburg woods (walk)
+rustboro city (trade-makuhita)
+route 116 (walk)
+rusturf tunnel (walk)
+route 105 (surf, fish)
+island cave (sealed_chamber_puzzle-regice)
+route 106 (surf, fish)
+ITEM: old_rod
+granite cave 1F (walk)
+granite cave steven's room (walk)
+granite cave B1F (walk)
+granite cave B2F (walk, rock_smash)
+dewford town (surf, fish)
+--------------
+2: DEWFORD GYM
+--------------
+route 107 (surf, fish)
+route 108 (surf, fish)
+abandoned ship (surf, fish)
+route 109 (surf, fish)
+slateport city (surf, fish)
+route 110 (walk, surf, fish)
+HM: rock_smash
+route 111 (go_goggles [special walking], surf, fish, rock_smash)
+desert ruins (sealed_chamber_puzzle-regirock)
+route 112 (walk)
+fiery path (walk)
+route 113 (walk)
+route 114 (walk, surf, fish, rock_smash)
+meteor falls 1F 1R (walk, surf, fish)
+route 115 (walk, surf, fish)
+jagged pass (walk)
+lavaridge town (gift-wynaut)
+ITEM: go_goggles
+devon corporation (fossil_restore)
+route 117 (walk, surf, fish)
+----------------
+3: LAVARIDGE GYM
+----------------
+HM: surf
+new mauville entrance (walk)
+new mauville basement (walk, static_encounter-voltorb)
+route 118 (walk, surf, fish)
+ITEM: good_rod
+route 119 (walk, surf, fish) <---- feebas is here, treat is as a normal wild pokemon via surf
+weather institute (gift-castform)
+fortree city (trade-skitty)
+route 120 (walk, surf, fish, devon_scope)
+ITEM: devon_scope
+ancient tomb (sealed_chamber_puzzle-registeel)
+--------------
+4: FORTREE GYM
+--------------
+route 121 (walk, surf, fish)
+safari zone area 1 - central (walk)
+safari zone area 2 - west (walk, surf, fish)
+safari zone area 3 - northwest (walk, surf, fish)
+safari zone area 4 - north (walk, rock_smash)
+route 122 (surf, fish)
+mt pyre interior (walk)
+mt pyre exterior (walk)
+mt pyre summit (walk)
+route 123 (walk, surf, fish)
+lilycove city (surf, fish)
+team aqua or magma hideout (static-electrode) <----- name these differently depending on game? RUBY/SAPPHIRE
+route 124 (surf, fish, dive)
+mossdeep city (surf, fish)
+ITEM: super_rod
+HM: dive
+route 125 (surf, fish)
+shoal cave main cave (walk, surf, fish)
+shoal cave ice room (walk)
+route 126 (surf, fish, dive)
+route 127 (surf, fish)
+route 128 (surf, fish)
+seafloor cavern (walk, surf, fish)
+sootopolis city (surf, fish)
+cave of origin entrance (walk)
+cave of origin 1F (walk)
+cave of origin B1F (walk)
+cave of origin B2F (walk)
+cave of origin B3F (walk)
+cave of origin B4F (static-groudon/kygore) <---- RUBY/SAPPHIRE
+route 129 (surf, fish)
+route 130 (surf, fish, mirage_island) <--- disable by default
+route 131 (surf, fish)
+sky pillar 1F (walk)
+sky pillar 3F (walk)
+sky pillar 5F (walk)
+pacifidlog town (surf, fish, trade-corsola)
+route 132 (surf, fish)
+route 133 (surf, fish)
+route 134 (surf, fish) <--- can technically go in the previous sphere when you get surf? or any rod?
+EVENT: sealed_chamber_puzzle
+meteor falls 1F 2R (walk, surf, fish)
+meteor falls B1F 1R (walk, surf, fish)
+meteor falls B1F 2R (walk, surf, fish)
+-------
+ENDGAME
+-------
+ever grande city (surf, fish)
+victory road 1F (walk)
+victory road B1F (walk, rock_smash)
+victory road B2F (walk, surf, fish)
+--------
+POSTGAME
+--------
+steven's house (gift-beldum)
+sky pillar summit (static-rayquaza)
+littleroot town (roaming-latias/latios) <--- RUBY/SAPPHIRE

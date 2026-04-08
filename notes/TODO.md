@@ -49,3 +49,6 @@
   - or not a toggle, but a list of 'allowed generations' e.g. [1,2,3]
 
 - add ko-fi support link or link to support page on website into tool footer/header
+
+- add 'Milk Drink' as field moves (HMs) in Gen 2 and 3?
+- add 'Secret Power' as field move (HM) in gen 3?

@@ -1,0 +1,1092 @@
+- map_name: Route101
+  walk:
+  - ZIGZAGOON
+  - WURMPLE
+  - POOCHYENA
+  starter:
+  - TREECKO
+  - TORCHIC
+  - MUDKIP
+- map_name: Route102
+  walk:
+  - ZIGZAGOON
+  - WURMPLE
+  - POOCHYENA
+  - SEEDOT
+  - RALTS
+  - SURSKIT
+  surf:
+  - MARILL
+  - SURSKIT
+  old_rod:
+  - MAGIKARP
+  - GOLDEEN
+  good_rod:
+  - MAGIKARP
+  - GOLDEEN
+  - CORPHISH
+  super_rod:
+  - CORPHISH
+- map_name: Route103
+  walk:
+  - ZIGZAGOON
+  - WINGULL
+  - POOCHYENA
+  surf:
+  - TENTACOOL
+  - WINGULL
+  - PELIPPER
+  old_rod:
+  - MAGIKARP
+  - TENTACOOL
+  good_rod:
+  - MAGIKARP
+  - TENTACOOL
+  - WAILMER
+  super_rod:
+  - WAILMER
+  - SHARPEDO
+- map_name: PetalburgCity
+  surf:
+  - MARILL
+  old_rod:
+  - MAGIKARP
+  - GOLDEEN
+  good_rod:
+  - MAGIKARP
+  - GOLDEEN
+  - CORPHISH
+  super_rod:
+  - CORPHISH
+- map_name: Route104
+  walk:
+  - ZIGZAGOON
+  - WURMPLE
+  - TAILLOW
+  - WINGULL
+  surf:
+  - WINGULL
+  - PELIPPER
+  old_rod:
+  - MAGIKARP
+  good_rod:
+  - MAGIKARP
+  super_rod:
+  - MAGIKARP
+- map_name: PetalburgWoods
+  walk:
+  - WURMPLE
+  - CASCOON
+  - SILCOON
+  - TAILLOW
+  - SHROOMISH
+  - SLAKOTH
+  - ZIGZAGOON
+- map_name: RustboroCity
+  trade:
+  - MAKUHITA
+- map_name: Route116
+  walk:
+  - WHISMUR
+  - ZIGZAGOON
+  - TAILLOW
+  - NINCADA
+  - SKITTY
+- map_name: RusturfTunnel
+  walk:
+  - WHISMUR
+- map_name: Route105
+  surf:
+  - TENTACOOL
+  - WINGULL
+  - PELIPPER
+  old_rod:
+  - MAGIKARP
+  - TENTACOOL
+  good_rod:
+  - MAGIKARP
+  - TENTACOOL
+  - WAILMER
+  super_rod:
+  - WAILMER
+- map_name: IslandCave
+  sealed_chamber_puzzle:
+  - REGICE
+- map_name: Route106
+  surf:
+  - TENTACOOL
+  - WINGULL
+  - PELIPPER
+  old_rod:
+  - MAGIKARP
+  - TENTACOOL
+  good_rod:
+  - MAGIKARP
+  - TENTACOOL
+  - WAILMER
+  super_rod:
+  - WAILMER
+- map_name: GraniteCave1F
+  walk:
+  - ABRA
+  - GEODUDE
+  - MAKUHITA
+  - ZUBAT
+- map_name: GraniteCaveStevensRoom
+  walk:
+  - MAKUHITA
+  - ZUBAT
+  - ABRA
+  - ARON
+- map_name: GraniteCaveB1F
+  walk:
+  - ARON
+  - ZUBAT
+  - ABRA
+  - MAKUHITA
+  - MAWILE
+- map_name: GraniteCaveB2F
+  walk:
+  - ARON
+  - ZUBAT
+  - MAWILE
+  - ABRA
+  rock_smash:
+  - GEODUDE
+  - NOSEPASS
+- map_name: DewfordTown
+  old_rod:
+  - MAGIKARP
+  - TENTACOOL
+  good_rod:
+  - MAGIKARP
+  - TENTACOOL
+  - WAILMER
+  super_rod:
+  - WAILMER
+- map_name: Route107
+  surf:
+  - TENTACOOL
+  - WINGULL
+  - PELIPPER
+  old_rod:
+  - MAGIKARP
+  - TENTACOOL
+  good_rod:
+  - MAGIKARP
+  - TENTACOOL
+  - WAILMER
+  super_rod:
+  - WAILMER
+- map_name: Route108
+  surf:
+  - TENTACOOL
+  - WINGULL
+  - PELIPPER
+  old_rod:
+  - MAGIKARP
+  - TENTACOOL
+  good_rod:
+  - MAGIKARP
+  - TENTACOOL
+  - WAILMER
+  super_rod:
+  - WAILMER
+- map_name: AbandonedShip
+  surf:
+  - TENTACOOL
+  - TENTACRUEL
+  old_rod:
+  - MAGIKARP
+  - TENTACOOL
+  good_rod:
+  - MAGIKARP
+  - TENTACOOL
+  super_rod:
+  - TENTACOOL
+  - TENTACRUEL
+- map_name: Route109
+  surf:
+  - TENTACOOL
+  - WINGULL
+  - PELIPPER
+  old_rod:
+  - MAGIKARP
+  - TENTACOOL
+  good_rod:
+  - MAGIKARP
+  - TENTACOOL
+  - WAILMER
+  super_rod:
+  - WAILMER
+- map_name: SlateportCity
+  surf:
+  - TENTACOOL
+  - WINGULL
+  - PELIPPER
+  old_rod:
+  - MAGIKARP
+  - TENTACOOL
+  good_rod:
+  - MAGIKARP
+  - TENTACOOL
+  - WAILMER
+  super_rod:
+  - WAILMER
+- map_name: Route110
+  walk:
+  - ELECTRIKE
+  - ZIGZAGOON
+  - MINUN
+  - GULPIN
+  - ODDISH
+  - WINGULL
+  - PLUSLE
+  surf:
+  - TENTACOOL
+  - WINGULL
+  - PELIPPER
+  old_rod:
+  - MAGIKARP
+  - TENTACOOL
+  good_rod:
+  - MAGIKARP
+  - TENTACOOL
+  - WAILMER
+  super_rod:
+  - WAILMER
+- map_name: Route111
+  go_goggles:
+  - CACNEA
+  - SANDSHREW
+  - BALTOY
+  - TRAPINCH
+  surf:
+  - MARILL
+  - SURSKIT
+  old_rod:
+  - MAGIKARP
+  - GOLDEEN
+  good_rod:
+  - MAGIKARP
+  - GOLDEEN
+  - BARBOACH
+  super_rod:
+  - BARBOACH
+  rock_smash:
+  - GEODUDE
+- map_name: DesertRuins
+  sealed_chamber_puzzle:
+  - REGIROCK
+- map_name: Route112
+  walk:
+  - NUMEL
+  - MACHOP
+- map_name: FieryPath
+  walk:
+  - NUMEL
+  - KOFFING
+  - GRIMER
+  - MACHOP
+  - SLUGMA
+  - TORKOAL
+- map_name: Route113
+  walk:
+  - SPINDA
+  - SANDSHREW
+  - SKARMORY
+- map_name: Route114
+  walk:
+  - SWABLU
+  - SEEDOT
+  - ZANGOOSE
+  - NUZLEAF
+  - SURSKIT
+  surf:
+  - MARILL
+  - SURSKIT
+  old_rod:
+  - MAGIKARP
+  - GOLDEEN
+  good_rod:
+  - MAGIKARP
+  - GOLDEEN
+  - BARBOACH
+  super_rod:
+  - BARBOACH
+  rock_smash:
+  - GEODUDE
+- map_name: MeteorFalls1F1R
+  walk:
+  - SOLROCK
+  - ZUBAT
+  surf:
+  - GOLBAT
+  - SOLROCK
+  old_rod:
+  - GOLDEEN
+  - MAGIKARP
+  good_rod:
+  - BARBOACH
+  - GOLDEEN
+  - MAGIKARP
+  super_rod:
+  - BARBOACH
+- map_name: Route115
+  walk:
+  - TAILLOW
+  - SWABLU
+  - JIGGLYPUFF
+  - SWELLOW
+  - WINGULL
+  surf:
+  - TENTACOOL
+  - WINGULL
+  - PELIPPER
+  old_rod:
+  - MAGIKARP
+  - TENTACOOL
+  good_rod:
+  - MAGIKARP
+  - TENTACOOL
+  - WAILMER
+  super_rod:
+  - WAILMER
+- map_name: JaggedPass
+  walk:
+  - MACHOP
+  - NUMEL
+  - SPOINK
+- map_name: LavaridgeTown
+  gift:
+  - WYNAUT
+- map_name: DevonCorporation
+  fossil_restore:
+  - LILEEP
+  - ANORITH
+- map_name: Route117
+  walk:
+  - ZIGZAGOON
+  - ROSELIA
+  - ILLUMISE
+  - ODDISH
+  - MARILL
+  - VOLBEAT
+  - SURSKIT
+  surf:
+  - MARILL
+  - SURSKIT
+  old_rod:
+  - MAGIKARP
+  - GOLDEEN
+  good_rod:
+  - MAGIKARP
+  - GOLDEEN
+  - CORPHISH
+  super_rod:
+  - CORPHISH
+- map_name: NewMauvilleEntrance
+  walk:
+  - MAGNEMITE
+  - VOLTORB
+- map_name: NewMauvilleBasement
+  walk:
+  - MAGNEMITE
+  - VOLTORB
+  - MAGNETON
+  - ELECTRODE
+  static_encounter:
+  - VOLTORB
+- map_name: Route118
+  walk:
+  - ZIGZAGOON
+  - ELECTRIKE
+  - WINGULL
+  - LINOONE
+  - MANECTRIC
+  - KECLEON
+  surf:
+  - TENTACOOL
+  - WINGULL
+  - PELIPPER
+  old_rod:
+  - MAGIKARP
+  - GOLDEEN
+  good_rod:
+  - MAGIKARP
+  - TENTACOOL
+  - CARVANHA
+  super_rod:
+  - CARVANHA
+  - SHARPEDO
+- map_name: Route119
+  walk:
+  - ODDISH
+  - ZIGZAGOON
+  - LINOONE
+  - TROPIUS
+  - KECLEON
+  surf:
+  - TENTACOOL
+  - WINGULL
+  - PELIPPER
+  old_rod:
+  - MAGIKARP
+  - GOLDEEN
+  good_rod:
+  - MAGIKARP
+  - TENTACOOL
+  - CARVANHA
+  super_rod:
+  - FEEBAS
+  - CARVANHA
+  devon_scope:
+  - KECLEON
+- map_name: WeatherInstitute
+  gift:
+  - CASTFORM
+- map_name: FortreeCity
+  trade:
+  - SKITTY
+- map_name: Route120
+  walk:
+  - LINOONE
+  - ODDISH
+  - ZIGZAGOON
+  - MARILL
+  - ABSOL
+  - SURSKIT
+  - KECLEON
+  surf:
+  - MARILL
+  - SURSKIT
+  old_rod:
+  - MAGIKARP
+  - GOLDEEN
+  good_rod:
+  - MAGIKARP
+  - GOLDEEN
+  - BARBOACH
+  super_rod:
+  - BARBOACH
+  devon_scope:
+  - KECLEON
+- map_name: AncientTomb
+  sealed_chamber_puzzle:
+  - REGISTEEL
+- map_name: Route121
+  walk:
+  - DUSKULL
+  - ZIGZAGOON
+  - LINOONE
+  - ODDISH
+  - WINGULL
+  - GLOOM
+  - KECLEON
+  surf:
+  - TENTACOOL
+  - WINGULL
+  - PELIPPER
+  old_rod:
+  - MAGIKARP
+  - TENTACOOL
+  good_rod:
+  - MAGIKARP
+  - TENTACOOL
+  - WAILMER
+  super_rod:
+  - WAILMER
+- map_name: SafariZoneSouthEast
+  walk:
+  - GLOOM
+  - GIRAFARIG
+  - NATU
+  - ODDISH
+  - PIKACHU
+  - DODUO
+  - WOBBUFFET
+- map_name: SafariZoneSouthWest
+  walk:
+  - GLOOM
+  - GIRAFARIG
+  - NATU
+  - ODDISH
+  - PIKACHU
+  - DODUO
+  - WOBBUFFET
+  surf:
+  - PSYDUCK
+  old_rod:
+  - GOLDEEN
+  - MAGIKARP
+  good_rod:
+  - GOLDEEN
+  - MAGIKARP
+  super_rod:
+  - GOLDEEN
+  - SEAKING
+- map_name: SafariZoneNorthWest
+  walk:
+  - GLOOM
+  - RHYHORN
+  - ODDISH
+  - DODUO
+  - PINSIR
+  - DODRIO
+  surf:
+  - PSYDUCK
+  - GOLDUCK
+  old_rod:
+  - GOLDEEN
+  - MAGIKARP
+  good_rod:
+  - GOLDEEN
+  - MAGIKARP
+  super_rod:
+  - GOLDEEN
+  - SEAKING
+- map_name: SafariZoneNorthEast
+  walk:
+  - GLOOM
+  - HERACROSS
+  - ODDISH
+  - PHANPY
+  - NATU
+  - XATU
+  rock_smash:
+  - GEODUDE
+- map_name: Route122
+  surf:
+  - TENTACOOL
+  - WINGULL
+  - PELIPPER
+  old_rod:
+  - MAGIKARP
+  - TENTACOOL
+  good_rod:
+  - MAGIKARP
+  - TENTACOOL
+  - WAILMER
+  super_rod:
+  - WAILMER
+  - SHARPEDO
+- map_name: MtPyre1F
+  walk:
+  - DUSKULL
+- map_name: MtPyre2F
+  walk:
+  - DUSKULL
+- map_name: MtPyre3F
+  walk:
+  - DUSKULL
+- map_name: MtPyre4F
+  walk:
+  - SHUPPET
+  - DUSKULL
+- map_name: MtPyre5F
+  walk:
+  - SHUPPET
+  - DUSKULL
+- map_name: MtPyre6F
+  walk:
+  - SHUPPET
+  - DUSKULL
+- map_name: MtPyreExterior
+  walk:
+  - WINGULL
+  - MEDITITE
+  - DUSKULL
+  - VULPIX
+- map_name: MtPyreSummit
+  walk:
+  - CHIMECHO
+  - SHUPPET
+  - DUSKULL
+- map_name: Route123
+  walk:
+  - DUSKULL
+  - ZIGZAGOON
+  - LINOONE
+  - ODDISH
+  - WINGULL
+  - GLOOM
+  - KECLEON
+  surf:
+  - TENTACOOL
+  - WINGULL
+  - PELIPPER
+  old_rod:
+  - MAGIKARP
+  - TENTACOOL
+  good_rod:
+  - MAGIKARP
+  - TENTACOOL
+  - WAILMER
+  super_rod:
+  - WAILMER
+- map_name: LilycoveCity
+  surf:
+  - TENTACOOL
+  - WINGULL
+  - PELIPPER
+  old_rod:
+  - MAGIKARP
+  - TENTACOOL
+  good_rod:
+  - MAGIKARP
+  - TENTACOOL
+  - WAILMER
+  super_rod:
+  - WAILMER
+  - STARYU
+- map_name: MagmaAquaHideout2F
+  static_encounter:
+  - ELECTRODE
+- map_name: Route124
+  surf:
+  - TENTACOOL
+  - WINGULL
+  - PELIPPER
+  old_rod:
+  - MAGIKARP
+  - TENTACOOL
+  good_rod:
+  - MAGIKARP
+  - TENTACOOL
+  - WAILMER
+  super_rod:
+  - WAILMER
+  - SHARPEDO
+  dive:
+  - CHINCHOU
+  - CLAMPERL
+  - RELICANTH
+- map_name: MossdeepCity
+  surf:
+  - TENTACOOL
+  - WINGULL
+  - PELIPPER
+  old_rod:
+  - MAGIKARP
+  - TENTACOOL
+  good_rod:
+  - MAGIKARP
+  - TENTACOOL
+  - WAILMER
+  super_rod:
+  - WAILMER
+  - SHARPEDO
+- map_name: Route125
+  surf:
+  - TENTACOOL
+  - WINGULL
+  - PELIPPER
+  old_rod:
+  - MAGIKARP
+  - TENTACOOL
+  good_rod:
+  - MAGIKARP
+  - TENTACOOL
+  - WAILMER
+  super_rod:
+  - WAILMER
+  - SHARPEDO
+- map_name: ShoalCave1F1RHighTide
+  walk:
+  - GOLBAT
+  - SPHEAL
+  - ZUBAT
+  surf:
+  - ZUBAT
+  - TENTACOOL
+  - SPHEAL
+  old_rod:
+  - MAGIKARP
+  - TENTACOOL
+  good_rod:
+  - MAGIKARP
+  - TENTACOOL
+  - WAILMER
+  super_rod:
+  - WAILMER
+- map_name: ShoalCave1F1RLowTide
+  walk:
+  - GOLBAT
+  - SPHEAL
+  - ZUBAT
+- map_name: ShoalCave1F2RHighTide
+  walk:
+  - GOLBAT
+  - SPHEAL
+  - ZUBAT
+  surf:
+  - ZUBAT
+  - TENTACOOL
+  - SPHEAL
+  old_rod:
+  - MAGIKARP
+  - TENTACOOL
+  good_rod:
+  - MAGIKARP
+  - TENTACOOL
+  - WAILMER
+  super_rod:
+  - WAILMER
+- map_name: ShoalCave1F2RLowTide
+  walk:
+  - GOLBAT
+  - SPHEAL
+  - ZUBAT
+- map_name: ShoalCaveB1FLowTide
+  walk:
+  - GOLBAT
+  - SPHEAL
+  - ZUBAT
+- map_name: ShoalCaveB2FLowTide
+  walk:
+  - GOLBAT
+  - SPHEAL
+  - ZUBAT
+- map_name: ShoalCaveB3FLowTide
+  walk:
+  - GOLBAT
+  - SPHEAL
+  - ZUBAT
+  - SNORUNT
+- map_name: Route126
+  surf:
+  - TENTACOOL
+  - WINGULL
+  - PELIPPER
+  old_rod:
+  - MAGIKARP
+  - TENTACOOL
+  good_rod:
+  - MAGIKARP
+  - TENTACOOL
+  - WAILMER
+  super_rod:
+  - WAILMER
+  - SHARPEDO
+  dive:
+  - CHINCHOU
+  - CLAMPERL
+  - RELICANTH
+- map_name: Route127
+  surf:
+  - TENTACOOL
+  - WINGULL
+  - PELIPPER
+  old_rod:
+  - MAGIKARP
+  - TENTACOOL
+  good_rod:
+  - MAGIKARP
+  - TENTACOOL
+  - WAILMER
+  super_rod:
+  - WAILMER
+  - SHARPEDO
+- map_name: Route128
+  surf:
+  - TENTACOOL
+  - WINGULL
+  - PELIPPER
+  old_rod:
+  - MAGIKARP
+  - TENTACOOL
+  good_rod:
+  - MAGIKARP
+  - WAILMER
+  - LUVDISC
+  super_rod:
+  - LUVDISC
+  - CORSOLA
+  - WAILMER
+- map_name: SeafloorCavern
+  walk:
+  - GOLBAT
+  - ZUBAT
+  surf:
+  - TENTACOOL
+  - ZUBAT
+  - GOLBAT
+  old_rod:
+  - MAGIKARP
+  - TENTACOOL
+  good_rod:
+  - MAGIKARP
+  - TENTACOOL
+  - WAILMER
+  super_rod:
+  - WAILMER
+- map_name: SootopolisCity
+  surf:
+  - MAGIKARP
+  old_rod:
+  - MAGIKARP
+  - TENTACOOL
+  good_rod:
+  - MAGIKARP
+  super_rod:
+  - GYARADOS
+  - MAGIKARP
+- map_name: CaveOfOriginEntrance
+  walk:
+  - GOLBAT
+  - ZUBAT
+- map_name: CaveOfOriginInterior
+  walk:
+  - GOLBAT
+  - MAWILE
+  - ZUBAT
+- map_name: CaveOfOriginBasement
+  static_encounter:
+  - GROUDON
+- map_name: Route129
+  surf:
+  - TENTACOOL
+  - WINGULL
+  - PELIPPER
+  - WAILORD
+  old_rod:
+  - MAGIKARP
+  - TENTACOOL
+  good_rod:
+  - MAGIKARP
+  - TENTACOOL
+  - WAILMER
+  super_rod:
+  - WAILMER
+  - SHARPEDO
+- map_name: Route130
+  surf:
+  - TENTACOOL
+  - WINGULL
+  - PELIPPER
+  old_rod:
+  - MAGIKARP
+  - TENTACOOL
+  good_rod:
+  - MAGIKARP
+  - TENTACOOL
+  - WAILMER
+  super_rod:
+  - WAILMER
+  - SHARPEDO
+  mirage_island:
+  - WYNAUT
+- map_name: Route131
+  surf:
+  - TENTACOOL
+  - WINGULL
+  - PELIPPER
+  old_rod:
+  - MAGIKARP
+  - TENTACOOL
+  good_rod:
+  - MAGIKARP
+  - TENTACOOL
+  - WAILMER
+  super_rod:
+  - WAILMER
+  - SHARPEDO
+- map_name: SkyPillar1F
+  walk:
+  - GOLBAT
+  - MAWILE
+  - CLAYDOL
+  - DUSCLOPS
+- map_name: SkyPillar3F
+  walk:
+  - GOLBAT
+  - MAWILE
+  - CLAYDOL
+  - DUSCLOPS
+- map_name: SkyPillar5F
+  walk:
+  - ALTARIA
+  - GOLBAT
+  - MAWILE
+  - CLAYDOL
+  - DUSCLOPS
+- map_name: PacifidlogTown
+  surf:
+  - TENTACOOL
+  - WINGULL
+  - PELIPPER
+  old_rod:
+  - MAGIKARP
+  - TENTACOOL
+  good_rod:
+  - MAGIKARP
+  - TENTACOOL
+  - WAILMER
+  super_rod:
+  - WAILMER
+  - SHARPEDO
+  trade:
+  - CORSOLA
+- map_name: Route132
+  surf:
+  - TENTACOOL
+  - WINGULL
+  - PELIPPER
+  old_rod:
+  - MAGIKARP
+  - TENTACOOL
+  good_rod:
+  - MAGIKARP
+  - TENTACOOL
+  - WAILMER
+  super_rod:
+  - WAILMER
+  - SHARPEDO
+  - HORSEA
+- map_name: Route133
+  surf:
+  - TENTACOOL
+  - WINGULL
+  - PELIPPER
+  old_rod:
+  - MAGIKARP
+  - TENTACOOL
+  good_rod:
+  - MAGIKARP
+  - TENTACOOL
+  - WAILMER
+  super_rod:
+  - WAILMER
+  - SHARPEDO
+  - HORSEA
+- map_name: Route134
+  surf:
+  - TENTACOOL
+  - WINGULL
+  - PELIPPER
+  old_rod:
+  - MAGIKARP
+  - TENTACOOL
+  good_rod:
+  - MAGIKARP
+  - TENTACOOL
+  - WAILMER
+  super_rod:
+  - WAILMER
+  - SHARPEDO
+  - HORSEA
+- map_name: MeteorFalls1F2R
+  walk:
+  - GOLBAT
+  - SOLROCK
+  surf:
+  - GOLBAT
+  - SOLROCK
+  old_rod:
+  - GOLDEEN
+  - MAGIKARP
+  good_rod:
+  - BARBOACH
+  - GOLDEEN
+  - MAGIKARP
+  super_rod:
+  - BARBOACH
+  - WHISCASH
+- map_name: MeteorFallsB1F1R
+  walk:
+  - GOLBAT
+  - SOLROCK
+  surf:
+  - GOLBAT
+  - SOLROCK
+  old_rod:
+  - GOLDEEN
+  - MAGIKARP
+  good_rod:
+  - BARBOACH
+  - GOLDEEN
+  - MAGIKARP
+  super_rod:
+  - BARBOACH
+  - WHISCASH
+- map_name: MeteorFallsB1F2R
+  walk:
+  - BAGON
+  - GOLBAT
+  - SOLROCK
+  surf:
+  - GOLBAT
+  - SOLROCK
+  old_rod:
+  - GOLDEEN
+  - MAGIKARP
+  good_rod:
+  - BARBOACH
+  - GOLDEEN
+  - MAGIKARP
+  super_rod:
+  - BARBOACH
+  - WHISCASH
+- map_name: EverGrandeCity
+  surf:
+  - TENTACOOL
+  - WINGULL
+  - PELIPPER
+  old_rod:
+  - MAGIKARP
+  - TENTACOOL
+  good_rod:
+  - MAGIKARP
+  - LUVDISC
+  - WAILMER
+  super_rod:
+  - WAILMER
+  - LUVDISC
+  - CORSOLA
+- map_name: VictoryRoad1F
+  walk:
+  - GOLBAT
+  - ZUBAT
+  - HARIYAMA
+  - LAIRON
+  - MAKUHITA
+  - LOUDRED
+  - ARON
+  - WHISMUR
+- map_name: VictoryRoadB1F
+  walk:
+  - GOLBAT
+  - HARIYAMA
+  - LAIRON
+  - MEDICHAM
+  - MEDITITE
+  rock_smash:
+  - GEODUDE
+  - GRAVELER
+- map_name: VictoryRoadB2F
+  walk:
+  - GOLBAT
+  - MAWILE
+  - LAIRON
+  - MEDICHAM
+  surf:
+  - GOLBAT
+  old_rod:
+  - GOLDEEN
+  - MAGIKARP
+  good_rod:
+  - BARBOACH
+  - GOLDEEN
+  - MAGIKARP
+  super_rod:
+  - BARBOACH
+  - WHISCASH
+- map_name: StevensHouse
+  gift:
+  - BELDUM
+- map_name: SkyPillar6F
+  static_encounter:
+  - RAYQUAZA
+- map_name: LittlerootTown
+  roaming:
+  - LATIOS

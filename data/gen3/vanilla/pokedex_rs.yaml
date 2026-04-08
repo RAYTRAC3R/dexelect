@@ -1,0 +1,4904 @@
+- name: BULBASAUR
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: BULBASAUR
+  types:
+  - grass
+  - poison
+  is_legendary: false
+  base_stat_total: 318
+  hm_learnset:
+  - CUT
+  - FLASH
+  evolution_method_required: none
+- name: IVYSAUR
+  is_fully_evolved: false
+  evo_stage: 2
+  species_line: BULBASAUR
+  types:
+  - grass
+  - poison
+  is_legendary: false
+  base_stat_total: 405
+  hm_learnset:
+  - CUT
+  - FLASH
+  evolution_method_required: level-up
+- name: VENUSAUR
+  is_fully_evolved: true
+  evo_stage: 3
+  species_line: BULBASAUR
+  types:
+  - grass
+  - poison
+  is_legendary: false
+  base_stat_total: 525
+  hm_learnset:
+  - CUT
+  - FLASH
+  evolution_method_required: level-up
+- name: CHARMANDER
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: CHARMANDER
+  types:
+  - fire
+  is_legendary: false
+  base_stat_total: 309
+  hm_learnset:
+  - CUT
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: none
+- name: CHARMELEON
+  is_fully_evolved: false
+  evo_stage: 2
+  species_line: CHARMANDER
+  types:
+  - fire
+  is_legendary: false
+  base_stat_total: 405
+  hm_learnset:
+  - CUT
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: level-up
+- name: CHARIZARD
+  is_fully_evolved: true
+  evo_stage: 3
+  species_line: CHARMANDER
+  types:
+  - fire
+  - flying
+  is_legendary: false
+  base_stat_total: 534
+  hm_learnset:
+  - CUT
+  - FLY
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: level-up
+- name: SQUIRTLE
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: SQUIRTLE
+  types:
+  - water
+  is_legendary: false
+  base_stat_total: 314
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  - WATERFALL
+  evolution_method_required: none
+- name: WARTORTLE
+  is_fully_evolved: false
+  evo_stage: 2
+  species_line: SQUIRTLE
+  types:
+  - water
+  is_legendary: false
+  base_stat_total: 405
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  - WATERFALL
+  evolution_method_required: level-up
+- name: BLASTOISE
+  is_fully_evolved: true
+  evo_stage: 3
+  species_line: SQUIRTLE
+  types:
+  - water
+  is_legendary: false
+  base_stat_total: 530
+  hm_learnset:
+  - DIVE
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  - WATERFALL
+  evolution_method_required: level-up
+- name: CATERPIE
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: CATERPIE
+  types:
+  - bug
+  is_legendary: false
+  base_stat_total: 195
+  hm_learnset: []
+  evolution_method_required: none
+- name: METAPOD
+  is_fully_evolved: false
+  evo_stage: 2
+  species_line: CATERPIE
+  types:
+  - bug
+  is_legendary: false
+  base_stat_total: 205
+  hm_learnset: []
+  evolution_method_required: level-up
+- name: BUTTERFREE
+  is_fully_evolved: true
+  evo_stage: 3
+  species_line: CATERPIE
+  types:
+  - bug
+  - flying
+  is_legendary: false
+  base_stat_total: 385
+  hm_learnset:
+  - FLASH
+  evolution_method_required: level-up
+- name: WEEDLE
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: WEEDLE
+  types:
+  - bug
+  - poison
+  is_legendary: false
+  base_stat_total: 195
+  hm_learnset: []
+  evolution_method_required: none
+- name: KAKUNA
+  is_fully_evolved: false
+  evo_stage: 2
+  species_line: WEEDLE
+  types:
+  - bug
+  - poison
+  is_legendary: false
+  base_stat_total: 205
+  hm_learnset: []
+  evolution_method_required: level-up
+- name: BEEDRILL
+  is_fully_evolved: true
+  evo_stage: 3
+  species_line: WEEDLE
+  types:
+  - bug
+  - poison
+  is_legendary: false
+  base_stat_total: 385
+  hm_learnset:
+  - CUT
+  evolution_method_required: level-up
+- name: PIDGEY
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: PIDGEY
+  types:
+  - normal
+  - flying
+  is_legendary: false
+  base_stat_total: 251
+  hm_learnset:
+  - FLY
+  evolution_method_required: none
+- name: PIDGEOTTO
+  is_fully_evolved: false
+  evo_stage: 2
+  species_line: PIDGEY
+  types:
+  - normal
+  - flying
+  is_legendary: false
+  base_stat_total: 349
+  hm_learnset:
+  - FLY
+  evolution_method_required: level-up
+- name: PIDGEOT
+  is_fully_evolved: true
+  evo_stage: 3
+  species_line: PIDGEY
+  types:
+  - normal
+  - flying
+  is_legendary: false
+  base_stat_total: 469
+  hm_learnset:
+  - FLY
+  evolution_method_required: level-up
+- name: RATTATA
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: RATTATA
+  types:
+  - normal
+  is_legendary: false
+  base_stat_total: 253
+  hm_learnset:
+  - CUT
+  evolution_method_required: none
+- name: RATICATE
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: RATTATA
+  types:
+  - normal
+  is_legendary: false
+  base_stat_total: 413
+  hm_learnset:
+  - CUT
+  - STRENGTH
+  evolution_method_required: level-up
+- name: SPEAROW
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: SPEAROW
+  types:
+  - normal
+  - flying
+  is_legendary: false
+  base_stat_total: 262
+  hm_learnset:
+  - FLY
+  evolution_method_required: none
+- name: FEAROW
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: SPEAROW
+  types:
+  - normal
+  - flying
+  is_legendary: false
+  base_stat_total: 442
+  hm_learnset:
+  - FLY
+  evolution_method_required: level-up
+- name: EKANS
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: EKANS
+  types:
+  - poison
+  is_legendary: false
+  base_stat_total: 288
+  hm_learnset:
+  - STRENGTH
+  evolution_method_required: none
+- name: ARBOK
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: EKANS
+  types:
+  - poison
+  is_legendary: false
+  base_stat_total: 438
+  hm_learnset:
+  - STRENGTH
+  evolution_method_required: level-up
+- name: PIKACHU
+  is_fully_evolved: false
+  evo_stage: 2
+  species_line: PICHU
+  types:
+  - electric
+  is_legendary: false
+  base_stat_total: 300
+  hm_learnset:
+  - FLASH
+  - STRENGTH
+  evolution_method_required: happiness
+- name: RAICHU
+  is_fully_evolved: true
+  evo_stage: 3
+  species_line: PICHU
+  types:
+  - electric
+  is_legendary: false
+  base_stat_total: 475
+  hm_learnset:
+  - FLASH
+  - STRENGTH
+  evolution_method_required: thunder_stone
+- name: SANDSHREW
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: SANDSHREW
+  types:
+  - ground
+  is_legendary: false
+  base_stat_total: 300
+  hm_learnset:
+  - CUT
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: none
+- name: SANDSLASH
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: SANDSHREW
+  types:
+  - ground
+  is_legendary: false
+  base_stat_total: 450
+  hm_learnset:
+  - CUT
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: level-up
+- name: NIDORAN_F
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: NIDORAN_F
+  types:
+  - poison
+  is_legendary: false
+  base_stat_total: 275
+  hm_learnset: []
+  evolution_method_required: none
+- name: NIDORINA
+  is_fully_evolved: false
+  evo_stage: 2
+  species_line: NIDORAN_F
+  types:
+  - poison
+  is_legendary: false
+  base_stat_total: 365
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: level-up
+- name: NIDOQUEEN
+  is_fully_evolved: true
+  evo_stage: 3
+  species_line: NIDORAN_F
+  types:
+  - poison
+  - ground
+  is_legendary: false
+  base_stat_total: 495
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  evolution_method_required: moon_stone
+- name: NIDORAN_M
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: NIDORAN_M
+  types:
+  - poison
+  is_legendary: false
+  base_stat_total: 273
+  hm_learnset: []
+  evolution_method_required: none
+- name: NIDORINO
+  is_fully_evolved: false
+  evo_stage: 2
+  species_line: NIDORAN_M
+  types:
+  - poison
+  is_legendary: false
+  base_stat_total: 365
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: level-up
+- name: NIDOKING
+  is_fully_evolved: true
+  evo_stage: 3
+  species_line: NIDORAN_M
+  types:
+  - poison
+  - ground
+  is_legendary: false
+  base_stat_total: 495
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  evolution_method_required: moon_stone
+- name: CLEFAIRY
+  is_fully_evolved: false
+  evo_stage: 2
+  species_line: CLEFFA
+  types:
+  - normal
+  is_legendary: false
+  base_stat_total: 323
+  hm_learnset:
+  - FLASH
+  - STRENGTH
+  evolution_method_required: happiness
+- name: CLEFABLE
+  is_fully_evolved: true
+  evo_stage: 3
+  species_line: CLEFFA
+  types:
+  - normal
+  is_legendary: false
+  base_stat_total: 473
+  hm_learnset:
+  - FLASH
+  - STRENGTH
+  evolution_method_required: moon_stone
+- name: VULPIX
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: VULPIX
+  types:
+  - fire
+  is_legendary: false
+  base_stat_total: 299
+  hm_learnset: []
+  evolution_method_required: none
+- name: NINETALES
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: VULPIX
+  types:
+  - fire
+  is_legendary: false
+  base_stat_total: 505
+  hm_learnset: []
+  evolution_method_required: fire_stone
+- name: JIGGLYPUFF
+  is_fully_evolved: false
+  evo_stage: 2
+  species_line: IGGLYBUFF
+  types:
+  - normal
+  is_legendary: false
+  base_stat_total: 270
+  hm_learnset:
+  - FLASH
+  - STRENGTH
+  evolution_method_required: happiness
+- name: WIGGLYTUFF
+  is_fully_evolved: true
+  evo_stage: 3
+  species_line: IGGLYBUFF
+  types:
+  - normal
+  is_legendary: false
+  base_stat_total: 425
+  hm_learnset:
+  - FLASH
+  - STRENGTH
+  evolution_method_required: moon_stone
+- name: ZUBAT
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: ZUBAT
+  types:
+  - poison
+  - flying
+  is_legendary: false
+  base_stat_total: 245
+  hm_learnset:
+  - FLY
+  evolution_method_required: none
+- name: GOLBAT
+  is_fully_evolved: false
+  evo_stage: 2
+  species_line: ZUBAT
+  types:
+  - poison
+  - flying
+  is_legendary: false
+  base_stat_total: 455
+  hm_learnset:
+  - FLY
+  evolution_method_required: level-up
+- name: ODDISH
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: ODDISH
+  types:
+  - grass
+  - poison
+  is_legendary: false
+  base_stat_total: 320
+  hm_learnset:
+  - CUT
+  - FLASH
+  evolution_method_required: none
+- name: GLOOM
+  is_fully_evolved: false
+  evo_stage: 2
+  species_line: ODDISH
+  types:
+  - grass
+  - poison
+  is_legendary: false
+  base_stat_total: 395
+  hm_learnset:
+  - CUT
+  - FLASH
+  evolution_method_required: level-up
+- name: VILEPLUME
+  is_fully_evolved: true
+  evo_stage: 3
+  species_line: ODDISH
+  types:
+  - grass
+  - poison
+  is_legendary: false
+  base_stat_total: 480
+  hm_learnset:
+  - CUT
+  - FLASH
+  evolution_method_required: leaf_stone
+- name: PARAS
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: PARAS
+  types:
+  - bug
+  - grass
+  is_legendary: false
+  base_stat_total: 285
+  hm_learnset:
+  - CUT
+  - FLASH
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: none
+- name: PARASECT
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: PARAS
+  types:
+  - bug
+  - grass
+  is_legendary: false
+  base_stat_total: 405
+  hm_learnset:
+  - CUT
+  - FLASH
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: level-up
+- name: VENONAT
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: VENONAT
+  types:
+  - bug
+  - poison
+  is_legendary: false
+  base_stat_total: 305
+  hm_learnset:
+  - FLASH
+  evolution_method_required: none
+- name: VENOMOTH
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: VENONAT
+  types:
+  - bug
+  - poison
+  is_legendary: false
+  base_stat_total: 450
+  hm_learnset:
+  - FLASH
+  evolution_method_required: level-up
+- name: DIGLETT
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: DIGLETT
+  types:
+  - ground
+  is_legendary: false
+  base_stat_total: 265
+  hm_learnset:
+  - CUT
+  - DIG
+  - ROCK_SMASH
+  evolution_method_required: none
+- name: DUGTRIO
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: DIGLETT
+  types:
+  - ground
+  is_legendary: false
+  base_stat_total: 405
+  hm_learnset:
+  - CUT
+  - DIG
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: level-up
+- name: MEOWTH
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: MEOWTH
+  types:
+  - normal
+  is_legendary: false
+  base_stat_total: 290
+  hm_learnset: []
+  evolution_method_required: none
+- name: PERSIAN
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: MEOWTH
+  types:
+  - normal
+  is_legendary: false
+  base_stat_total: 440
+  hm_learnset: []
+  evolution_method_required: level-up
+- name: PSYDUCK
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: PSYDUCK
+  types:
+  - water
+  is_legendary: false
+  base_stat_total: 320
+  hm_learnset:
+  - DIG
+  - FLASH
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  - WATERFALL
+  evolution_method_required: none
+- name: GOLDUCK
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: PSYDUCK
+  types:
+  - water
+  is_legendary: false
+  base_stat_total: 500
+  hm_learnset:
+  - DIG
+  - FLASH
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  - WATERFALL
+  evolution_method_required: level-up
+- name: MANKEY
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: MANKEY
+  types:
+  - fighting
+  is_legendary: false
+  base_stat_total: 305
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: none
+- name: PRIMEAPE
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: MANKEY
+  types:
+  - fighting
+  is_legendary: false
+  base_stat_total: 455
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: level-up
+- name: GROWLITHE
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: GROWLITHE
+  types:
+  - fire
+  is_legendary: false
+  base_stat_total: 350
+  hm_learnset:
+  - STRENGTH
+  evolution_method_required: none
+- name: ARCANINE
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: GROWLITHE
+  types:
+  - fire
+  is_legendary: false
+  base_stat_total: 555
+  hm_learnset:
+  - STRENGTH
+  evolution_method_required: fire_stone
+- name: POLIWAG
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: POLIWAG
+  types:
+  - water
+  is_legendary: false
+  base_stat_total: 300
+  hm_learnset:
+  - SURF
+  - WATERFALL
+  evolution_method_required: none
+- name: POLIWHIRL
+  is_fully_evolved: false
+  evo_stage: 2
+  species_line: POLIWAG
+  types:
+  - water
+  is_legendary: false
+  base_stat_total: 385
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  - WATERFALL
+  evolution_method_required: level-up
+- name: POLIWRATH
+  is_fully_evolved: true
+  evo_stage: 3
+  species_line: POLIWAG
+  types:
+  - water
+  - fighting
+  is_legendary: false
+  base_stat_total: 500
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  - WATERFALL
+  evolution_method_required: water_stone
+- name: ABRA
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: ABRA
+  types:
+  - psychic
+  is_legendary: false
+  base_stat_total: 310
+  hm_learnset:
+  - FLASH
+  - TELEPORT
+  evolution_method_required: none
+- name: KADABRA
+  is_fully_evolved: false
+  evo_stage: 2
+  species_line: ABRA
+  types:
+  - psychic
+  is_legendary: false
+  base_stat_total: 400
+  hm_learnset:
+  - DIG
+  - FLASH
+  - TELEPORT
+  evolution_method_required: level-up
+- name: ALAKAZAM
+  is_fully_evolved: true
+  evo_stage: 3
+  species_line: ABRA
+  types:
+  - psychic
+  is_legendary: false
+  base_stat_total: 490
+  hm_learnset:
+  - DIG
+  - FLASH
+  - TELEPORT
+  evolution_method_required: trade
+- name: MACHOP
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: MACHOP
+  types:
+  - fighting
+  is_legendary: false
+  base_stat_total: 305
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: none
+- name: MACHOKE
+  is_fully_evolved: false
+  evo_stage: 2
+  species_line: MACHOP
+  types:
+  - fighting
+  is_legendary: false
+  base_stat_total: 405
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: level-up
+- name: MACHAMP
+  is_fully_evolved: true
+  evo_stage: 3
+  species_line: MACHOP
+  types:
+  - fighting
+  is_legendary: false
+  base_stat_total: 505
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: trade
+- name: BELLSPROUT
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: BELLSPROUT
+  types:
+  - grass
+  - poison
+  is_legendary: false
+  base_stat_total: 300
+  hm_learnset:
+  - CUT
+  - FLASH
+  evolution_method_required: none
+- name: WEEPINBELL
+  is_fully_evolved: false
+  evo_stage: 2
+  species_line: BELLSPROUT
+  types:
+  - grass
+  - poison
+  is_legendary: false
+  base_stat_total: 390
+  hm_learnset:
+  - CUT
+  - FLASH
+  evolution_method_required: level-up
+- name: VICTREEBEL
+  is_fully_evolved: true
+  evo_stage: 3
+  species_line: BELLSPROUT
+  types:
+  - grass
+  - poison
+  is_legendary: false
+  base_stat_total: 480
+  hm_learnset:
+  - CUT
+  - FLASH
+  evolution_method_required: leaf_stone
+- name: TENTACOOL
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: TENTACOOL
+  types:
+  - water
+  - poison
+  is_legendary: false
+  base_stat_total: 335
+  hm_learnset:
+  - CUT
+  - SURF
+  evolution_method_required: none
+- name: TENTACRUEL
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: TENTACOOL
+  types:
+  - water
+  - poison
+  is_legendary: false
+  base_stat_total: 515
+  hm_learnset:
+  - CUT
+  - SURF
+  evolution_method_required: level-up
+- name: GEODUDE
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: GEODUDE
+  types:
+  - rock
+  - ground
+  is_legendary: false
+  base_stat_total: 300
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: none
+- name: GRAVELER
+  is_fully_evolved: false
+  evo_stage: 2
+  species_line: GEODUDE
+  types:
+  - rock
+  - ground
+  is_legendary: false
+  base_stat_total: 390
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: level-up
+- name: GOLEM
+  is_fully_evolved: true
+  evo_stage: 3
+  species_line: GEODUDE
+  types:
+  - rock
+  - ground
+  is_legendary: false
+  base_stat_total: 485
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: trade
+- name: PONYTA
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: PONYTA
+  types:
+  - fire
+  is_legendary: false
+  base_stat_total: 410
+  hm_learnset: []
+  evolution_method_required: none
+- name: RAPIDASH
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: PONYTA
+  types:
+  - fire
+  is_legendary: false
+  base_stat_total: 500
+  hm_learnset: []
+  evolution_method_required: level-up
+- name: SLOWPOKE
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: SLOWPOKE
+  types:
+  - water
+  - psychic
+  is_legendary: false
+  base_stat_total: 315
+  hm_learnset:
+  - DIG
+  - FLASH
+  - STRENGTH
+  - SURF
+  evolution_method_required: none
+- name: SLOWBRO
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: SLOWPOKE
+  types:
+  - water
+  - psychic
+  is_legendary: false
+  base_stat_total: 490
+  hm_learnset:
+  - DIG
+  - FLASH
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  evolution_method_required: level-up
+- name: MAGNEMITE
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: MAGNEMITE
+  types:
+  - electric
+  - steel
+  is_legendary: false
+  base_stat_total: 325
+  hm_learnset:
+  - FLASH
+  evolution_method_required: none
+- name: MAGNETON
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: MAGNEMITE
+  types:
+  - electric
+  - steel
+  is_legendary: false
+  base_stat_total: 465
+  hm_learnset:
+  - FLASH
+  evolution_method_required: level-up
+- name: FARFETCHD
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: FARFETCHD
+  types:
+  - normal
+  - flying
+  is_legendary: false
+  base_stat_total: 352
+  hm_learnset:
+  - CUT
+  - FLY
+  evolution_method_required: none
+- name: DODUO
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: DODUO
+  types:
+  - normal
+  - flying
+  is_legendary: false
+  base_stat_total: 310
+  hm_learnset:
+  - FLY
+  evolution_method_required: none
+- name: DODRIO
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: DODUO
+  types:
+  - normal
+  - flying
+  is_legendary: false
+  base_stat_total: 460
+  hm_learnset:
+  - FLY
+  evolution_method_required: level-up
+- name: SEEL
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: SEEL
+  types:
+  - water
+  is_legendary: false
+  base_stat_total: 325
+  hm_learnset:
+  - SURF
+  - WATERFALL
+  evolution_method_required: none
+- name: DEWGONG
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: SEEL
+  types:
+  - water
+  - ice
+  is_legendary: false
+  base_stat_total: 475
+  hm_learnset:
+  - SURF
+  - WATERFALL
+  evolution_method_required: level-up
+- name: GRIMER
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: GRIMER
+  types:
+  - poison
+  is_legendary: false
+  base_stat_total: 325
+  hm_learnset: []
+  evolution_method_required: none
+- name: MUK
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: GRIMER
+  types:
+  - poison
+  is_legendary: false
+  base_stat_total: 500
+  hm_learnset: []
+  evolution_method_required: level-up
+- name: SHELLDER
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: SHELLDER
+  types:
+  - water
+  is_legendary: false
+  base_stat_total: 305
+  hm_learnset:
+  - SURF
+  evolution_method_required: none
+- name: CLOYSTER
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: SHELLDER
+  types:
+  - water
+  - ice
+  is_legendary: false
+  base_stat_total: 525
+  hm_learnset:
+  - SURF
+  evolution_method_required: water_stone
+- name: GASTLY
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: GASTLY
+  types:
+  - ghost
+  - poison
+  is_legendary: false
+  base_stat_total: 310
+  hm_learnset: []
+  evolution_method_required: none
+- name: HAUNTER
+  is_fully_evolved: false
+  evo_stage: 2
+  species_line: GASTLY
+  types:
+  - ghost
+  - poison
+  is_legendary: false
+  base_stat_total: 405
+  hm_learnset: []
+  evolution_method_required: level-up
+- name: GENGAR
+  is_fully_evolved: true
+  evo_stage: 3
+  species_line: GASTLY
+  types:
+  - ghost
+  - poison
+  is_legendary: false
+  base_stat_total: 500
+  hm_learnset:
+  - STRENGTH
+  evolution_method_required: trade
+- name: ONIX
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: ONIX
+  types:
+  - rock
+  - ground
+  is_legendary: false
+  base_stat_total: 385
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: none
+- name: DROWZEE
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: DROWZEE
+  types:
+  - psychic
+  is_legendary: false
+  base_stat_total: 328
+  hm_learnset:
+  - FLASH
+  evolution_method_required: none
+- name: HYPNO
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: DROWZEE
+  types:
+  - psychic
+  is_legendary: false
+  base_stat_total: 483
+  hm_learnset:
+  - FLASH
+  evolution_method_required: level-up
+- name: KRABBY
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: KRABBY
+  types:
+  - water
+  is_legendary: false
+  base_stat_total: 325
+  hm_learnset:
+  - CUT
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  evolution_method_required: none
+- name: KINGLER
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: KRABBY
+  types:
+  - water
+  is_legendary: false
+  base_stat_total: 475
+  hm_learnset:
+  - CUT
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  evolution_method_required: level-up
+- name: VOLTORB
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: VOLTORB
+  types:
+  - electric
+  is_legendary: false
+  base_stat_total: 330
+  hm_learnset:
+  - FLASH
+  evolution_method_required: none
+- name: ELECTRODE
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: VOLTORB
+  types:
+  - electric
+  is_legendary: false
+  base_stat_total: 480
+  hm_learnset:
+  - FLASH
+  evolution_method_required: level-up
+- name: EXEGGCUTE
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: EXEGGCUTE
+  types:
+  - grass
+  - psychic
+  is_legendary: false
+  base_stat_total: 325
+  hm_learnset:
+  - FLASH
+  - STRENGTH
+  evolution_method_required: none
+- name: EXEGGUTOR
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: EXEGGCUTE
+  types:
+  - grass
+  - psychic
+  is_legendary: false
+  base_stat_total: 520
+  hm_learnset:
+  - FLASH
+  - STRENGTH
+  evolution_method_required: leaf_stone
+- name: CUBONE
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: CUBONE
+  types:
+  - ground
+  is_legendary: false
+  base_stat_total: 320
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: none
+- name: MAROWAK
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: CUBONE
+  types:
+  - ground
+  is_legendary: false
+  base_stat_total: 425
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: level-up
+- name: HITMONLEE
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: TYROGUE
+  types:
+  - fighting
+  is_legendary: false
+  base_stat_total: 455
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: level-up_atk_greater_def
+- name: HITMONCHAN
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: TYROGUE
+  types:
+  - fighting
+  is_legendary: false
+  base_stat_total: 455
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: level-up_def_greater_atk
+- name: LICKITUNG
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: LICKITUNG
+  types:
+  - normal
+  is_legendary: false
+  base_stat_total: 385
+  hm_learnset:
+  - CUT
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  evolution_method_required: none
+- name: KOFFING
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: KOFFING
+  types:
+  - poison
+  is_legendary: false
+  base_stat_total: 340
+  hm_learnset: []
+  evolution_method_required: none
+- name: WEEZING
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: KOFFING
+  types:
+  - poison
+  is_legendary: false
+  base_stat_total: 490
+  hm_learnset: []
+  evolution_method_required: level-up
+- name: RHYHORN
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: RHYHORN
+  types:
+  - ground
+  - rock
+  is_legendary: false
+  base_stat_total: 345
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: none
+- name: RHYDON
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: RHYHORN
+  types:
+  - ground
+  - rock
+  is_legendary: false
+  base_stat_total: 485
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  evolution_method_required: level-up
+- name: CHANSEY
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: CHANSEY
+  types:
+  - normal
+  is_legendary: false
+  base_stat_total: 450
+  hm_learnset:
+  - FLASH
+  - ROCK_SMASH
+  - SOFTBOILED
+  - STRENGTH
+  evolution_method_required: none
+- name: TANGELA
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: TANGELA
+  types:
+  - grass
+  is_legendary: false
+  base_stat_total: 435
+  hm_learnset:
+  - CUT
+  - FLASH
+  evolution_method_required: none
+- name: KANGASKHAN
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: KANGASKHAN
+  types:
+  - normal
+  is_legendary: false
+  base_stat_total: 490
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  evolution_method_required: none
+- name: HORSEA
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: HORSEA
+  types:
+  - water
+  is_legendary: false
+  base_stat_total: 295
+  hm_learnset:
+  - SURF
+  - WATERFALL
+  evolution_method_required: none
+- name: SEADRA
+  is_fully_evolved: false
+  evo_stage: 2
+  species_line: HORSEA
+  types:
+  - water
+  is_legendary: false
+  base_stat_total: 440
+  hm_learnset:
+  - SURF
+  - WATERFALL
+  evolution_method_required: level-up
+- name: GOLDEEN
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: GOLDEEN
+  types:
+  - water
+  is_legendary: false
+  base_stat_total: 320
+  hm_learnset:
+  - SURF
+  - WATERFALL
+  evolution_method_required: none
+- name: SEAKING
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: GOLDEEN
+  types:
+  - water
+  is_legendary: false
+  base_stat_total: 450
+  hm_learnset:
+  - SURF
+  - WATERFALL
+  evolution_method_required: level-up
+- name: STARYU
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: STARYU
+  types:
+  - water
+  is_legendary: false
+  base_stat_total: 340
+  hm_learnset:
+  - FLASH
+  - SURF
+  - WATERFALL
+  evolution_method_required: none
+- name: STARMIE
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: STARYU
+  types:
+  - water
+  - psychic
+  is_legendary: false
+  base_stat_total: 520
+  hm_learnset:
+  - FLASH
+  - SURF
+  - WATERFALL
+  evolution_method_required: water_stone
+- name: MR.MIME
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: MR.MIME
+  types:
+  - psychic
+  is_legendary: false
+  base_stat_total: 460
+  hm_learnset:
+  - FLASH
+  evolution_method_required: none
+- name: SCYTHER
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: SCYTHER
+  types:
+  - bug
+  - flying
+  is_legendary: false
+  base_stat_total: 500
+  hm_learnset:
+  - CUT
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: none
+- name: JYNX
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: SMOOCHUM
+  types:
+  - ice
+  - psychic
+  is_legendary: false
+  base_stat_total: 455
+  hm_learnset: []
+  evolution_method_required: level-up
+- name: ELECTABUZZ
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: ELEKID
+  types:
+  - electric
+  is_legendary: false
+  base_stat_total: 490
+  hm_learnset:
+  - FLASH
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: level-up
+- name: MAGMAR
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: MAGBY
+  types:
+  - fire
+  is_legendary: false
+  base_stat_total: 495
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: level-up
+- name: PINSIR
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: PINSIR
+  types:
+  - bug
+  is_legendary: false
+  base_stat_total: 500
+  hm_learnset:
+  - CUT
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: none
+- name: TAUROS
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: TAUROS
+  types:
+  - normal
+  is_legendary: false
+  base_stat_total: 490
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  evolution_method_required: none
+- name: MAGIKARP
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: MAGIKARP
+  types:
+  - water
+  is_legendary: false
+  base_stat_total: 200
+  hm_learnset:
+  - SURF
+  - WATERFALL
+  evolution_method_required: none
+- name: GYARADOS
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: MAGIKARP
+  types:
+  - water
+  - flying
+  is_legendary: false
+  base_stat_total: 540
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  - WATERFALL
+  evolution_method_required: level-up
+- name: LAPRAS
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: LAPRAS
+  types:
+  - water
+  - ice
+  is_legendary: false
+  base_stat_total: 535
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  - WATERFALL
+  evolution_method_required: none
+- name: DITTO
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: DITTO
+  types:
+  - normal
+  is_legendary: false
+  base_stat_total: 288
+  hm_learnset: []
+  evolution_method_required: none
+- name: EEVEE
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: EEVEE
+  types:
+  - normal
+  is_legendary: false
+  base_stat_total: 325
+  hm_learnset: []
+  evolution_method_required: none
+- name: VAPOREON
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: EEVEE
+  types:
+  - water
+  is_legendary: false
+  base_stat_total: 525
+  hm_learnset:
+  - SURF
+  - WATERFALL
+  evolution_method_required: water_stone
+- name: JOLTEON
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: EEVEE
+  types:
+  - electric
+  is_legendary: false
+  base_stat_total: 525
+  hm_learnset:
+  - FLASH
+  evolution_method_required: thunder_stone
+- name: FLAREON
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: EEVEE
+  types:
+  - fire
+  is_legendary: false
+  base_stat_total: 525
+  hm_learnset: []
+  evolution_method_required: fire_stone
+- name: PORYGON
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: PORYGON
+  types:
+  - normal
+  is_legendary: false
+  base_stat_total: 395
+  hm_learnset:
+  - FLASH
+  evolution_method_required: none
+- name: OMANYTE
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: OMANYTE
+  types:
+  - rock
+  - water
+  is_legendary: false
+  base_stat_total: 355
+  hm_learnset:
+  - ROCK_SMASH
+  - SURF
+  - WATERFALL
+  evolution_method_required: none
+- name: OMASTAR
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: OMANYTE
+  types:
+  - rock
+  - water
+  is_legendary: false
+  base_stat_total: 495
+  hm_learnset:
+  - ROCK_SMASH
+  - SURF
+  - WATERFALL
+  evolution_method_required: level-up
+- name: KABUTO
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: KABUTO
+  types:
+  - rock
+  - water
+  is_legendary: false
+  base_stat_total: 355
+  hm_learnset:
+  - ROCK_SMASH
+  - SURF
+  evolution_method_required: none
+- name: KABUTOPS
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: KABUTO
+  types:
+  - rock
+  - water
+  is_legendary: false
+  base_stat_total: 495
+  hm_learnset:
+  - CUT
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  - WATERFALL
+  evolution_method_required: level-up
+- name: AERODACTYL
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: AERODACTYL
+  types:
+  - rock
+  - flying
+  is_legendary: false
+  base_stat_total: 515
+  hm_learnset:
+  - FLY
+  - ROCK_SMASH
+  evolution_method_required: none
+- name: SNORLAX
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: SNORLAX
+  types:
+  - normal
+  is_legendary: false
+  base_stat_total: 540
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  evolution_method_required: none
+- name: ARTICUNO
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: ARTICUNO
+  types:
+  - ice
+  - flying
+  is_legendary: true
+  base_stat_total: 580
+  hm_learnset:
+  - FLY
+  - ROCK_SMASH
+  evolution_method_required: none
+- name: ZAPDOS
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: ZAPDOS
+  types:
+  - electric
+  - flying
+  is_legendary: true
+  base_stat_total: 580
+  hm_learnset:
+  - FLASH
+  - FLY
+  - ROCK_SMASH
+  evolution_method_required: none
+- name: MOLTRES
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: MOLTRES
+  types:
+  - fire
+  - flying
+  is_legendary: true
+  base_stat_total: 580
+  hm_learnset:
+  - FLY
+  - ROCK_SMASH
+  evolution_method_required: none
+- name: DRATINI
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: DRATINI
+  types:
+  - dragon
+  is_legendary: false
+  base_stat_total: 300
+  hm_learnset:
+  - SURF
+  - WATERFALL
+  evolution_method_required: none
+- name: DRAGONAIR
+  is_fully_evolved: false
+  evo_stage: 2
+  species_line: DRATINI
+  types:
+  - dragon
+  is_legendary: false
+  base_stat_total: 420
+  hm_learnset:
+  - SURF
+  - WATERFALL
+  evolution_method_required: level-up
+- name: DRAGONITE
+  is_fully_evolved: true
+  evo_stage: 3
+  species_line: DRATINI
+  types:
+  - dragon
+  - flying
+  is_legendary: false
+  base_stat_total: 600
+  hm_learnset:
+  - FLY
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  - WATERFALL
+  evolution_method_required: level-up
+- name: MEWTWO
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: MEWTWO
+  types:
+  - psychic
+  is_legendary: true
+  base_stat_total: 680
+  hm_learnset:
+  - FLASH
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: none
+- name: MEW
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: MEW
+  types:
+  - psychic
+  is_legendary: true
+  base_stat_total: 600
+  hm_learnset:
+  - CUT
+  - DIG
+  - DIVE
+  - FLASH
+  - FLY
+  - ROCK_SMASH
+  - SOFTBOILED
+  - STRENGTH
+  - SURF
+  - TELEPORT
+  - WATERFALL
+  evolution_method_required: none
+- name: CHIKORITA
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: CHIKORITA
+  types:
+  - grass
+  is_legendary: false
+  base_stat_total: 318
+  hm_learnset:
+  - CUT
+  - FLASH
+  evolution_method_required: none
+- name: BAYLEEF
+  is_fully_evolved: false
+  evo_stage: 2
+  species_line: CHIKORITA
+  types:
+  - grass
+  is_legendary: false
+  base_stat_total: 405
+  hm_learnset:
+  - CUT
+  - FLASH
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: level-up
+- name: MEGANIUM
+  is_fully_evolved: true
+  evo_stage: 3
+  species_line: CHIKORITA
+  types:
+  - grass
+  is_legendary: false
+  base_stat_total: 525
+  hm_learnset:
+  - CUT
+  - FLASH
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: level-up
+- name: CYNDAQUIL
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: CYNDAQUIL
+  types:
+  - fire
+  is_legendary: false
+  base_stat_total: 309
+  hm_learnset:
+  - CUT
+  evolution_method_required: none
+- name: QUILAVA
+  is_fully_evolved: false
+  evo_stage: 2
+  species_line: CYNDAQUIL
+  types:
+  - fire
+  is_legendary: false
+  base_stat_total: 405
+  hm_learnset:
+  - CUT
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: level-up
+- name: TYPHLOSION
+  is_fully_evolved: true
+  evo_stage: 3
+  species_line: CYNDAQUIL
+  types:
+  - fire
+  is_legendary: false
+  base_stat_total: 534
+  hm_learnset:
+  - CUT
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: level-up
+- name: TOTODILE
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: TOTODILE
+  types:
+  - water
+  is_legendary: false
+  base_stat_total: 314
+  hm_learnset:
+  - CUT
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  - WATERFALL
+  evolution_method_required: none
+- name: CROCONAW
+  is_fully_evolved: false
+  evo_stage: 2
+  species_line: TOTODILE
+  types:
+  - water
+  is_legendary: false
+  base_stat_total: 405
+  hm_learnset:
+  - CUT
+  - DIVE
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  - WATERFALL
+  evolution_method_required: level-up
+- name: FERALIGATR
+  is_fully_evolved: true
+  evo_stage: 3
+  species_line: TOTODILE
+  types:
+  - water
+  is_legendary: false
+  base_stat_total: 530
+  hm_learnset:
+  - CUT
+  - DIVE
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  - WATERFALL
+  evolution_method_required: level-up
+- name: SENTRET
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: SENTRET
+  types:
+  - normal
+  is_legendary: false
+  base_stat_total: 215
+  hm_learnset:
+  - CUT
+  - STRENGTH
+  - SURF
+  evolution_method_required: none
+- name: FURRET
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: SENTRET
+  types:
+  - normal
+  is_legendary: false
+  base_stat_total: 415
+  hm_learnset:
+  - CUT
+  - STRENGTH
+  - SURF
+  evolution_method_required: level-up
+- name: HOOTHOOT
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: HOOTHOOT
+  types:
+  - normal
+  - flying
+  is_legendary: false
+  base_stat_total: 262
+  hm_learnset:
+  - FLY
+  evolution_method_required: none
+- name: NOCTOWL
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: HOOTHOOT
+  types:
+  - normal
+  - flying
+  is_legendary: false
+  base_stat_total: 442
+  hm_learnset:
+  - FLY
+  evolution_method_required: level-up
+- name: LEDYBA
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: LEDYBA
+  types:
+  - bug
+  - flying
+  is_legendary: false
+  base_stat_total: 265
+  hm_learnset:
+  - FLASH
+  evolution_method_required: none
+- name: LEDIAN
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: LEDYBA
+  types:
+  - bug
+  - flying
+  is_legendary: false
+  base_stat_total: 390
+  hm_learnset:
+  - FLASH
+  evolution_method_required: level-up
+- name: SPINARAK
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: SPINARAK
+  types:
+  - bug
+  - poison
+  is_legendary: false
+  base_stat_total: 250
+  hm_learnset:
+  - FLASH
+  evolution_method_required: none
+- name: ARIADOS
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: SPINARAK
+  types:
+  - bug
+  - poison
+  is_legendary: false
+  base_stat_total: 390
+  hm_learnset:
+  - FLASH
+  evolution_method_required: level-up
+- name: CROBAT
+  is_fully_evolved: true
+  evo_stage: 3
+  species_line: ZUBAT
+  types:
+  - poison
+  - flying
+  is_legendary: false
+  base_stat_total: 535
+  hm_learnset:
+  - FLY
+  evolution_method_required: happiness
+- name: CHINCHOU
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: CHINCHOU
+  types:
+  - water
+  - electric
+  is_legendary: false
+  base_stat_total: 330
+  hm_learnset:
+  - FLASH
+  - SURF
+  - WATERFALL
+  evolution_method_required: none
+- name: LANTURN
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: CHINCHOU
+  types:
+  - water
+  - electric
+  is_legendary: false
+  base_stat_total: 460
+  hm_learnset:
+  - FLASH
+  - SURF
+  - WATERFALL
+  evolution_method_required: level-up
+- name: PICHU
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: PICHU
+  types:
+  - electric
+  is_legendary: false
+  base_stat_total: 205
+  hm_learnset:
+  - FLASH
+  evolution_method_required: none
+- name: CLEFFA
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: CLEFFA
+  types:
+  - normal
+  is_legendary: false
+  base_stat_total: 218
+  hm_learnset:
+  - FLASH
+  evolution_method_required: none
+- name: IGGLYBUFF
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: IGGLYBUFF
+  types:
+  - normal
+  is_legendary: false
+  base_stat_total: 210
+  hm_learnset:
+  - FLASH
+  evolution_method_required: none
+- name: TOGEPI
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: TOGEPI
+  types:
+  - normal
+  is_legendary: false
+  base_stat_total: 245
+  hm_learnset:
+  - FLASH
+  - ROCK_SMASH
+  evolution_method_required: none
+- name: TOGETIC
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: TOGEPI
+  types:
+  - normal
+  - flying
+  is_legendary: false
+  base_stat_total: 405
+  hm_learnset:
+  - FLASH
+  - FLY
+  - ROCK_SMASH
+  evolution_method_required: happiness
+- name: NATU
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: NATU
+  types:
+  - psychic
+  - flying
+  is_legendary: false
+  base_stat_total: 320
+  hm_learnset:
+  - FLASH
+  - TELEPORT
+  evolution_method_required: none
+- name: XATU
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: NATU
+  types:
+  - psychic
+  - flying
+  is_legendary: false
+  base_stat_total: 470
+  hm_learnset:
+  - FLASH
+  - FLY
+  - TELEPORT
+  evolution_method_required: level-up
+- name: MAREEP
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: MAREEP
+  types:
+  - electric
+  is_legendary: false
+  base_stat_total: 280
+  hm_learnset:
+  - FLASH
+  evolution_method_required: none
+- name: FLAAFFY
+  is_fully_evolved: false
+  evo_stage: 2
+  species_line: MAREEP
+  types:
+  - electric
+  is_legendary: false
+  base_stat_total: 365
+  hm_learnset:
+  - FLASH
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: level-up
+- name: AMPHAROS
+  is_fully_evolved: true
+  evo_stage: 3
+  species_line: MAREEP
+  types:
+  - electric
+  is_legendary: false
+  base_stat_total: 500
+  hm_learnset:
+  - FLASH
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: level-up
+- name: BELLOSSOM
+  is_fully_evolved: true
+  evo_stage: 3
+  species_line: ODDISH
+  types:
+  - grass
+  is_legendary: false
+  base_stat_total: 480
+  hm_learnset:
+  - CUT
+  - FLASH
+  evolution_method_required: sun_stone
+- name: MARILL
+  is_fully_evolved: false
+  evo_stage: 2
+  species_line: AZURILL
+  types:
+  - water
+  is_legendary: false
+  base_stat_total: 250
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  - WATERFALL
+  evolution_method_required: happiness
+- name: AZUMARILL
+  is_fully_evolved: true
+  evo_stage: 3
+  species_line: AZURILL
+  types:
+  - water
+  is_legendary: false
+  base_stat_total: 410
+  hm_learnset:
+  - DIVE
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  - WATERFALL
+  evolution_method_required: level-up
+- name: SUDOWOODO
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: SUDOWOODO
+  types:
+  - rock
+  is_legendary: false
+  base_stat_total: 410
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: none
+- name: POLITOED
+  is_fully_evolved: true
+  evo_stage: 3
+  species_line: POLIWAG
+  types:
+  - water
+  is_legendary: false
+  base_stat_total: 500
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  - WATERFALL
+  evolution_method_required: trade_kings_rock
+- name: HOPPIP
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: HOPPIP
+  types:
+  - grass
+  - flying
+  is_legendary: false
+  base_stat_total: 250
+  hm_learnset:
+  - FLASH
+  evolution_method_required: none
+- name: SKIPLOOM
+  is_fully_evolved: false
+  evo_stage: 2
+  species_line: HOPPIP
+  types:
+  - grass
+  - flying
+  is_legendary: false
+  base_stat_total: 340
+  hm_learnset:
+  - FLASH
+  evolution_method_required: level-up
+- name: JUMPLUFF
+  is_fully_evolved: true
+  evo_stage: 3
+  species_line: HOPPIP
+  types:
+  - grass
+  - flying
+  is_legendary: false
+  base_stat_total: 450
+  hm_learnset:
+  - FLASH
+  evolution_method_required: level-up
+- name: AIPOM
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: AIPOM
+  types:
+  - normal
+  is_legendary: false
+  base_stat_total: 360
+  hm_learnset:
+  - CUT
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: none
+- name: SUNKERN
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: SUNKERN
+  types:
+  - grass
+  is_legendary: false
+  base_stat_total: 180
+  hm_learnset:
+  - CUT
+  - FLASH
+  evolution_method_required: none
+- name: SUNFLORA
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: SUNKERN
+  types:
+  - grass
+  is_legendary: false
+  base_stat_total: 425
+  hm_learnset:
+  - CUT
+  - FLASH
+  evolution_method_required: sun_stone
+- name: YANMA
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: YANMA
+  types:
+  - bug
+  - flying
+  is_legendary: false
+  base_stat_total: 390
+  hm_learnset:
+  - FLASH
+  evolution_method_required: none
+- name: WOOPER
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: WOOPER
+  types:
+  - water
+  - ground
+  is_legendary: false
+  base_stat_total: 210
+  hm_learnset:
+  - ROCK_SMASH
+  - SURF
+  - WATERFALL
+  evolution_method_required: none
+- name: QUAGSIRE
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: WOOPER
+  types:
+  - water
+  - ground
+  is_legendary: false
+  base_stat_total: 430
+  hm_learnset:
+  - DIVE
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  - WATERFALL
+  evolution_method_required: level-up
+- name: ESPEON
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: EEVEE
+  types:
+  - psychic
+  is_legendary: false
+  base_stat_total: 525
+  hm_learnset:
+  - FLASH
+  evolution_method_required: happiness
+- name: UMBREON
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: EEVEE
+  types:
+  - dark
+  is_legendary: false
+  base_stat_total: 525
+  hm_learnset:
+  - FLASH
+  evolution_method_required: happiness
+- name: MURKROW
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: MURKROW
+  types:
+  - dark
+  - flying
+  is_legendary: false
+  base_stat_total: 405
+  hm_learnset:
+  - FLY
+  evolution_method_required: none
+- name: SLOWKING
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: SLOWPOKE
+  types:
+  - water
+  - psychic
+  is_legendary: false
+  base_stat_total: 490
+  hm_learnset:
+  - DIG
+  - FLASH
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  evolution_method_required: trade_kings_rock
+- name: MISDREAVUS
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: MISDREAVUS
+  types:
+  - ghost
+  is_legendary: false
+  base_stat_total: 435
+  hm_learnset:
+  - FLASH
+  evolution_method_required: none
+- name: UNOWN
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: UNOWN
+  types:
+  - psychic
+  is_legendary: false
+  base_stat_total: 336
+  hm_learnset:
+  - FLASH
+  evolution_method_required: none
+- name: WOBBUFFET
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: WOBBUFFET
+  types:
+  - psychic
+  is_legendary: false
+  base_stat_total: 405
+  hm_learnset:
+  - FLASH
+  evolution_method_required: none
+- name: GIRAFARIG
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: GIRAFARIG
+  types:
+  - normal
+  - psychic
+  is_legendary: false
+  base_stat_total: 455
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: none
+- name: PINECO
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: PINECO
+  types:
+  - bug
+  is_legendary: false
+  base_stat_total: 290
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: none
+- name: FORRETRESS
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: PINECO
+  types:
+  - bug
+  - steel
+  is_legendary: false
+  base_stat_total: 465
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: level-up
+- name: DUNSPARCE
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: DUNSPARCE
+  types:
+  - normal
+  is_legendary: false
+  base_stat_total: 415
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: none
+- name: GLIGAR
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: GLIGAR
+  types:
+  - ground
+  - flying
+  is_legendary: false
+  base_stat_total: 430
+  hm_learnset:
+  - CUT
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: none
+- name: STEELIX
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: ONIX
+  types:
+  - steel
+  - ground
+  is_legendary: false
+  base_stat_total: 510
+  hm_learnset:
+  - CUT
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: trade_metal_coat
+- name: SNUBBULL
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: SNUBBULL
+  types:
+  - normal
+  is_legendary: false
+  base_stat_total: 300
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: none
+- name: GRANBULL
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: SNUBBULL
+  types:
+  - normal
+  is_legendary: false
+  base_stat_total: 450
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: level-up
+- name: QWILFISH
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: QWILFISH
+  types:
+  - water
+  - poison
+  is_legendary: false
+  base_stat_total: 430
+  hm_learnset:
+  - SURF
+  - WATERFALL
+  evolution_method_required: none
+- name: SCIZOR
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: SCYTHER
+  types:
+  - bug
+  - steel
+  is_legendary: false
+  base_stat_total: 500
+  hm_learnset:
+  - CUT
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: trade_metal_coat
+- name: SHUCKLE
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: SHUCKLE
+  types:
+  - bug
+  - rock
+  is_legendary: false
+  base_stat_total: 505
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: none
+- name: HERACROSS
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: HERACROSS
+  types:
+  - bug
+  - fighting
+  is_legendary: false
+  base_stat_total: 500
+  hm_learnset:
+  - CUT
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: none
+- name: SNEASEL
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: SNEASEL
+  types:
+  - dark
+  - ice
+  is_legendary: false
+  base_stat_total: 430
+  hm_learnset:
+  - CUT
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  evolution_method_required: none
+- name: TEDDIURSA
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: TEDDIURSA
+  types:
+  - normal
+  is_legendary: false
+  base_stat_total: 330
+  hm_learnset:
+  - CUT
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: none
+- name: URSARING
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: TEDDIURSA
+  types:
+  - normal
+  is_legendary: false
+  base_stat_total: 500
+  hm_learnset:
+  - CUT
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: level-up
+- name: SLUGMA
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: SLUGMA
+  types:
+  - fire
+  is_legendary: false
+  base_stat_total: 250
+  hm_learnset:
+  - ROCK_SMASH
+  evolution_method_required: none
+- name: MAGCARGO
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: SLUGMA
+  types:
+  - fire
+  - rock
+  is_legendary: false
+  base_stat_total: 410
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: level-up
+- name: SWINUB
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: SWINUB
+  types:
+  - ice
+  - ground
+  is_legendary: false
+  base_stat_total: 250
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: none
+- name: PILOSWINE
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: SWINUB
+  types:
+  - ice
+  - ground
+  is_legendary: false
+  base_stat_total: 450
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: level-up
+- name: CORSOLA
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: CORSOLA
+  types:
+  - water
+  - rock
+  is_legendary: false
+  base_stat_total: 380
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  evolution_method_required: none
+- name: REMORAID
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: REMORAID
+  types:
+  - water
+  is_legendary: false
+  base_stat_total: 300
+  hm_learnset:
+  - SURF
+  evolution_method_required: none
+- name: OCTILLERY
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: REMORAID
+  types:
+  - water
+  is_legendary: false
+  base_stat_total: 480
+  hm_learnset:
+  - SURF
+  evolution_method_required: level-up
+- name: DELIBIRD
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: DELIBIRD
+  types:
+  - ice
+  - flying
+  is_legendary: false
+  base_stat_total: 330
+  hm_learnset:
+  - FLY
+  evolution_method_required: none
+- name: MANTINE
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: MANTINE
+  types:
+  - water
+  - flying
+  is_legendary: false
+  base_stat_total: 465
+  hm_learnset:
+  - DIVE
+  - SURF
+  - WATERFALL
+  evolution_method_required: none
+- name: SKARMORY
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: SKARMORY
+  types:
+  - steel
+  - flying
+  is_legendary: false
+  base_stat_total: 465
+  hm_learnset:
+  - CUT
+  - FLY
+  evolution_method_required: none
+- name: HOUNDOUR
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: HOUNDOUR
+  types:
+  - dark
+  - fire
+  is_legendary: false
+  base_stat_total: 330
+  hm_learnset:
+  - ROCK_SMASH
+  evolution_method_required: none
+- name: HOUNDOOM
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: HOUNDOUR
+  types:
+  - dark
+  - fire
+  is_legendary: false
+  base_stat_total: 500
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: level-up
+- name: KINGDRA
+  is_fully_evolved: true
+  evo_stage: 3
+  species_line: HORSEA
+  types:
+  - water
+  - dragon
+  is_legendary: false
+  base_stat_total: 540
+  hm_learnset:
+  - SURF
+  - WATERFALL
+  evolution_method_required: trade_dragon_scale
+- name: PHANPY
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: PHANPY
+  types:
+  - ground
+  is_legendary: false
+  base_stat_total: 330
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: none
+- name: DONPHAN
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: PHANPY
+  types:
+  - ground
+  is_legendary: false
+  base_stat_total: 500
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: level-up
+- name: PORYGON2
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: PORYGON
+  types:
+  - normal
+  is_legendary: false
+  base_stat_total: 515
+  hm_learnset:
+  - FLASH
+  evolution_method_required: trade_upgrade
+- name: STANTLER
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: STANTLER
+  types:
+  - normal
+  is_legendary: false
+  base_stat_total: 465
+  hm_learnset:
+  - FLASH
+  - STRENGTH
+  evolution_method_required: none
+- name: SMEARGLE
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: SMEARGLE
+  types:
+  - normal
+  is_legendary: false
+  base_stat_total: 250
+  hm_learnset: []
+  evolution_method_required: none
+- name: TYROGUE
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: TYROGUE
+  types:
+  - fighting
+  is_legendary: false
+  base_stat_total: 210
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: none
+- name: HITMONTOP
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: TYROGUE
+  types:
+  - fighting
+  is_legendary: false
+  base_stat_total: 455
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: level-up_atk_equal_def
+- name: SMOOCHUM
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: SMOOCHUM
+  types:
+  - ice
+  - psychic
+  is_legendary: false
+  base_stat_total: 305
+  hm_learnset:
+  - FLASH
+  evolution_method_required: none
+- name: ELEKID
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: ELEKID
+  types:
+  - electric
+  is_legendary: false
+  base_stat_total: 360
+  hm_learnset:
+  - FLASH
+  evolution_method_required: none
+- name: MAGBY
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: MAGBY
+  types:
+  - fire
+  is_legendary: false
+  base_stat_total: 365
+  hm_learnset: []
+  evolution_method_required: none
+- name: MILTANK
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: MILTANK
+  types:
+  - normal
+  is_legendary: false
+  base_stat_total: 490
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  evolution_method_required: none
+- name: BLISSEY
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: CHANSEY
+  types:
+  - normal
+  is_legendary: false
+  base_stat_total: 540
+  hm_learnset:
+  - FLASH
+  - ROCK_SMASH
+  - SOFTBOILED
+  - STRENGTH
+  evolution_method_required: happiness
+- name: RAIKOU
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: RAIKOU
+  types:
+  - electric
+  is_legendary: true
+  base_stat_total: 580
+  hm_learnset:
+  - DIG
+  - FLASH
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  evolution_method_required: none
+- name: ENTEI
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: ENTEI
+  types:
+  - fire
+  is_legendary: true
+  base_stat_total: 580
+  hm_learnset:
+  - DIG
+  - FLASH
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  evolution_method_required: none
+- name: SUICUNE
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: SUICUNE
+  types:
+  - water
+  is_legendary: true
+  base_stat_total: 580
+  hm_learnset:
+  - DIG
+  - DIVE
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  - WATERFALL
+  evolution_method_required: none
+- name: LARVITAR
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: LARVITAR
+  types:
+  - rock
+  - ground
+  is_legendary: false
+  base_stat_total: 300
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: none
+- name: PUPITAR
+  is_fully_evolved: false
+  evo_stage: 2
+  species_line: LARVITAR
+  types:
+  - rock
+  - ground
+  is_legendary: false
+  base_stat_total: 410
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: level-up
+- name: TYRANITAR
+  is_fully_evolved: true
+  evo_stage: 3
+  species_line: LARVITAR
+  types:
+  - rock
+  - dark
+  is_legendary: false
+  base_stat_total: 600
+  hm_learnset:
+  - CUT
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  evolution_method_required: level-up
+- name: LUGIA
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: LUGIA
+  types:
+  - psychic
+  - flying
+  is_legendary: true
+  base_stat_total: 680
+  hm_learnset:
+  - FLY
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  - WATERFALL
+  evolution_method_required: none
+- name: HO-OH
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: HO-OH
+  types:
+  - fire
+  - flying
+  is_legendary: true
+  base_stat_total: 680
+  hm_learnset:
+  - FLASH
+  - FLY
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: none
+- name: CELEBI
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: CELEBI
+  types:
+  - psychic
+  - grass
+  is_legendary: true
+  base_stat_total: 600
+  hm_learnset:
+  - FLASH
+  evolution_method_required: none
+- name: TREECKO
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: TREECKO
+  types:
+  - grass
+  is_legendary: false
+  base_stat_total: 310
+  hm_learnset:
+  - CUT
+  - ROCK_SMASH
+  evolution_method_required: none
+- name: GROVYLE
+  is_fully_evolved: false
+  evo_stage: 2
+  species_line: TREECKO
+  types:
+  - grass
+  is_legendary: false
+  base_stat_total: 405
+  hm_learnset:
+  - CUT
+  - ROCK_SMASH
+  evolution_method_required: level-up
+- name: SCEPTILE
+  is_fully_evolved: true
+  evo_stage: 3
+  species_line: TREECKO
+  types:
+  - grass
+  is_legendary: false
+  base_stat_total: 530
+  hm_learnset:
+  - CUT
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: level-up
+- name: TORCHIC
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: TORCHIC
+  types:
+  - fire
+  is_legendary: false
+  base_stat_total: 310
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: none
+- name: COMBUSKEN
+  is_fully_evolved: false
+  evo_stage: 2
+  species_line: TORCHIC
+  types:
+  - fire
+  - fighting
+  is_legendary: false
+  base_stat_total: 405
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: level-up
+- name: BLAZIKEN
+  is_fully_evolved: true
+  evo_stage: 3
+  species_line: TORCHIC
+  types:
+  - fire
+  - fighting
+  is_legendary: false
+  base_stat_total: 530
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: level-up
+- name: MUDKIP
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: MUDKIP
+  types:
+  - water
+  is_legendary: false
+  base_stat_total: 310
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  - WATERFALL
+  evolution_method_required: none
+- name: MARSHTOMP
+  is_fully_evolved: false
+  evo_stage: 2
+  species_line: MUDKIP
+  types:
+  - water
+  - ground
+  is_legendary: false
+  base_stat_total: 405
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  - WATERFALL
+  evolution_method_required: level-up
+- name: SWAMPERT
+  is_fully_evolved: true
+  evo_stage: 3
+  species_line: MUDKIP
+  types:
+  - water
+  - ground
+  is_legendary: false
+  base_stat_total: 535
+  hm_learnset:
+  - DIVE
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  - WATERFALL
+  evolution_method_required: level-up
+- name: POOCHYENA
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: POOCHYENA
+  types:
+  - dark
+  is_legendary: false
+  base_stat_total: 220
+  hm_learnset:
+  - STRENGTH
+  evolution_method_required: none
+- name: MIGHTYENA
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: POOCHYENA
+  types:
+  - dark
+  is_legendary: false
+  base_stat_total: 420
+  hm_learnset:
+  - STRENGTH
+  evolution_method_required: level-up
+- name: ZIGZAGOON
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: ZIGZAGOON
+  types:
+  - normal
+  is_legendary: false
+  base_stat_total: 240
+  hm_learnset:
+  - CUT
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  evolution_method_required: none
+- name: LINOONE
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: ZIGZAGOON
+  types:
+  - normal
+  is_legendary: false
+  base_stat_total: 420
+  hm_learnset:
+  - CUT
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  evolution_method_required: level-up
+- name: WURMPLE
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: WURMPLE
+  types:
+  - bug
+  is_legendary: false
+  base_stat_total: 195
+  hm_learnset: []
+  evolution_method_required: none
+- name: SILCOON
+  is_fully_evolved: false
+  evo_stage: 2
+  species_line: WURMPLE
+  types:
+  - bug
+  is_legendary: false
+  base_stat_total: 205
+  hm_learnset: []
+  evolution_method_required: level-up
+- name: BEAUTIFLY
+  is_fully_evolved: true
+  evo_stage: 3
+  species_line: WURMPLE
+  types:
+  - bug
+  - flying
+  is_legendary: false
+  base_stat_total: 385
+  hm_learnset:
+  - FLASH
+  evolution_method_required: level-up
+- name: CASCOON
+  is_fully_evolved: false
+  evo_stage: 2
+  species_line: WURMPLE
+  types:
+  - bug
+  is_legendary: false
+  base_stat_total: 205
+  hm_learnset: []
+  evolution_method_required: level-up
+- name: DUSTOX
+  is_fully_evolved: true
+  evo_stage: 3
+  species_line: WURMPLE
+  types:
+  - bug
+  - poison
+  is_legendary: false
+  base_stat_total: 385
+  hm_learnset:
+  - FLASH
+  evolution_method_required: level-up
+- name: LOTAD
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: LOTAD
+  types:
+  - water
+  - grass
+  is_legendary: false
+  base_stat_total: 220
+  hm_learnset:
+  - SURF
+  evolution_method_required: none
+- name: LOMBRE
+  is_fully_evolved: false
+  evo_stage: 2
+  species_line: LOTAD
+  types:
+  - water
+  - grass
+  is_legendary: false
+  base_stat_total: 340
+  hm_learnset:
+  - SURF
+  - WATERFALL
+  evolution_method_required: level-up
+- name: LUDICOLO
+  is_fully_evolved: true
+  evo_stage: 3
+  species_line: LOTAD
+  types:
+  - water
+  - grass
+  is_legendary: false
+  base_stat_total: 480
+  hm_learnset:
+  - DIVE
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  - WATERFALL
+  evolution_method_required: water_stone
+- name: SEEDOT
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: SEEDOT
+  types:
+  - grass
+  is_legendary: false
+  base_stat_total: 220
+  hm_learnset: []
+  evolution_method_required: none
+- name: NUZLEAF
+  is_fully_evolved: false
+  evo_stage: 2
+  species_line: SEEDOT
+  types:
+  - grass
+  - dark
+  is_legendary: false
+  base_stat_total: 340
+  hm_learnset:
+  - CUT
+  - STRENGTH
+  evolution_method_required: level-up
+- name: SHIFTRY
+  is_fully_evolved: true
+  evo_stage: 3
+  species_line: SEEDOT
+  types:
+  - grass
+  - dark
+  is_legendary: false
+  base_stat_total: 480
+  hm_learnset:
+  - CUT
+  - STRENGTH
+  evolution_method_required: leaf_stone
+- name: TAILLOW
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: TAILLOW
+  types:
+  - normal
+  - flying
+  is_legendary: false
+  base_stat_total: 270
+  hm_learnset:
+  - FLY
+  evolution_method_required: none
+- name: SWELLOW
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: TAILLOW
+  types:
+  - normal
+  - flying
+  is_legendary: false
+  base_stat_total: 430
+  hm_learnset:
+  - FLY
+  evolution_method_required: level-up
+- name: WINGULL
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: WINGULL
+  types:
+  - water
+  - flying
+  is_legendary: false
+  base_stat_total: 270
+  hm_learnset:
+  - FLY
+  - SURF
+  - WATERFALL
+  evolution_method_required: none
+- name: PELIPPER
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: WINGULL
+  types:
+  - water
+  - flying
+  is_legendary: false
+  base_stat_total: 430
+  hm_learnset:
+  - FLY
+  - SURF
+  - WATERFALL
+  evolution_method_required: level-up
+- name: RALTS
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: RALTS
+  types:
+  - psychic
+  is_legendary: false
+  base_stat_total: 198
+  hm_learnset:
+  - FLASH
+  evolution_method_required: none
+- name: KIRLIA
+  is_fully_evolved: false
+  evo_stage: 2
+  species_line: RALTS
+  types:
+  - psychic
+  is_legendary: false
+  base_stat_total: 278
+  hm_learnset:
+  - FLASH
+  evolution_method_required: level-up
+- name: GARDEVOIR
+  is_fully_evolved: true
+  evo_stage: 3
+  species_line: RALTS
+  types:
+  - psychic
+  is_legendary: false
+  base_stat_total: 518
+  hm_learnset:
+  - FLASH
+  evolution_method_required: level-up
+- name: SURSKIT
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: SURSKIT
+  types:
+  - bug
+  - water
+  is_legendary: false
+  base_stat_total: 269
+  hm_learnset:
+  - SURF
+  evolution_method_required: none
+- name: MASQUERAIN
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: SURSKIT
+  types:
+  - bug
+  - flying
+  is_legendary: false
+  base_stat_total: 414
+  hm_learnset:
+  - FLY
+  - SURF
+  evolution_method_required: level-up
+- name: SHROOMISH
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: SHROOMISH
+  types:
+  - grass
+  is_legendary: false
+  base_stat_total: 295
+  hm_learnset:
+  - FLASH
+  - STRENGTH
+  evolution_method_required: none
+- name: BRELOOM
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: SHROOMISH
+  types:
+  - grass
+  - fighting
+  is_legendary: false
+  base_stat_total: 460
+  hm_learnset:
+  - FLASH
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: level-up
+- name: SLAKOTH
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: SLAKOTH
+  types:
+  - normal
+  is_legendary: false
+  base_stat_total: 280
+  hm_learnset:
+  - CUT
+  - STRENGTH
+  evolution_method_required: none
+- name: VIGOROTH
+  is_fully_evolved: false
+  evo_stage: 2
+  species_line: SLAKOTH
+  types:
+  - normal
+  is_legendary: false
+  base_stat_total: 440
+  hm_learnset:
+  - CUT
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: level-up
+- name: SLAKING
+  is_fully_evolved: true
+  evo_stage: 3
+  species_line: SLAKOTH
+  types:
+  - normal
+  is_legendary: false
+  base_stat_total: 670
+  hm_learnset:
+  - CUT
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  evolution_method_required: level-up
+- name: NINCADA
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: NINCADA
+  types:
+  - bug
+  - ground
+  is_legendary: false
+  base_stat_total: 266
+  hm_learnset:
+  - CUT
+  - FLASH
+  - ROCK_SMASH
+  evolution_method_required: none
+- name: NINJASK
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: NINCADA
+  types:
+  - bug
+  - flying
+  is_legendary: false
+  base_stat_total: 456
+  hm_learnset:
+  - CUT
+  - FLASH
+  - ROCK_SMASH
+  evolution_method_required: level-up
+- name: SHEDINJA
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: NINCADA
+  types:
+  - bug
+  - ghost
+  is_legendary: false
+  base_stat_total: 236
+  hm_learnset:
+  - CUT
+  - FLASH
+  - ROCK_SMASH
+  evolution_method_required: level-up_shedinja
+- name: WHISMUR
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: WHISMUR
+  types:
+  - normal
+  is_legendary: false
+  base_stat_total: 240
+  hm_learnset:
+  - STRENGTH
+  evolution_method_required: none
+- name: LOUDRED
+  is_fully_evolved: false
+  evo_stage: 2
+  species_line: WHISMUR
+  types:
+  - normal
+  is_legendary: false
+  base_stat_total: 360
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: level-up
+- name: EXPLOUD
+  is_fully_evolved: true
+  evo_stage: 3
+  species_line: WHISMUR
+  types:
+  - normal
+  is_legendary: false
+  base_stat_total: 480
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  evolution_method_required: level-up
+- name: MAKUHITA
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: MAKUHITA
+  types:
+  - fighting
+  is_legendary: false
+  base_stat_total: 237
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: none
+- name: HARIYAMA
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: MAKUHITA
+  types:
+  - fighting
+  is_legendary: false
+  base_stat_total: 474
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  evolution_method_required: level-up
+- name: AZURILL
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: AZURILL
+  types:
+  - normal
+  is_legendary: false
+  base_stat_total: 190
+  hm_learnset: []
+  evolution_method_required: none
+- name: NOSEPASS
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: NOSEPASS
+  types:
+  - rock
+  is_legendary: false
+  base_stat_total: 375
+  hm_learnset:
+  - FLASH
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: none
+- name: SKITTY
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: SKITTY
+  types:
+  - normal
+  is_legendary: false
+  base_stat_total: 260
+  hm_learnset: []
+  evolution_method_required: none
+- name: DELCATTY
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: SKITTY
+  types:
+  - normal
+  is_legendary: false
+  base_stat_total: 380
+  hm_learnset: []
+  evolution_method_required: moon_stone
+- name: SABLEYE
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: SABLEYE
+  types:
+  - dark
+  - ghost
+  is_legendary: false
+  base_stat_total: 380
+  hm_learnset:
+  - FLASH
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: none
+- name: MAWILE
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: MAWILE
+  types:
+  - steel
+  is_legendary: false
+  base_stat_total: 380
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: none
+- name: ARON
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: ARON
+  types:
+  - steel
+  - rock
+  is_legendary: false
+  base_stat_total: 330
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: none
+- name: LAIRON
+  is_fully_evolved: false
+  evo_stage: 2
+  species_line: ARON
+  types:
+  - steel
+  - rock
+  is_legendary: false
+  base_stat_total: 430
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: level-up
+- name: AGGRON
+  is_fully_evolved: true
+  evo_stage: 3
+  species_line: ARON
+  types:
+  - steel
+  - rock
+  is_legendary: false
+  base_stat_total: 530
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  evolution_method_required: level-up
+- name: MEDITITE
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: MEDITITE
+  types:
+  - fighting
+  - psychic
+  is_legendary: false
+  base_stat_total: 280
+  hm_learnset:
+  - FLASH
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: none
+- name: MEDICHAM
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: MEDITITE
+  types:
+  - fighting
+  - psychic
+  is_legendary: false
+  base_stat_total: 410
+  hm_learnset:
+  - FLASH
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: level-up
+- name: ELECTRIKE
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: ELECTRIKE
+  types:
+  - electric
+  is_legendary: false
+  base_stat_total: 295
+  hm_learnset:
+  - FLASH
+  evolution_method_required: none
+- name: MANECTRIC
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: ELECTRIKE
+  types:
+  - electric
+  is_legendary: false
+  base_stat_total: 475
+  hm_learnset:
+  - FLASH
+  evolution_method_required: level-up
+- name: PLUSLE
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: PLUSLE
+  types:
+  - electric
+  is_legendary: false
+  base_stat_total: 405
+  hm_learnset:
+  - FLASH
+  evolution_method_required: none
+- name: MINUN
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: MINUN
+  types:
+  - electric
+  is_legendary: false
+  base_stat_total: 405
+  hm_learnset:
+  - FLASH
+  evolution_method_required: none
+- name: VOLBEAT
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: VOLBEAT
+  types:
+  - bug
+  is_legendary: false
+  base_stat_total: 400
+  hm_learnset:
+  - FLASH
+  evolution_method_required: none
+- name: ILLUMISE
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: ILLUMISE
+  types:
+  - bug
+  is_legendary: false
+  base_stat_total: 400
+  hm_learnset:
+  - FLASH
+  evolution_method_required: none
+- name: ROSELIA
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: ROSELIA
+  types:
+  - grass
+  - poison
+  is_legendary: false
+  base_stat_total: 400
+  hm_learnset:
+  - CUT
+  - FLASH
+  evolution_method_required: none
+- name: GULPIN
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: GULPIN
+  types:
+  - poison
+  is_legendary: false
+  base_stat_total: 302
+  hm_learnset:
+  - STRENGTH
+  evolution_method_required: none
+- name: SWALOT
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: GULPIN
+  types:
+  - poison
+  is_legendary: false
+  base_stat_total: 467
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  evolution_method_required: level-up
+- name: CARVANHA
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: CARVANHA
+  types:
+  - water
+  - dark
+  is_legendary: false
+  base_stat_total: 305
+  hm_learnset:
+  - SURF
+  - WATERFALL
+  evolution_method_required: none
+- name: SHARPEDO
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: CARVANHA
+  types:
+  - water
+  - dark
+  is_legendary: false
+  base_stat_total: 460
+  hm_learnset:
+  - DIVE
+  - SURF
+  - WATERFALL
+  evolution_method_required: level-up
+- name: WAILMER
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: WAILMER
+  types:
+  - water
+  is_legendary: false
+  base_stat_total: 400
+  hm_learnset:
+  - DIVE
+  - SURF
+  - WATERFALL
+  evolution_method_required: none
+- name: WAILORD
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: WAILMER
+  types:
+  - water
+  is_legendary: false
+  base_stat_total: 500
+  hm_learnset:
+  - DIVE
+  - SURF
+  - WATERFALL
+  evolution_method_required: level-up
+- name: NUMEL
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: NUMEL
+  types:
+  - fire
+  - ground
+  is_legendary: false
+  base_stat_total: 305
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  evolution_method_required: none
+- name: CAMERUPT
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: NUMEL
+  types:
+  - fire
+  - ground
+  is_legendary: false
+  base_stat_total: 460
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  evolution_method_required: level-up
+- name: TORKOAL
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: TORKOAL
+  types:
+  - fire
+  is_legendary: false
+  base_stat_total: 470
+  hm_learnset:
+  - FLASH
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: none
+- name: SPOINK
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: SPOINK
+  types:
+  - psychic
+  is_legendary: false
+  base_stat_total: 330
+  hm_learnset:
+  - FLASH
+  - STRENGTH
+  evolution_method_required: none
+- name: GRUMPIG
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: SPOINK
+  types:
+  - psychic
+  is_legendary: false
+  base_stat_total: 470
+  hm_learnset:
+  - FLASH
+  - STRENGTH
+  evolution_method_required: level-up
+- name: SPINDA
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: SPINDA
+  types:
+  - normal
+  is_legendary: false
+  base_stat_total: 360
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: none
+- name: TRAPINCH
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: TRAPINCH
+  types:
+  - ground
+  is_legendary: false
+  base_stat_total: 290
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: none
+- name: VIBRAVA
+  is_fully_evolved: false
+  evo_stage: 2
+  species_line: TRAPINCH
+  types:
+  - ground
+  - dragon
+  is_legendary: false
+  base_stat_total: 340
+  hm_learnset:
+  - FLY
+  - STRENGTH
+  evolution_method_required: level-up
+- name: FLYGON
+  is_fully_evolved: true
+  evo_stage: 3
+  species_line: TRAPINCH
+  types:
+  - ground
+  - dragon
+  is_legendary: false
+  base_stat_total: 520
+  hm_learnset:
+  - FLY
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: level-up
+- name: CACNEA
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: CACNEA
+  types:
+  - grass
+  is_legendary: false
+  base_stat_total: 335
+  hm_learnset:
+  - CUT
+  - STRENGTH
+  evolution_method_required: none
+- name: CACTURNE
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: CACNEA
+  types:
+  - grass
+  - dark
+  is_legendary: false
+  base_stat_total: 475
+  hm_learnset:
+  - CUT
+  - STRENGTH
+  evolution_method_required: level-up
+- name: SWABLU
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: SWABLU
+  types:
+  - normal
+  - flying
+  is_legendary: false
+  base_stat_total: 310
+  hm_learnset:
+  - FLY
+  evolution_method_required: none
+- name: ALTARIA
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: SWABLU
+  types:
+  - dragon
+  - flying
+  is_legendary: false
+  base_stat_total: 490
+  hm_learnset:
+  - FLY
+  evolution_method_required: level-up
+- name: ZANGOOSE
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: ZANGOOSE
+  types:
+  - normal
+  is_legendary: false
+  base_stat_total: 458
+  hm_learnset:
+  - CUT
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: none
+- name: SEVIPER
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: SEVIPER
+  types:
+  - poison
+  is_legendary: false
+  base_stat_total: 458
+  hm_learnset:
+  - STRENGTH
+  evolution_method_required: none
+- name: LUNATONE
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: LUNATONE
+  types:
+  - rock
+  - psychic
+  is_legendary: false
+  base_stat_total: 440
+  hm_learnset:
+  - FLASH
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: none
+- name: SOLROCK
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: SOLROCK
+  types:
+  - rock
+  - psychic
+  is_legendary: false
+  base_stat_total: 440
+  hm_learnset:
+  - FLASH
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: none
+- name: BARBOACH
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: BARBOACH
+  types:
+  - water
+  - ground
+  is_legendary: false
+  base_stat_total: 288
+  hm_learnset:
+  - SURF
+  - WATERFALL
+  evolution_method_required: none
+- name: WHISCASH
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: BARBOACH
+  types:
+  - water
+  - ground
+  is_legendary: false
+  base_stat_total: 468
+  hm_learnset:
+  - DIVE
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  - WATERFALL
+  evolution_method_required: level-up
+- name: CORPHISH
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: CORPHISH
+  types:
+  - water
+  is_legendary: false
+  base_stat_total: 308
+  hm_learnset:
+  - CUT
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  - WATERFALL
+  evolution_method_required: none
+- name: CRAWDAUNT
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: CORPHISH
+  types:
+  - water
+  - dark
+  is_legendary: false
+  base_stat_total: 468
+  hm_learnset:
+  - CUT
+  - DIVE
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  - WATERFALL
+  evolution_method_required: level-up
+- name: BALTOY
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: BALTOY
+  types:
+  - ground
+  - psychic
+  is_legendary: false
+  base_stat_total: 300
+  hm_learnset:
+  - FLASH
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: none
+- name: CLAYDOL
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: BALTOY
+  types:
+  - ground
+  - psychic
+  is_legendary: false
+  base_stat_total: 500
+  hm_learnset:
+  - FLASH
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: level-up
+- name: LILEEP
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: LILEEP
+  types:
+  - rock
+  - grass
+  is_legendary: false
+  base_stat_total: 355
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  evolution_method_required: none
+- name: CRADILY
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: LILEEP
+  types:
+  - rock
+  - grass
+  is_legendary: false
+  base_stat_total: 495
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  evolution_method_required: level-up
+- name: ANORITH
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: ANORITH
+  types:
+  - rock
+  - bug
+  is_legendary: false
+  base_stat_total: 355
+  hm_learnset:
+  - CUT
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  evolution_method_required: none
+- name: ARMALDO
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: ANORITH
+  types:
+  - rock
+  - bug
+  is_legendary: false
+  base_stat_total: 495
+  hm_learnset:
+  - CUT
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  evolution_method_required: level-up
+- name: FEEBAS
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: FEEBAS
+  types:
+  - water
+  is_legendary: false
+  base_stat_total: 200
+  hm_learnset:
+  - SURF
+  - WATERFALL
+  evolution_method_required: none
+- name: MILOTIC
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: FEEBAS
+  types:
+  - water
+  is_legendary: false
+  base_stat_total: 540
+  hm_learnset:
+  - DIVE
+  - SURF
+  - WATERFALL
+  evolution_method_required: level-up_beauty
+- name: CASTFORM
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: CASTFORM
+  types:
+  - normal
+  is_legendary: false
+  base_stat_total: 420
+  hm_learnset:
+  - FLASH
+  evolution_method_required: none
+- name: KECLEON
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: KECLEON
+  types:
+  - normal
+  is_legendary: false
+  base_stat_total: 440
+  hm_learnset:
+  - CUT
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: none
+- name: SHUPPET
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: SHUPPET
+  types:
+  - ghost
+  is_legendary: false
+  base_stat_total: 295
+  hm_learnset:
+  - STRENGTH
+  evolution_method_required: none
+- name: BANETTE
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: SHUPPET
+  types:
+  - ghost
+  is_legendary: false
+  base_stat_total: 455
+  hm_learnset:
+  - STRENGTH
+  evolution_method_required: level-up
+- name: DUSKULL
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: DUSKULL
+  types:
+  - ghost
+  is_legendary: false
+  base_stat_total: 295
+  hm_learnset:
+  - FLASH
+  - STRENGTH
+  evolution_method_required: none
+- name: DUSCLOPS
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: DUSKULL
+  types:
+  - ghost
+  is_legendary: false
+  base_stat_total: 455
+  hm_learnset:
+  - FLASH
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: level-up
+- name: TROPIUS
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: TROPIUS
+  types:
+  - grass
+  - flying
+  is_legendary: false
+  base_stat_total: 460
+  hm_learnset:
+  - CUT
+  - FLY
+  - STRENGTH
+  evolution_method_required: none
+- name: CHIMECHO
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: CHIMECHO
+  types:
+  - psychic
+  is_legendary: false
+  base_stat_total: 425
+  hm_learnset:
+  - FLASH
+  - STRENGTH
+  evolution_method_required: none
+- name: ABSOL
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: ABSOL
+  types:
+  - dark
+  is_legendary: false
+  base_stat_total: 465
+  hm_learnset:
+  - CUT
+  - FLASH
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  evolution_method_required: none
+- name: WYNAUT
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: WOBBUFFET
+  types:
+  - psychic
+  is_legendary: false
+  base_stat_total: 260
+  hm_learnset:
+  - FLASH
+  evolution_method_required: none
+- name: SNORUNT
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: SNORUNT
+  types:
+  - ice
+  is_legendary: false
+  base_stat_total: 300
+  hm_learnset:
+  - FLASH
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: none
+- name: GLALIE
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: SNORUNT
+  types:
+  - ice
+  is_legendary: false
+  base_stat_total: 480
+  hm_learnset:
+  - FLASH
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: level-up
+- name: SPHEAL
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: SPHEAL
+  types:
+  - ice
+  - water
+  is_legendary: false
+  base_stat_total: 290
+  hm_learnset:
+  - DIVE
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  - WATERFALL
+  evolution_method_required: none
+- name: SEALEO
+  is_fully_evolved: false
+  evo_stage: 2
+  species_line: SPHEAL
+  types:
+  - ice
+  - water
+  is_legendary: false
+  base_stat_total: 410
+  hm_learnset:
+  - DIVE
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  - WATERFALL
+  evolution_method_required: level-up
+- name: WALREIN
+  is_fully_evolved: true
+  evo_stage: 3
+  species_line: SPHEAL
+  types:
+  - ice
+  - water
+  is_legendary: false
+  base_stat_total: 530
+  hm_learnset:
+  - DIVE
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  - WATERFALL
+  evolution_method_required: level-up
+- name: CLAMPERL
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: CLAMPERL
+  types:
+  - water
+  is_legendary: false
+  base_stat_total: 345
+  hm_learnset:
+  - DIVE
+  - SURF
+  - WATERFALL
+  evolution_method_required: none
+- name: HUNTAIL
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: CLAMPERL
+  types:
+  - water
+  is_legendary: false
+  base_stat_total: 485
+  hm_learnset:
+  - DIVE
+  - SURF
+  - WATERFALL
+  evolution_method_required: trade_deepseatooth
+- name: GOREBYSS
+  is_fully_evolved: true
+  evo_stage: 2
+  species_line: CLAMPERL
+  types:
+  - water
+  is_legendary: false
+  base_stat_total: 485
+  hm_learnset:
+  - DIVE
+  - SURF
+  - WATERFALL
+  evolution_method_required: trade_deepseascale
+- name: RELICANTH
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: RELICANTH
+  types:
+  - water
+  - rock
+  is_legendary: false
+  base_stat_total: 485
+  hm_learnset:
+  - DIVE
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  - WATERFALL
+  evolution_method_required: none
+- name: LUVDISC
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: LUVDISC
+  types:
+  - water
+  is_legendary: false
+  base_stat_total: 330
+  hm_learnset:
+  - SURF
+  - WATERFALL
+  evolution_method_required: none
+- name: BAGON
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: BAGON
+  types:
+  - dragon
+  is_legendary: false
+  base_stat_total: 300
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: none
+- name: SHELGON
+  is_fully_evolved: false
+  evo_stage: 2
+  species_line: BAGON
+  types:
+  - dragon
+  is_legendary: false
+  base_stat_total: 420
+  hm_learnset:
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: level-up
+- name: SALAMENCE
+  is_fully_evolved: true
+  evo_stage: 3
+  species_line: BAGON
+  types:
+  - dragon
+  - flying
+  is_legendary: false
+  base_stat_total: 600
+  hm_learnset:
+  - FLY
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  evolution_method_required: level-up
+- name: BELDUM
+  is_fully_evolved: false
+  evo_stage: 1
+  species_line: BELDUM
+  types:
+  - steel
+  - psychic
+  is_legendary: false
+  base_stat_total: 300
+  hm_learnset: []
+  evolution_method_required: none
+- name: METANG
+  is_fully_evolved: false
+  evo_stage: 2
+  species_line: BELDUM
+  types:
+  - steel
+  - psychic
+  is_legendary: false
+  base_stat_total: 420
+  hm_learnset: []
+  evolution_method_required: level-up
+- name: METAGROSS
+  is_fully_evolved: true
+  evo_stage: 3
+  species_line: BELDUM
+  types:
+  - steel
+  - psychic
+  is_legendary: false
+  base_stat_total: 600
+  hm_learnset:
+  - FLASH
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: level-up
+- name: REGIROCK
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: REGIROCK
+  types:
+  - rock
+  is_legendary: true
+  base_stat_total: 580
+  hm_learnset:
+  - FLASH
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: none
+- name: REGICE
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: REGICE
+  types:
+  - ice
+  is_legendary: true
+  base_stat_total: 580
+  hm_learnset:
+  - FLASH
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  evolution_method_required: none
+- name: REGISTEEL
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: REGISTEEL
+  types:
+  - steel
+  is_legendary: true
+  base_stat_total: 580
+  hm_learnset:
+  - FLASH
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: none
+- name: LATIAS
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: LATIAS
+  types:
+  - dragon
+  - psychic
+  is_legendary: true
+  base_stat_total: 600
+  hm_learnset:
+  - FLY
+  - SURF
+  - WATERFALL
+  evolution_method_required: none
+- name: LATIOS
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: LATIOS
+  types:
+  - dragon
+  - psychic
+  is_legendary: true
+  base_stat_total: 600
+  hm_learnset:
+  - FLY
+  - SURF
+  - WATERFALL
+  evolution_method_required: none
+- name: KYOGRE
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: KYOGRE
+  types:
+  - water
+  is_legendary: true
+  base_stat_total: 670
+  hm_learnset:
+  - DIVE
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  - WATERFALL
+  evolution_method_required: none
+- name: GROUDON
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: GROUDON
+  types:
+  - ground
+  is_legendary: true
+  base_stat_total: 670
+  hm_learnset:
+  - FLASH
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  evolution_method_required: none
+- name: RAYQUAZA
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: RAYQUAZA
+  types:
+  - dragon
+  - flying
+  is_legendary: true
+  base_stat_total: 680
+  hm_learnset:
+  - FLY
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  evolution_method_required: none
+- name: JIRACHI
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: JIRACHI
+  types:
+  - steel
+  - psychic
+  is_legendary: true
+  base_stat_total: 600
+  hm_learnset:
+  - FLASH
+  - ROCK_SMASH
+  - STRENGTH
+  evolution_method_required: none
+- name: DEOXYS
+  is_fully_evolved: true
+  evo_stage: 1
+  species_line: DEOXYS
+  types:
+  - psychic
+  is_legendary: true
+  base_stat_total: 600
+  hm_learnset:
+  - FLASH
+  - ROCK_SMASH
+  - STRENGTH
+  - SURF
+  evolution_method_required: none

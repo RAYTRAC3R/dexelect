@@ -1,5 +1,7 @@
 # _TeamGen_ – Universal Party Generator
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Q5Q311GBFF)
+
 A tool for generating a random, progression-viable party of Pokémon for use in a playthrough. 
 Pokémon availability and game progression are respected in the final output, and customization options are 
 available to curate the output further.

@@ -134,17 +134,17 @@ def display_party(party_blob, config_data, global_settings, duration, game, gene
         return
 
     if party_blob == 'game_updated':
-        print(f"{BRIGHT_GREEN}Success! Game updated.{RESET}\n")
+        print(f"{BRIGHT_GREEN}OK! Game updated.{RESET}\n")
         print_global_settings()
         return
 
     if party_blob == 'generation_mode_toggled':
-        print(f"{BRIGHT_GREEN}Success! Mode updated.{RESET}\n")
+        print(f"{BRIGHT_GREEN}OK! Mode updated.{RESET}\n")
         print_global_settings()
         return
 
     if party_blob == 'config_reloaded':
-        print(f"{BRIGHT_GREEN}Success! Config reloaded.{RESET}\n")
+        print(f"{BRIGHT_GREEN}OK! Config reloaded.{RESET}\n")
         print_global_settings()
         return
 

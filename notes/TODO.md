@@ -64,3 +64,5 @@
 
 - add party size limit to config file options
 - add flag to check to "ensure_at_least_one_sphere_1_mon" is generated
+
+- add feature "only generate pokemon in Sphere X" (or should this only be accomplished by the sphere_modes in meta file?)

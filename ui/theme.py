@@ -1,0 +1,46 @@
+# Copyright 2025 Derek Andersen
+# https://derekandersen.net
+
+import customtkinter as ctk
+
+ctk.set_appearance_mode("dark")
+ctk.set_default_color_theme("green")
+
+# Colour palette — dark minimal, single soft green accent
+C_BG        = "#111111"   # near-black main background
+C_PANEL     = "#171717"   # slightly lifted panel background
+C_SIDEBAR   = "#141414"   # sidebar (subtle distinction from main)
+C_ACCENT    = "#6abf7b"   # soft green — sole accent colour
+C_ACCENT2   = "#2a3d2e"   # dark green — hover states, dividers, secondary fills
+C_TEXT      = "#e0e0e0"   # primary text (off-white, not harsh)
+C_MUTED     = "#b8b8b8"   # secondary / muted text
+C_BTN_TEXT  = "#0f1f14"   # dark text for use on green (accent) buttons
+C_SUCCESS   = "#6abf7b"   # same as accent for success messages
+C_WARNING   = "#c8a96e"   # muted amber — kept for warnings only
+C_ENTRY_BG  = "#0e0e0e"   # input field background (slightly darker than C_BG)
+
+FONT_TITLE  = ("Courier New", 24, "bold")
+FONT_HEADER = ("Courier New", 15, "bold")
+FONT_BODY   = ("Courier New", 13)
+FONT_SMALL  = ("Courier New", 13)
+FONT_MONO   = ("Courier New", 13)
+
+TYPE_COLORS = {
+    "normal":   "#9a9a78",
+    "fire":     "#f08030",
+    "water":    "#6890f0",
+    "grass":    "#78c850",
+    "electric": "#f8d030",
+    "flying":   "#a890f0",
+    "fighting": "#c03028",
+    "ice":      "#98d8d8",
+    "psychic":  "#f85888",
+    "ground":   "#e0c068",
+    "rock":     "#b8a038",
+    "poison":   "#a040a0",
+    "bug":      "#a8b820",
+    "dragon":   "#7038f8",
+    "ghost":    "#705898",
+    "steel":    "#b8b8d0",
+    "dark":     "#705848",
+}

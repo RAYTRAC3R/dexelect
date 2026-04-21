@@ -3,9 +3,9 @@ set -e
 
 # ------------------------------------------------------------------------------------------
 # This script simply creates a new tag for the current version and pushes it to GitHub,
-# which then triggers the GitHub Action workflow to build a Windows EXE. The EXE folder
-# becomes available in the Artifacts section in the workflow, which can be manually added
-# to a new release on GitHub for this tag.
+# which then triggers the GitHub Action workflow to build both Linux and Windows binaries.
+# The binary folder becomes available in the Artifacts section in the workflow,
+# which can be manually added to a new release on GitHub for this tag.
 # ------------------------------------------------------------------------------------------
 
 # Read version from version.py
@@ -28,4 +28,4 @@ git push
 git push origin $TAG
 echo "Pushed tag $TAG"
 
-echo "Done. GitHub Action will now trigger, building EXE for $TAG."
+echo "Done. GitHub Action will now trigger, building Linux and Windows binaries for $TAG."

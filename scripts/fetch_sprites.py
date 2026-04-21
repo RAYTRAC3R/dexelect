@@ -8,7 +8,7 @@ for Gen 1 (Red/Blue), Gen 2 (Gold/Silver), and Gen 3 (Ruby/Sapphire).
 Output structure:
   assets/sprites/
     gen1/   # Red/Blue,  Pokémon #001 – #151
-    gen2/   # Gold,      Pokémon #001 – #250
+    gen2/   # Gold,      Pokémon #001 – #251
     gen3/   # Ruby,      Pokémon #001 – #386
 
 Usage:
@@ -16,7 +16,6 @@ Usage:
 
 Optional flags:
   --gens 1 2 3      Download only specific generations (default: all)
-  --out  PATH       Override the output root (default: assets/sprites)
 """
 
 import argparse
@@ -118,13 +117,9 @@ def main():
         "--gens", nargs="+", type=int, choices=[1, 2, 3], default=[1, 2, 3],
         metavar="N", help="Generations to download (e.g. --gens 1 3)"
     )
-    parser.add_argument(
-        "--out", type=str, default="assets/sprites",
-        help="Output root directory (default: assets/sprites)"
-    )
     args = parser.parse_args()
 
-    out_root = Path(args.out)
+    out_root = Path(__file__).parent.parent / "assets/sprites"
     print(f"Output directory : {out_root.resolve()}")
     print(f"Generations      : {args.gens}")
 

@@ -40,7 +40,9 @@
 
 - add 'export to txt' option for saving teams, or do it automatically (last X teams generated in a file)
 
-- add some code that generates the config files for each game (creates the yaml) or something that resets it to the default (recommended) values before i push a release (or maybe have options in the UI to switch to certain presets, like "recommended", "hard", etc)
+- add some script that generates the config files for each game (creates the yaml) or something that resets it to the default (recommended) values before i push a release (or maybe have options in the UI to switch to certain presets, like "recommended", "hard", etc)
+  - `config_gen1.default.yaml`
+  - `config_gen1.hard.yaml`
 
 - add "types to exclude" config setting
 
@@ -66,5 +68,3 @@
 - add flag to check to "ensure_at_least_one_sphere_1_mon" is generated
 
 - add feature "only generate pokemon in Sphere X" (or should this only be accomplished by the sphere_modes in meta file?)
-
-- fix fetch_sprites.py so it can be run from anywhere but creates the assets/sprites dir in the correct spot (root)

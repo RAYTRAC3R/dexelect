@@ -1,40 +1,31 @@
 # -*- mode: python ; coding: utf-8 -*-
-from PyInstaller.building.build_main import Analysis, PYZ, EXE, COLLECT
+import os
+from PyInstaller.utils.hooks import collect_data_files
 
-block_cipher = None
+# customtkinter bundles its own assets (themes, fonts, icons) that must be
+# included explicitly — PyInstaller won't find them via import analysis alone.
+ctk_datas = collect_data_files('customtkinter')
 
-# --------------------------
-# Data folders (copy intact)
-# --------------------------
 datas = [
-    ('config', 'config'),
-    ('data', 'data')
-]
+    ('config',         'config'),
+    ('data',           'data'),
+    ('assets/sprites', 'assets/sprites'),
+] + ctk_datas
 
-# --------------------------
-# Analysis
-# --------------------------
 a = Analysis(
     ['main.py'],
     pathex=[],
     binaries=[],
     datas=datas,
-    hiddenimports=[],
+    hiddenimports=['customtkinter', 'PIL._tkinter_finder'],
     hookspath=[],
     runtime_hooks=[],
     excludes=[],
-    cipher=block_cipher,
-    noarchive=False
+    noarchive=False,
 )
 
-# --------------------------
-# Build PYZ
-# --------------------------
-pyz = PYZ(a.pure, a.zipped_data, cipher=block_cipher)
+pyz = PYZ(a.pure)
 
-# --------------------------
-# Build EXE
-# --------------------------
 exe = EXE(
     pyz,
     a.scripts,
@@ -43,20 +34,15 @@ exe = EXE(
     debug=False,
     strip=False,
     upx=True,
-    console=True
+    console=False,
 )
 
-# --------------------------
-# Collect into dist/teamgen/
-# --------------------------
 coll = COLLECT(
     exe,
     a.binaries,
     a.zipfiles,
-    a.datas,     # datas go to the exact folder specified in the tuple
+    a.datas,
     strip=False,
     upx=True,
-    name='teamgen'
+    name='teamgen',
 )
-
-

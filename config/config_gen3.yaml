@@ -51,7 +51,7 @@ ensure_hm_coverage:
   SURF: true
   STRENGTH: true
   FLASH: false
-  ROCK_SMASH: true
+  ROCK_SMASH: false
   WATERFALL: false
   DIVE: false
   DIG: false

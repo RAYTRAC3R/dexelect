@@ -66,3 +66,5 @@
 - add flag to check to "ensure_at_least_one_sphere_1_mon" is generated
 
 - add feature "only generate pokemon in Sphere X" (or should this only be accomplished by the sphere_modes in meta file?)
+
+- fix fetch_sprites.py so it can be run from anywhere but creates the assets/sprites dir in the correct spot (root)

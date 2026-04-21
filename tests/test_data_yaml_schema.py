@@ -10,6 +10,7 @@ def test_pokedex_required_fields(yaml_files):
     """Tests whether all required fields are present for each Pokemon."""
     REQUIRED = {
         "name",
+        "nat_dex_number",
         "species_line",
         "evo_stage",
         "is_fully_evolved",
@@ -174,13 +175,14 @@ def test_config_data_types(yaml_files):
     """Tests whether all data types are valid for entries in config YAML."""
     valid_type_distributions = {"no_overlap", "all_share_one_type", "anything_goes"}
     valid_types = {'normal', 'fire', 'water', 'grass', 'electric', 'flying', 'fighting',
-                   'ice', 'psychic', 'ground', 'rock', 'poison', 'bug', 'dragon', 'ghost'}
+                   'ice', 'psychic', 'ground', 'rock', 'poison', 'bug', 'dragon', 'ghost',
+                   'steel', 'dark'}
     for path, category in filter_yaml(yaml_files, "config"):
         config = load_yaml(path)
 
-        assert isinstance(config['allowed_balancing'], list), f"{path}: 'allowed_balancing' must be a list"
-        assert isinstance(config['allowed_spreads'], list), f"{path}: 'allowed_spreads' must be a list"
-        assert isinstance(config['allowed_patterns'], list), f"{path}: 'allowed_patterns' must be a list"
+        assert isinstance(config['allowed_balancing']['value'], list), f"{path}: 'allowed_balancing' must be a list"
+        assert isinstance(config['allowed_spreads']['value'], list), f"{path}: 'allowed_spreads' must be a list"
+        assert isinstance(config['allowed_patterns']['value'], list), f"{path}: 'allowed_patterns' must be a list"
         assert isinstance(config['force_starter'], bool), f"{path}: 'force_starter' must be a bool"
         assert isinstance(config['allow_not_fully_evolved'], bool), f"{path}: 'allow_not_fully_evolved' must be a bool"
         assert isinstance(config['max_evo_stage'], int), f"{path}: 'max_evo_stage' must be an int"
@@ -188,10 +190,10 @@ def test_config_data_types(yaml_files):
         assert isinstance(config['allow_duplicate_species'], bool), f"{path}: 'allow_duplicate_species' must be a bool"
         assert isinstance(config['allow_dual_type'], bool), f"{path}: 'allow_dual_type' must be a bool"
 
-        assert isinstance(config['type_distribution'], str), f"{path}: 'type_distribution' must be a str"
-        assert config['type_distribution'] in valid_type_distributions, f"{path}: 'type_distribution' must be one of: {valid_type_distributions}"
+        assert isinstance(config['type_distribution']['value'], str), f"{path}: 'type_distribution' must be a str"
+        assert config['type_distribution']['value'] in valid_type_distributions, f"{path}: 'type_distribution' must be one of: {valid_type_distributions}"
 
-        assert config['prescribed_type'] in (valid_types | {'none'}), f"{path}: 'prescribed_type' must be one of: {valid_types | {'none'}}"
+        assert config['prescribed_type']['value'] in (valid_types | {'none'}), f"{path}: 'prescribed_type' must be one of: {valid_types | {'none'}}"
 
         assert isinstance(config['species_blacklist'], list), f"{path}: 'species_blacklist' must be a list"
         assert isinstance(config['allowed_evo_methods'], dict), f"{path}: 'allowed_evo_methods' must be a dict"

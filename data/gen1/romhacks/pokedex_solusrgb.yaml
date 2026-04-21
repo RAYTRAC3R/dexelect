@@ -1,4 +1,5 @@
 - name: BULBASAUR
+  nat_dex_number: '001'
   is_fully_evolved: false
   evo_stage: 1
   species_line: BULBASAUR
@@ -12,6 +13,7 @@
   - FLASH
   evolution_method_required: none
 - name: IVYSAUR
+  nat_dex_number: '002'
   is_fully_evolved: false
   evo_stage: 2
   species_line: BULBASAUR
@@ -25,6 +27,7 @@
   - FLASH
   evolution_method_required: level-up
 - name: VENUSAUR
+  nat_dex_number: '003'
   is_fully_evolved: true
   evo_stage: 3
   species_line: BULBASAUR
@@ -38,6 +41,7 @@
   - FLASH
   evolution_method_required: level-up
 - name: CHARMANDER
+  nat_dex_number: '004'
   is_fully_evolved: false
   evo_stage: 1
   species_line: CHARMANDER
@@ -51,6 +55,7 @@
   - STRENGTH
   evolution_method_required: none
 - name: CHARMELEON
+  nat_dex_number: '005'
   is_fully_evolved: false
   evo_stage: 2
   species_line: CHARMANDER
@@ -64,6 +69,7 @@
   - STRENGTH
   evolution_method_required: level-up
 - name: CHARIZARD
+  nat_dex_number: '006'
   is_fully_evolved: true
   evo_stage: 3
   species_line: CHARMANDER
@@ -79,6 +85,7 @@
   - STRENGTH
   evolution_method_required: level-up
 - name: SQUIRTLE
+  nat_dex_number: '007'
   is_fully_evolved: false
   evo_stage: 1
   species_line: SQUIRTLE
@@ -92,6 +99,7 @@
   - SURF
   evolution_method_required: none
 - name: WARTORTLE
+  nat_dex_number: '008'
   is_fully_evolved: false
   evo_stage: 2
   species_line: SQUIRTLE
@@ -105,6 +113,7 @@
   - SURF
   evolution_method_required: level-up
 - name: BLASTOISE
+  nat_dex_number: '009'
   is_fully_evolved: true
   evo_stage: 3
   species_line: SQUIRTLE
@@ -118,6 +127,7 @@
   - SURF
   evolution_method_required: level-up
 - name: CATERPIE
+  nat_dex_number: '010'
   is_fully_evolved: false
   evo_stage: 1
   species_line: CATERPIE
@@ -128,6 +138,7 @@
   hm_learnset: []
   evolution_method_required: none
 - name: METAPOD
+  nat_dex_number: '011'
   is_fully_evolved: false
   evo_stage: 2
   species_line: CATERPIE
@@ -138,6 +149,7 @@
   hm_learnset: []
   evolution_method_required: level-up
 - name: BUTTERFREE
+  nat_dex_number: '012'
   is_fully_evolved: true
   evo_stage: 3
   species_line: CATERPIE
@@ -151,6 +163,7 @@
   - TELEPORT
   evolution_method_required: level-up
 - name: WEEDLE
+  nat_dex_number: '013'
   is_fully_evolved: false
   evo_stage: 1
   species_line: WEEDLE
@@ -162,6 +175,7 @@
   hm_learnset: []
   evolution_method_required: none
 - name: KAKUNA
+  nat_dex_number: '014'
   is_fully_evolved: false
   evo_stage: 2
   species_line: WEEDLE
@@ -173,6 +187,7 @@
   hm_learnset: []
   evolution_method_required: level-up
 - name: BEEDRILL
+  nat_dex_number: '015'
   is_fully_evolved: true
   evo_stage: 3
   species_line: WEEDLE
@@ -185,6 +200,7 @@
   - CUT
   evolution_method_required: level-up
 - name: PIDGEY
+  nat_dex_number: '016'
   is_fully_evolved: false
   evo_stage: 1
   species_line: PIDGEY
@@ -197,6 +213,7 @@
   - FLY
   evolution_method_required: none
 - name: PIDGEOTTO
+  nat_dex_number: '017'
   is_fully_evolved: false
   evo_stage: 2
   species_line: PIDGEY
@@ -209,6 +226,7 @@
   - FLY
   evolution_method_required: level-up
 - name: PIDGEOT
+  nat_dex_number: '018'
   is_fully_evolved: true
   evo_stage: 3
   species_line: PIDGEY
@@ -221,6 +239,7 @@
   - FLY
   evolution_method_required: level-up
 - name: RATTATA
+  nat_dex_number: '019'
   is_fully_evolved: false
   evo_stage: 1
   species_line: RATTATA
@@ -232,6 +251,7 @@
   - DIG
   evolution_method_required: none
 - name: RATICATE
+  nat_dex_number: '020'
   is_fully_evolved: true
   evo_stage: 2
   species_line: RATTATA
@@ -245,6 +265,7 @@
   - STRENGTH
   evolution_method_required: level-up
 - name: SPEAROW
+  nat_dex_number: '021'
   is_fully_evolved: false
   evo_stage: 1
   species_line: SPEAROW
@@ -257,6 +278,7 @@
   - FLY
   evolution_method_required: none
 - name: FEAROW
+  nat_dex_number: '022'
   is_fully_evolved: true
   evo_stage: 2
   species_line: SPEAROW
@@ -269,6 +291,7 @@
   - FLY
   evolution_method_required: level-up
 - name: EKANS
+  nat_dex_number: '023'
   is_fully_evolved: false
   evo_stage: 1
   species_line: EKANS
@@ -281,6 +304,7 @@
   - STRENGTH
   evolution_method_required: none
 - name: ARBOK
+  nat_dex_number: '024'
   is_fully_evolved: true
   evo_stage: 2
   species_line: EKANS
@@ -293,6 +317,7 @@
   - STRENGTH
   evolution_method_required: level-up
 - name: PIKACHU
+  nat_dex_number: '025'
   is_fully_evolved: false
   evo_stage: 1
   species_line: PIKACHU
@@ -305,6 +330,7 @@
   - STRENGTH
   evolution_method_required: none
 - name: RAICHU
+  nat_dex_number: '026'
   is_fully_evolved: true
   evo_stage: 2
   species_line: PIKACHU
@@ -317,6 +343,7 @@
   - STRENGTH
   evolution_method_required: thunder_stone
 - name: SANDSHREW
+  nat_dex_number: '027'
   is_fully_evolved: false
   evo_stage: 1
   species_line: SANDSHREW
@@ -330,6 +357,7 @@
   - STRENGTH
   evolution_method_required: none
 - name: SANDSLASH
+  nat_dex_number: '028'
   is_fully_evolved: true
   evo_stage: 2
   species_line: SANDSHREW
@@ -343,6 +371,7 @@
   - STRENGTH
   evolution_method_required: level-up
 - name: NIDORAN_F
+  nat_dex_number: '029'
   is_fully_evolved: false
   evo_stage: 1
   species_line: NIDORAN_F
@@ -353,6 +382,7 @@
   hm_learnset: []
   evolution_method_required: none
 - name: NIDORINA
+  nat_dex_number: '030'
   is_fully_evolved: false
   evo_stage: 2
   species_line: NIDORAN_F
@@ -364,6 +394,7 @@
   - STRENGTH
   evolution_method_required: level-up
 - name: NIDOQUEEN
+  nat_dex_number: '031'
   is_fully_evolved: true
   evo_stage: 3
   species_line: NIDORAN_F
@@ -377,6 +408,7 @@
   - SURF
   evolution_method_required: moon_stone
 - name: NIDORAN_M
+  nat_dex_number: '032'
   is_fully_evolved: false
   evo_stage: 1
   species_line: NIDORAN_M
@@ -387,6 +419,7 @@
   hm_learnset: []
   evolution_method_required: none
 - name: NIDORINO
+  nat_dex_number: '033'
   is_fully_evolved: false
   evo_stage: 2
   species_line: NIDORAN_M
@@ -398,6 +431,7 @@
   - STRENGTH
   evolution_method_required: level-up
 - name: NIDOKING
+  nat_dex_number: '034'
   is_fully_evolved: true
   evo_stage: 3
   species_line: NIDORAN_M
@@ -411,6 +445,7 @@
   - SURF
   evolution_method_required: moon_stone
 - name: CLEFAIRY
+  nat_dex_number: '035'
   is_fully_evolved: false
   evo_stage: 1
   species_line: CLEFAIRY
@@ -424,6 +459,7 @@
   - TELEPORT
   evolution_method_required: none
 - name: CLEFABLE
+  nat_dex_number: '036'
   is_fully_evolved: true
   evo_stage: 2
   species_line: CLEFAIRY
@@ -437,6 +473,7 @@
   - TELEPORT
   evolution_method_required: moon_stone
 - name: VULPIX
+  nat_dex_number: '037'
   is_fully_evolved: false
   evo_stage: 1
   species_line: VULPIX
@@ -448,6 +485,7 @@
   - DIG
   evolution_method_required: none
 - name: NINETALES
+  nat_dex_number: '038'
   is_fully_evolved: true
   evo_stage: 2
   species_line: VULPIX
@@ -459,6 +497,7 @@
   - DIG
   evolution_method_required: fire_stone
 - name: JIGGLYPUFF
+  nat_dex_number: '039'
   is_fully_evolved: false
   evo_stage: 1
   species_line: JIGGLYPUFF
@@ -472,6 +511,7 @@
   - TELEPORT
   evolution_method_required: none
 - name: WIGGLYTUFF
+  nat_dex_number: '040'
   is_fully_evolved: true
   evo_stage: 2
   species_line: JIGGLYPUFF
@@ -485,6 +525,7 @@
   - TELEPORT
   evolution_method_required: moon_stone
 - name: ZUBAT
+  nat_dex_number: '041'
   is_fully_evolved: false
   evo_stage: 1
   species_line: ZUBAT
@@ -496,6 +537,7 @@
   hm_learnset: []
   evolution_method_required: none
 - name: GOLBAT
+  nat_dex_number: '042'
   is_fully_evolved: true
   evo_stage: 2
   species_line: ZUBAT
@@ -507,6 +549,7 @@
   hm_learnset: []
   evolution_method_required: level-up
 - name: ODDISH
+  nat_dex_number: '043'
   is_fully_evolved: false
   evo_stage: 1
   species_line: ODDISH
@@ -520,6 +563,7 @@
   - FLASH
   evolution_method_required: none
 - name: GLOOM
+  nat_dex_number: '044'
   is_fully_evolved: false
   evo_stage: 2
   species_line: ODDISH
@@ -533,6 +577,7 @@
   - FLASH
   evolution_method_required: level-up
 - name: VILEPLUME
+  nat_dex_number: '045'
   is_fully_evolved: true
   evo_stage: 3
   species_line: ODDISH
@@ -546,6 +591,7 @@
   - FLASH
   evolution_method_required: leaf_stone
 - name: PARAS
+  nat_dex_number: '046'
   is_fully_evolved: false
   evo_stage: 1
   species_line: PARAS
@@ -560,6 +606,7 @@
   - FLASH
   evolution_method_required: none
 - name: PARASECT
+  nat_dex_number: '047'
   is_fully_evolved: true
   evo_stage: 2
   species_line: PARAS
@@ -574,6 +621,7 @@
   - FLASH
   evolution_method_required: level-up
 - name: VENONAT
+  nat_dex_number: '048'
   is_fully_evolved: false
   evo_stage: 1
   species_line: VENONAT
@@ -586,6 +634,7 @@
   - FLASH
   evolution_method_required: none
 - name: VENOMOTH
+  nat_dex_number: '049'
   is_fully_evolved: true
   evo_stage: 2
   species_line: VENONAT
@@ -599,6 +648,7 @@
   - TELEPORT
   evolution_method_required: level-up
 - name: DIGLETT
+  nat_dex_number: '050'
   is_fully_evolved: false
   evo_stage: 1
   species_line: DIGLETT
@@ -611,6 +661,7 @@
   - DIG
   evolution_method_required: none
 - name: DUGTRIO
+  nat_dex_number: '051'
   is_fully_evolved: true
   evo_stage: 2
   species_line: DIGLETT
@@ -623,6 +674,7 @@
   - DIG
   evolution_method_required: level-up
 - name: MEOWTH
+  nat_dex_number: '052'
   is_fully_evolved: false
   evo_stage: 1
   species_line: MEOWTH
@@ -633,6 +685,7 @@
   hm_learnset: []
   evolution_method_required: none
 - name: PERSIAN
+  nat_dex_number: '053'
   is_fully_evolved: true
   evo_stage: 2
   species_line: MEOWTH
@@ -643,6 +696,7 @@
   hm_learnset: []
   evolution_method_required: level-up
 - name: PSYDUCK
+  nat_dex_number: '054'
   is_fully_evolved: false
   evo_stage: 1
   species_line: PSYDUCK
@@ -657,6 +711,7 @@
   - SURF
   evolution_method_required: none
 - name: GOLDUCK
+  nat_dex_number: '055'
   is_fully_evolved: true
   evo_stage: 2
   species_line: PSYDUCK
@@ -671,6 +726,7 @@
   - SURF
   evolution_method_required: level-up
 - name: MANKEY
+  nat_dex_number: '056'
   is_fully_evolved: false
   evo_stage: 1
   species_line: MANKEY
@@ -683,6 +739,7 @@
   - STRENGTH
   evolution_method_required: none
 - name: PRIMEAPE
+  nat_dex_number: '057'
   is_fully_evolved: true
   evo_stage: 2
   species_line: MANKEY
@@ -695,6 +752,7 @@
   - STRENGTH
   evolution_method_required: level-up
 - name: GROWLITHE
+  nat_dex_number: '058'
   is_fully_evolved: false
   evo_stage: 1
   species_line: GROWLITHE
@@ -706,6 +764,7 @@
   - DIG
   evolution_method_required: none
 - name: ARCANINE
+  nat_dex_number: '059'
   is_fully_evolved: true
   evo_stage: 2
   species_line: GROWLITHE
@@ -718,6 +777,7 @@
   - TELEPORT
   evolution_method_required: fire_stone
 - name: POLIWAG
+  nat_dex_number: '060'
   is_fully_evolved: false
   evo_stage: 1
   species_line: POLIWAG
@@ -729,6 +789,7 @@
   - SURF
   evolution_method_required: none
 - name: POLIWHIRL
+  nat_dex_number: '061'
   is_fully_evolved: false
   evo_stage: 2
   species_line: POLIWAG
@@ -741,6 +802,7 @@
   - SURF
   evolution_method_required: level-up
 - name: POLIWRATH
+  nat_dex_number: '062'
   is_fully_evolved: true
   evo_stage: 3
   species_line: POLIWAG
@@ -754,6 +816,7 @@
   - SURF
   evolution_method_required: water_stone
 - name: ABRA
+  nat_dex_number: '063'
   is_fully_evolved: false
   evo_stage: 1
   species_line: ABRA
@@ -766,6 +829,7 @@
   - TELEPORT
   evolution_method_required: none
 - name: KADABRA
+  nat_dex_number: '064'
   is_fully_evolved: false
   evo_stage: 2
   species_line: ABRA
@@ -779,6 +843,7 @@
   - TELEPORT
   evolution_method_required: level-up
 - name: ALAKAZAM
+  nat_dex_number: '065'
   is_fully_evolved: true
   evo_stage: 3
   species_line: ABRA
@@ -792,6 +857,7 @@
   - TELEPORT
   evolution_method_required: trade
 - name: MACHOP
+  nat_dex_number: '066'
   is_fully_evolved: false
   evo_stage: 1
   species_line: MACHOP
@@ -804,6 +870,7 @@
   - STRENGTH
   evolution_method_required: none
 - name: MACHOKE
+  nat_dex_number: '067'
   is_fully_evolved: false
   evo_stage: 2
   species_line: MACHOP
@@ -816,6 +883,7 @@
   - STRENGTH
   evolution_method_required: level-up
 - name: MACHAMP
+  nat_dex_number: '068'
   is_fully_evolved: true
   evo_stage: 3
   species_line: MACHOP
@@ -828,6 +896,7 @@
   - STRENGTH
   evolution_method_required: trade
 - name: BELLSPROUT
+  nat_dex_number: '069'
   is_fully_evolved: false
   evo_stage: 1
   species_line: BELLSPROUT
@@ -841,6 +910,7 @@
   - FLASH
   evolution_method_required: none
 - name: WEEPINBELL
+  nat_dex_number: '070'
   is_fully_evolved: false
   evo_stage: 2
   species_line: BELLSPROUT
@@ -854,6 +924,7 @@
   - FLASH
   evolution_method_required: level-up
 - name: VICTREEBEL
+  nat_dex_number: '071'
   is_fully_evolved: true
   evo_stage: 3
   species_line: BELLSPROUT
@@ -867,6 +938,7 @@
   - FLASH
   evolution_method_required: leaf_stone
 - name: TENTACOOL
+  nat_dex_number: '072'
   is_fully_evolved: false
   evo_stage: 1
   species_line: TENTACOOL
@@ -880,6 +952,7 @@
   - SURF
   evolution_method_required: none
 - name: TENTACRUEL
+  nat_dex_number: '073'
   is_fully_evolved: true
   evo_stage: 2
   species_line: TENTACOOL
@@ -893,6 +966,7 @@
   - SURF
   evolution_method_required: level-up
 - name: GEODUDE
+  nat_dex_number: '074'
   is_fully_evolved: false
   evo_stage: 1
   species_line: GEODUDE
@@ -906,6 +980,7 @@
   - STRENGTH
   evolution_method_required: none
 - name: GRAVELER
+  nat_dex_number: '075'
   is_fully_evolved: false
   evo_stage: 2
   species_line: GEODUDE
@@ -919,6 +994,7 @@
   - STRENGTH
   evolution_method_required: level-up
 - name: GOLEM
+  nat_dex_number: '076'
   is_fully_evolved: true
   evo_stage: 3
   species_line: GEODUDE
@@ -932,6 +1008,7 @@
   - STRENGTH
   evolution_method_required: trade
 - name: PONYTA
+  nat_dex_number: '077'
   is_fully_evolved: false
   evo_stage: 1
   species_line: PONYTA
@@ -942,6 +1019,7 @@
   hm_learnset: []
   evolution_method_required: none
 - name: RAPIDASH
+  nat_dex_number: '078'
   is_fully_evolved: true
   evo_stage: 2
   species_line: PONYTA
@@ -952,6 +1030,7 @@
   hm_learnset: []
   evolution_method_required: level-up
 - name: SLOWPOKE
+  nat_dex_number: '079'
   is_fully_evolved: false
   evo_stage: 1
   species_line: SLOWPOKE
@@ -968,6 +1047,7 @@
   - TELEPORT
   evolution_method_required: none
 - name: SLOWBRO
+  nat_dex_number: '080'
   is_fully_evolved: true
   evo_stage: 2
   species_line: SLOWPOKE
@@ -984,6 +1064,7 @@
   - TELEPORT
   evolution_method_required: level-up
 - name: MAGNEMITE
+  nat_dex_number: '081'
   is_fully_evolved: false
   evo_stage: 1
   species_line: MAGNEMITE
@@ -996,6 +1077,7 @@
   - TELEPORT
   evolution_method_required: none
 - name: MAGNETON
+  nat_dex_number: '082'
   is_fully_evolved: true
   evo_stage: 2
   species_line: MAGNEMITE
@@ -1008,6 +1090,7 @@
   - TELEPORT
   evolution_method_required: level-up
 - name: FARFETCHD
+  nat_dex_number: '083'
   is_fully_evolved: true
   evo_stage: 1
   species_line: FARFETCHD
@@ -1021,6 +1104,7 @@
   - FLY
   evolution_method_required: none
 - name: DODUO
+  nat_dex_number: '084'
   is_fully_evolved: false
   evo_stage: 1
   species_line: DODUO
@@ -1033,6 +1117,7 @@
   - FLY
   evolution_method_required: none
 - name: DODRIO
+  nat_dex_number: '085'
   is_fully_evolved: true
   evo_stage: 2
   species_line: DODUO
@@ -1045,6 +1130,7 @@
   - FLY
   evolution_method_required: level-up
 - name: SEEL
+  nat_dex_number: '086'
   is_fully_evolved: false
   evo_stage: 1
   species_line: SEEL
@@ -1057,6 +1143,7 @@
   - SURF
   evolution_method_required: none
 - name: DEWGONG
+  nat_dex_number: '087'
   is_fully_evolved: true
   evo_stage: 2
   species_line: SEEL
@@ -1070,6 +1157,7 @@
   - SURF
   evolution_method_required: level-up
 - name: GRIMER
+  nat_dex_number: '088'
   is_fully_evolved: false
   evo_stage: 1
   species_line: GRIMER
@@ -1080,6 +1168,7 @@
   hm_learnset: []
   evolution_method_required: none
 - name: MUK
+  nat_dex_number: '089'
   is_fully_evolved: true
   evo_stage: 2
   species_line: GRIMER
@@ -1090,6 +1179,7 @@
   hm_learnset: []
   evolution_method_required: level-up
 - name: SHELLDER
+  nat_dex_number: '090'
   is_fully_evolved: false
   evo_stage: 1
   species_line: SHELLDER
@@ -1102,6 +1192,7 @@
   - TELEPORT
   evolution_method_required: none
 - name: CLOYSTER
+  nat_dex_number: '091'
   is_fully_evolved: true
   evo_stage: 2
   species_line: SHELLDER
@@ -1115,6 +1206,7 @@
   - TELEPORT
   evolution_method_required: water_stone
 - name: GASTLY
+  nat_dex_number: '092'
   is_fully_evolved: false
   evo_stage: 1
   species_line: GASTLY
@@ -1126,6 +1218,7 @@
   hm_learnset: []
   evolution_method_required: none
 - name: HAUNTER
+  nat_dex_number: '093'
   is_fully_evolved: false
   evo_stage: 2
   species_line: GASTLY
@@ -1137,6 +1230,7 @@
   hm_learnset: []
   evolution_method_required: level-up
 - name: GENGAR
+  nat_dex_number: '094'
   is_fully_evolved: true
   evo_stage: 3
   species_line: GASTLY
@@ -1149,6 +1243,7 @@
   - STRENGTH
   evolution_method_required: trade
 - name: ONIX
+  nat_dex_number: '095'
   is_fully_evolved: true
   evo_stage: 1
   species_line: ONIX
@@ -1162,6 +1257,7 @@
   - STRENGTH
   evolution_method_required: none
 - name: DROWZEE
+  nat_dex_number: '096'
   is_fully_evolved: false
   evo_stage: 1
   species_line: DROWZEE
@@ -1174,6 +1270,7 @@
   - TELEPORT
   evolution_method_required: none
 - name: HYPNO
+  nat_dex_number: '097'
   is_fully_evolved: true
   evo_stage: 2
   species_line: DROWZEE
@@ -1186,6 +1283,7 @@
   - TELEPORT
   evolution_method_required: level-up
 - name: KRABBY
+  nat_dex_number: '098'
   is_fully_evolved: false
   evo_stage: 1
   species_line: KRABBY
@@ -1199,6 +1297,7 @@
   - SURF
   evolution_method_required: none
 - name: KINGLER
+  nat_dex_number: '099'
   is_fully_evolved: true
   evo_stage: 2
   species_line: KRABBY
@@ -1212,6 +1311,7 @@
   - SURF
   evolution_method_required: level-up
 - name: VOLTORB
+  nat_dex_number: '100'
   is_fully_evolved: false
   evo_stage: 1
   species_line: VOLTORB
@@ -1224,6 +1324,7 @@
   - TELEPORT
   evolution_method_required: none
 - name: ELECTRODE
+  nat_dex_number: '101'
   is_fully_evolved: true
   evo_stage: 2
   species_line: VOLTORB
@@ -1236,6 +1337,7 @@
   - TELEPORT
   evolution_method_required: level-up
 - name: EXEGGCUTE
+  nat_dex_number: '102'
   is_fully_evolved: false
   evo_stage: 1
   species_line: EXEGGCUTE
@@ -1250,6 +1352,7 @@
   - TELEPORT
   evolution_method_required: none
 - name: EXEGGUTOR
+  nat_dex_number: '103'
   is_fully_evolved: true
   evo_stage: 2
   species_line: EXEGGCUTE
@@ -1264,6 +1367,7 @@
   - TELEPORT
   evolution_method_required: leaf_stone
 - name: CUBONE
+  nat_dex_number: '104'
   is_fully_evolved: false
   evo_stage: 1
   species_line: CUBONE
@@ -1276,6 +1380,7 @@
   - STRENGTH
   evolution_method_required: none
 - name: MAROWAK
+  nat_dex_number: '105'
   is_fully_evolved: true
   evo_stage: 2
   species_line: CUBONE
@@ -1288,6 +1393,7 @@
   - STRENGTH
   evolution_method_required: level-up
 - name: HITMONLEE
+  nat_dex_number: '106'
   is_fully_evolved: true
   evo_stage: 1
   species_line: HITMONLEE
@@ -1299,6 +1405,7 @@
   - STRENGTH
   evolution_method_required: none
 - name: HITMONCHAN
+  nat_dex_number: '107'
   is_fully_evolved: true
   evo_stage: 1
   species_line: HITMONCHAN
@@ -1310,6 +1417,7 @@
   - STRENGTH
   evolution_method_required: none
 - name: LICKITUNG
+  nat_dex_number: '108'
   is_fully_evolved: true
   evo_stage: 1
   species_line: LICKITUNG
@@ -1323,6 +1431,7 @@
   - SURF
   evolution_method_required: none
 - name: KOFFING
+  nat_dex_number: '109'
   is_fully_evolved: false
   evo_stage: 1
   species_line: KOFFING
@@ -1333,6 +1442,7 @@
   hm_learnset: []
   evolution_method_required: none
 - name: WEEZING
+  nat_dex_number: '110'
   is_fully_evolved: true
   evo_stage: 2
   species_line: KOFFING
@@ -1343,6 +1453,7 @@
   hm_learnset: []
   evolution_method_required: level-up
 - name: RHYHORN
+  nat_dex_number: '111'
   is_fully_evolved: false
   evo_stage: 1
   species_line: RHYHORN
@@ -1356,6 +1467,7 @@
   - STRENGTH
   evolution_method_required: none
 - name: RHYDON
+  nat_dex_number: '112'
   is_fully_evolved: true
   evo_stage: 2
   species_line: RHYHORN
@@ -1370,6 +1482,7 @@
   - SURF
   evolution_method_required: level-up
 - name: CHANSEY
+  nat_dex_number: '113'
   is_fully_evolved: true
   evo_stage: 1
   species_line: CHANSEY
@@ -1384,6 +1497,7 @@
   - TELEPORT
   evolution_method_required: none
 - name: TANGELA
+  nat_dex_number: '114'
   is_fully_evolved: true
   evo_stage: 1
   species_line: TANGELA
@@ -1396,6 +1510,7 @@
   - FLASH
   evolution_method_required: none
 - name: KANGASKHAN
+  nat_dex_number: '115'
   is_fully_evolved: true
   evo_stage: 1
   species_line: KANGASKHAN
@@ -1408,6 +1523,7 @@
   - SURF
   evolution_method_required: none
 - name: HORSEA
+  nat_dex_number: '116'
   is_fully_evolved: false
   evo_stage: 1
   species_line: HORSEA
@@ -1419,6 +1535,7 @@
   - SURF
   evolution_method_required: none
 - name: SEADRA
+  nat_dex_number: '117'
   is_fully_evolved: true
   evo_stage: 2
   species_line: HORSEA
@@ -1430,6 +1547,7 @@
   - SURF
   evolution_method_required: level-up
 - name: GOLDEEN
+  nat_dex_number: '118'
   is_fully_evolved: false
   evo_stage: 1
   species_line: GOLDEEN
@@ -1441,6 +1559,7 @@
   - SURF
   evolution_method_required: none
 - name: SEAKING
+  nat_dex_number: '119'
   is_fully_evolved: true
   evo_stage: 2
   species_line: GOLDEEN
@@ -1452,6 +1571,7 @@
   - SURF
   evolution_method_required: level-up
 - name: STARYU
+  nat_dex_number: '120'
   is_fully_evolved: false
   evo_stage: 1
   species_line: STARYU
@@ -1465,6 +1585,7 @@
   - TELEPORT
   evolution_method_required: none
 - name: STARMIE
+  nat_dex_number: '121'
   is_fully_evolved: true
   evo_stage: 2
   species_line: STARYU
@@ -1479,6 +1600,7 @@
   - TELEPORT
   evolution_method_required: water_stone
 - name: MR.MIME
+  nat_dex_number: '122'
   is_fully_evolved: true
   evo_stage: 1
   species_line: MR.MIME
@@ -1491,6 +1613,7 @@
   - FLASH
   evolution_method_required: none
 - name: SCYTHER
+  nat_dex_number: '123'
   is_fully_evolved: true
   evo_stage: 1
   species_line: SCYTHER
@@ -1503,6 +1626,7 @@
   - CUT
   evolution_method_required: none
 - name: JYNX
+  nat_dex_number: '124'
   is_fully_evolved: true
   evo_stage: 1
   species_line: JYNX
@@ -1515,6 +1639,7 @@
   - TELEPORT
   evolution_method_required: none
 - name: ELECTABUZZ
+  nat_dex_number: '125'
   is_fully_evolved: true
   evo_stage: 1
   species_line: ELECTABUZZ
@@ -1528,6 +1653,7 @@
   - TELEPORT
   evolution_method_required: none
 - name: MAGMAR
+  nat_dex_number: '126'
   is_fully_evolved: true
   evo_stage: 1
   species_line: MAGMAR
@@ -1540,6 +1666,7 @@
   - TELEPORT
   evolution_method_required: none
 - name: PINSIR
+  nat_dex_number: '127'
   is_fully_evolved: true
   evo_stage: 1
   species_line: PINSIR
@@ -1552,6 +1679,7 @@
   - STRENGTH
   evolution_method_required: none
 - name: TAUROS
+  nat_dex_number: '128'
   is_fully_evolved: true
   evo_stage: 1
   species_line: TAUROS
@@ -1564,6 +1692,7 @@
   - SURF
   evolution_method_required: none
 - name: MAGIKARP
+  nat_dex_number: '129'
   is_fully_evolved: false
   evo_stage: 1
   species_line: MAGIKARP
@@ -1574,6 +1703,7 @@
   hm_learnset: []
   evolution_method_required: none
 - name: GYARADOS
+  nat_dex_number: '130'
   is_fully_evolved: true
   evo_stage: 2
   species_line: MAGIKARP
@@ -1587,6 +1717,7 @@
   - SURF
   evolution_method_required: level-up
 - name: LAPRAS
+  nat_dex_number: '131'
   is_fully_evolved: true
   evo_stage: 1
   species_line: LAPRAS
@@ -1600,6 +1731,7 @@
   - SURF
   evolution_method_required: none
 - name: DITTO
+  nat_dex_number: '132'
   is_fully_evolved: true
   evo_stage: 1
   species_line: DITTO
@@ -1610,6 +1742,7 @@
   hm_learnset: []
   evolution_method_required: none
 - name: EEVEE
+  nat_dex_number: '133'
   is_fully_evolved: false
   evo_stage: 1
   species_line: EEVEE
@@ -1620,6 +1753,7 @@
   hm_learnset: []
   evolution_method_required: none
 - name: VAPOREON
+  nat_dex_number: '134'
   is_fully_evolved: true
   evo_stage: 2
   species_line: EEVEE
@@ -1631,6 +1765,7 @@
   - SURF
   evolution_method_required: water_stone
 - name: JOLTEON
+  nat_dex_number: '135'
   is_fully_evolved: true
   evo_stage: 2
   species_line: EEVEE
@@ -1642,6 +1777,7 @@
   - FLASH
   evolution_method_required: thunder_stone
 - name: FLAREON
+  nat_dex_number: '136'
   is_fully_evolved: true
   evo_stage: 2
   species_line: EEVEE
@@ -1652,6 +1788,7 @@
   hm_learnset: []
   evolution_method_required: fire_stone
 - name: PORYGON
+  nat_dex_number: '137'
   is_fully_evolved: true
   evo_stage: 1
   species_line: PORYGON
@@ -1664,6 +1801,7 @@
   - TELEPORT
   evolution_method_required: none
 - name: OMANYTE
+  nat_dex_number: '138'
   is_fully_evolved: false
   evo_stage: 1
   species_line: OMANYTE
@@ -1676,6 +1814,7 @@
   - SURF
   evolution_method_required: none
 - name: OMASTAR
+  nat_dex_number: '139'
   is_fully_evolved: true
   evo_stage: 2
   species_line: OMANYTE
@@ -1688,6 +1827,7 @@
   - SURF
   evolution_method_required: level-up
 - name: KABUTO
+  nat_dex_number: '140'
   is_fully_evolved: false
   evo_stage: 1
   species_line: KABUTO
@@ -1700,6 +1840,7 @@
   - SURF
   evolution_method_required: none
 - name: KABUTOPS
+  nat_dex_number: '141'
   is_fully_evolved: true
   evo_stage: 2
   species_line: KABUTO
@@ -1713,6 +1854,7 @@
   - SURF
   evolution_method_required: level-up
 - name: AERODACTYL
+  nat_dex_number: '142'
   is_fully_evolved: true
   evo_stage: 1
   species_line: AERODACTYL
@@ -1725,6 +1867,7 @@
   - FLY
   evolution_method_required: none
 - name: SNORLAX
+  nat_dex_number: '143'
   is_fully_evolved: true
   evo_stage: 1
   species_line: SNORLAX
@@ -1737,6 +1880,7 @@
   - SURF
   evolution_method_required: none
 - name: ARTICUNO
+  nat_dex_number: '144'
   is_fully_evolved: true
   evo_stage: 1
   species_line: ARTICUNO
@@ -1749,6 +1893,7 @@
   - FLY
   evolution_method_required: none
 - name: ZAPDOS
+  nat_dex_number: '145'
   is_fully_evolved: true
   evo_stage: 1
   species_line: ZAPDOS
@@ -1762,6 +1907,7 @@
   - FLY
   evolution_method_required: none
 - name: MOLTRES
+  nat_dex_number: '146'
   is_fully_evolved: true
   evo_stage: 1
   species_line: MOLTRES
@@ -1774,6 +1920,7 @@
   - FLY
   evolution_method_required: none
 - name: DRATINI
+  nat_dex_number: '147'
   is_fully_evolved: false
   evo_stage: 1
   species_line: DRATINI
@@ -1785,6 +1932,7 @@
   - SURF
   evolution_method_required: none
 - name: DRAGONAIR
+  nat_dex_number: '148'
   is_fully_evolved: false
   evo_stage: 2
   species_line: DRATINI
@@ -1796,6 +1944,7 @@
   - SURF
   evolution_method_required: level-up
 - name: DRAGONITE
+  nat_dex_number: '149'
   is_fully_evolved: true
   evo_stage: 3
   species_line: DRATINI
@@ -1810,6 +1959,7 @@
   - SURF
   evolution_method_required: level-up
 - name: MEWTWO
+  nat_dex_number: '150'
   is_fully_evolved: true
   evo_stage: 1
   species_line: MEWTWO
@@ -1823,6 +1973,7 @@
   - TELEPORT
   evolution_method_required: none
 - name: MEW
+  nat_dex_number: '151'
   is_fully_evolved: true
   evo_stage: 1
   species_line: MEW

@@ -5,6 +5,7 @@ from __future__ import annotations
 class Pokemon:
     def __init__(self,
                  name: str,
+                 nat_dex_number: str,
                  species_line: str,
                  evo_stage: int,
                  is_fully_evolved: bool,
@@ -14,6 +15,7 @@ class Pokemon:
                  hm_learnset: list[str],
                  evolution_method_required: str):
         self.name = name  # str
+        self.nat_dex_number = nat_dex_number  # str, zero-padded 3 digits, e.g. '001'
         self.species_line = species_line  # str
         self.evo_stage = evo_stage  # int
         self.is_fully_evolved = is_fully_evolved  # bool

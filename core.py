@@ -155,8 +155,8 @@ def is_party_valid(party, is_party_full, config_data, meta_data) -> bool:
     allow_legendaries = config_data["allow_legendaries"]
     allow_duplicate_species = config_data["allow_duplicate_species"]
     allow_dual_type = config_data["allow_dual_type"]
-    prescribed_type = config_data["prescribed_type"]
-    type_distribution = config_data["type_distribution"]
+    prescribed_type = config_data["prescribed_type"]["value"]
+    type_distribution = config_data["type_distribution"]["value"]
     species_blacklist = config_data["species_blacklist"]
     allowed_evo_methods = [em for em in config_data["allowed_evo_methods"] if config_data["allowed_evo_methods"][em] == True]
     max_evo_stage = config_data["max_evo_stage"]
@@ -546,9 +546,9 @@ def validate_balance_grade(balance_stats, config_data) -> bool:
         bool
     """
     # the allowed modes per the config file
-    allowed_balancing = [mode for mode in config_data['allowed_balancing']]
-    allowed_spreads = [mode for mode in config_data['allowed_spreads']]
-    allowed_patterns = [mode for mode in config_data['allowed_patterns']]
+    allowed_balancing = [mode for mode in config_data['allowed_balancing']['value']]
+    allowed_spreads = [mode for mode in config_data['allowed_spreads']['value']]
+    allowed_patterns = [mode for mode in config_data['allowed_patterns']['value']]
 
     # the assigned modes given to the party (from balance_stats) by assign_balance_grade
     assigned_balancing = balance_stats['lean']
@@ -641,6 +641,7 @@ def construct_full_pokemon_set(pokedex_data) -> dict[str, 'Pokemon']:
         # create object of class Pokemon for current mon
         cur_mon_obj = Pokemon(
             name=cur_mon["name"],
+            nat_dex_number=cur_mon.get("nat_dex_number", "000"),
             species_line=cur_mon["species_line"],
             evo_stage=cur_mon["evo_stage"],
             is_fully_evolved=cur_mon["is_fully_evolved"],

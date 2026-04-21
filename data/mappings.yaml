@@ -4,36 +4,42 @@ Red:
   pokedex: 'data/gen1/vanilla/pokedex_rb.yaml'
   locations: 'data/gen1/vanilla/locations_red.yaml'
   config: 'config/config_gen1.yaml'
+  sprites: 'assets/sprites/gen1'
 
 Blue:
   meta: 'data/gen1/vanilla/meta_rb.yaml'
   pokedex: 'data/gen1/vanilla/pokedex_rb.yaml'
   locations: 'data/gen1/vanilla/locations_blue.yaml'
   config: 'config/config_gen1.yaml'
+  sprites: 'assets/sprites/gen1'
 
 Gold:
   meta: 'data/gen2/vanilla/meta_gold.yaml'
   pokedex: 'data/gen2/vanilla/pokedex_gs.yaml'
   locations: 'data/gen2/vanilla/locations_gold.yaml'
   config: 'config/config_gen2.yaml'
+  sprites: 'assets/sprites/gen2'
 
 Silver:
   meta: 'data/gen2/vanilla/meta_silver.yaml'
   pokedex: 'data/gen2/vanilla/pokedex_gs.yaml'
   locations: 'data/gen2/vanilla/locations_silver.yaml'
   config: 'config/config_gen2.yaml'
+  sprites: 'assets/sprites/gen2'
 
 Ruby:
   meta: 'data/gen3/vanilla/meta_rs.yaml'
   pokedex: 'data/gen3/vanilla/pokedex_rs.yaml'
   locations: 'data/gen3/vanilla/locations_ruby.yaml'
   config: 'config/config_gen3.yaml'
+  sprites: 'assets/sprites/gen3'
 
 Sapphire:
   meta: 'data/gen3/vanilla/meta_rs.yaml'
   pokedex: 'data/gen3/vanilla/pokedex_rs.yaml'
   locations: 'data/gen3/vanilla/locations_sapphire.yaml'
   config: 'config/config_gen3.yaml'
+  sprites: 'assets/sprites/gen3'
 
 ### romhacks ###
 Solus RGB:
@@ -41,3 +47,4 @@ Solus RGB:
   pokedex: 'data/gen1/romhacks/pokedex_solusrgb.yaml'
   locations: 'data/gen1/romhacks/locations_solusrgb.yaml'
   config: 'config/config_gen1.yaml'
+  sprites: 'assets/sprites/gen1'

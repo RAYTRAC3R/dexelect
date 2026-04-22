@@ -7,7 +7,7 @@ Pokémon availability and game progression are respected in the final output, an
 available to curate the output further.
 
 <p align="center" style="margin-left: 10%; margin-right: 10%">
-  <img src="screenshots/sample-output.png">
+  <img src="screenshots/sample-gui-output.png">
 </p>
 
 ## Table of contents
@@ -21,8 +21,8 @@ available to curate the output further.
 ## Introduction
 _TeamGen_ generates (prescribes) a party for use in a playthrough — either to introduce an element of 
 challenge or simply for team inspiration. 
-The tool is **universal** in the sense that it maintains compatibility with _most_ generations of Pokémon, 
-but also with romhacks that might contain the following (as long as the relevant game data files are added):
+The app is **universal** in the sense that it maintains compatibility with _most_ generations of Pokémon, 
+and also with romhacks that might contain the following (as long as the relevant game data files are added):
 - New Pokémon
 - New locations 
 - Changes to existing game data (location data, evolution methods, etc.)
@@ -36,29 +36,30 @@ but also with romhacks that might contain the following (as long as the relevant
   - [Pokémon Solus RGB](https://github.com/Dechrissen/poke-solus-rgb)
 
 ## Installation
-### Option 1: Linux / macOS (CLI)
+
+### Pre-built executable (Windows/Linux)
+
+1. Download `teamgen-<version>-<platform>.zip` from the [latest release](https://github.com/Dechrissen/teamgen/releases/latest) 
+2. Extract
+3. Run `teamgen.exe` on Windows, or `teamgen` on Linux
+
+### Command-line app
 
 Prerequisites:
 - Python 3.10+
 - `pip`
-- (Optional) `venv`
+- `venv`
 
 Steps:
 1. Clone this repository (or download the [latest release](https://github.com/Dechrissen/teamgen/releases/latest) 
    source code and extract it)
 2. `cd teamgen`
-3. (Optional) Create a virtual environment first for less headache
-    - `python -m venv .venv`
-    - `source .venv/bin/activate`
-4. Install dependencies (`pip install -r requirements.txt`)
-5. Run with `python main.py`
+3. (First-time setup) Create a virtual environment (`python -m venv .venv`)
+4. Activate the virtual environment  (`source .venv/bin/activate`)
+5. Install dependencies (`pip install -r requirements.txt`)
+6. (Optional) If you want sprites to display in the GUI, run `python main.py --fetch_sprites`
+7. Run (`python main.py`, or for the CLI UI, `python main.py --ui=cli`)
 
-### Option 2: Windows (Prebuilt executable)
-
-1. Download `teamgen-<version>.zip` from the [latest release](https://github.com/Dechrissen/teamgen/releases/latest) 
-  assets
-2. Extract
-3. Run `teamgen.exe`
 
 ## Usage
 

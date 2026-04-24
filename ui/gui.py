@@ -45,7 +45,7 @@ from version import __version__
 from ui.theme import (
     C_BG, C_PANEL, C_SIDEBAR, C_ACCENT, C_ACCENT2,
     C_TEXT, C_MUTED, C_BTN_TEXT, C_SUCCESS, C_WARNING, C_ENTRY_BG,
-    FONT_TITLE, FONT_HEADER, FONT_BODY, FONT_SMALL, FONT_MONO,
+    FONT_TITLE, FONT_HEADER, FONT_BODY, FONT_SMALL, FONT_MONO, FONT_MONO_HEADER,
     TYPE_COLORS,
 )
 
@@ -73,6 +73,118 @@ def write_yaml(path: str, data: dict):
     with open(resource_path(path), "w") as f:
         yaml.dump(data, f, Dumper=_InlineListDumper, default_flow_style=False, allow_unicode=True, sort_keys=False)
 
+
+
+# =============================================================================
+# TOOLTIP
+# =============================================================================
+
+TOOLTIPS_PATH = "config/tooltips.yaml"
+
+class _Tooltip:
+    """Lightweight hover tooltip rendered as an in-window frame.
+
+    Uses a tk.Frame placed inside the root window via place() rather than a
+    Toplevel. This avoids two Wayland/tiling-WM problems with Toplevel:
+      1. Absolute screen coordinates are unreliable (winfo_rootx/y returns 0,0
+         for XWayland apps). Relative coords (widget - root) cancel that out.
+      2. A Toplevel is a separate OS window that steals focus, causes synthetic
+         Leave events, and can get orphaned if the reference is lost mid-hide.
+    """
+
+    def __init__(self, widget, text: str):
+        self._widget  = widget
+        self._text    = text
+        self._tip     = None
+        self._show_id = None
+        self._hide_id = None
+        widget.bind("<Enter>",   self._on_enter,  add="+")
+        widget.bind("<Leave>",   self._on_leave,  add="+")
+        widget.bind("<Destroy>", lambda e: self._cancel_all(), add="+")
+
+    def _on_enter(self, event=None):
+        self._cancel_hide()
+        if not self._tip:
+            self._show_id = self._widget.after(500, self._show)
+
+    def _on_leave(self, event=None):
+        self._cancel_show()
+        self._hide_id = self._widget.after(50, self._check_and_hide)
+
+    def _check_and_hide(self):
+        self._hide_id = None
+        try:
+            px = self._widget.winfo_pointerx()
+            py = self._widget.winfo_pointery()
+            wx = self._widget.winfo_rootx()
+            wy = self._widget.winfo_rooty()
+            ww = self._widget.winfo_width()
+            wh = self._widget.winfo_height()
+            if wx <= px <= wx + ww and wy <= py <= wy + wh:
+                if self._tip is None and self._show_id is None:
+                    self._show_id = self._widget.after(500, self._show)
+                return
+        except tk.TclError:
+            pass
+        self._do_hide()
+
+    def _show(self):
+        self._show_id = None
+        if self._tip:
+            return
+        root = self._widget.winfo_toplevel()
+        tip = tk.Frame(root, bg=C_ACCENT2, highlightthickness=1,
+                       highlightbackground=C_ACCENT)
+        tk.Label(
+            tip, text=self._text, justify="left",
+            bg=C_ACCENT2, fg=C_TEXT,
+            font=("Roboto", 11),
+            padx=10, pady=6, wraplength=300,
+        ).pack()
+        self._tip = tip
+        root.update_idletasks()
+        tip_w = tip.winfo_reqwidth()
+        tip_h = tip.winfo_reqheight()
+        # Subtracting root's own winfo_rootx/y converts to root-relative coords,
+        # which cancels out any wrong absolute offset Wayland reports.
+        rx = self._widget.winfo_rootx() - root.winfo_rootx()
+        ry = self._widget.winfo_rooty() - root.winfo_rooty()
+        wh = self._widget.winfo_height()
+        rw = root.winfo_width()
+        rh = root.winfo_height()
+        # Horizontal: prefer right of icon, flip left if it would clip.
+        tx = rx + 12
+        if tx + tip_w > rw - 4:
+            tx = rx - tip_w - 4
+        tx = max(4, tx)
+        # Vertical: prefer above icon, fall back to below.
+        ty = ry - tip_h - 4 if ry > tip_h + 4 else ry + wh + 4
+        ty = max(4, min(ty, rh - tip_h - 4))
+        tip.place(x=tx, y=ty)
+        tip.lift()
+
+    def _do_hide(self):
+        if self._tip:
+            try:
+                self._tip.destroy()
+            except tk.TclError:
+                pass
+            self._tip = None
+
+    def _cancel_show(self):
+        if self._show_id:
+            self._widget.after_cancel(self._show_id)
+            self._show_id = None
+
+    def _cancel_hide(self):
+        if self._hide_id:
+            self._widget.after_cancel(self._hide_id)
+            self._hide_id = None
+
+    def _cancel_all(self):
+        self._cancel_show()
+        self._cancel_hide()
+        self._do_hide()
 
 
 # =============================================================================
@@ -113,6 +225,12 @@ class TeamGenApp(ctk.CTk):
 
         # Sprite image refs (prevent GC of CTkImage objects while they're displayed)
         self._sprite_images = [None] * 6
+
+        # Tooltip text keyed by config field name
+        try:
+            self.tooltips = read_yaml(TOOLTIPS_PATH) or {}
+        except Exception:
+            self.tooltips = {}
 
         # ---- Build UI ----
         self._build_layout()
@@ -177,7 +295,7 @@ class TeamGenApp(ctk.CTk):
         # ---- Title ----
         ctk.CTkLabel(sf, text="TeamGen", font=FONT_TITLE, text_color=C_ACCENT).grid(
             row=0, column=0, padx=20, pady=(24, 2), sticky="w")
-        ctk.CTkLabel(sf, text=f"v{__version__}", font=FONT_SMALL, text_color=C_MUTED).grid(
+        ctk.CTkLabel(sf, text=f"v{__version__}", font=FONT_MONO, text_color=C_TEXT).grid(
             row=1, column=0, padx=20, pady=(0, 20), sticky="w")
 
         ctk.CTkFrame(sf, height=1, fg_color=C_ACCENT2).grid(
@@ -352,10 +470,10 @@ class TeamGenApp(ctk.CTk):
             fg_color=C_ACCENT,
             hover_color=C_ACCENT2,
             text_color=C_BTN_TEXT,
-            font=("Courier New", 15, "bold"),
+            font=("Roboto", 15, "bold"),
             height=42,
             width=180,
-            corner_radius=6,
+            corner_radius=5,
         )
         self.generate_btn.grid(row=0, column=0, padx=(0, 16))
 
@@ -374,7 +492,7 @@ class TeamGenApp(ctk.CTk):
         cards_outer.grid_columnconfigure(0, weight=1)
         cards_outer.grid_columnconfigure(1, weight=1)
         for r in range(3):
-            cards_outer.grid_rowconfigure(r, weight=1, minsize=105)
+            cards_outer.grid_rowconfigure(r, weight=1, minsize=135)
 
         self.party_cards = []
         for r in range(3):
@@ -384,7 +502,7 @@ class TeamGenApp(ctk.CTk):
                 self.party_cards.append(card)
 
         # ---- Stats strip ----
-        stats_frame = ctk.CTkFrame(parent, fg_color=C_PANEL, corner_radius=8)
+        stats_frame = ctk.CTkFrame(parent, fg_color=C_PANEL, corner_radius=5)
         stats_frame.grid(row=2, column=0, sticky="ew", padx=16, pady=(0, 16))
         stats_frame.grid_columnconfigure(0, weight=1)
         stats_frame.grid_columnconfigure(1, weight=0)
@@ -396,7 +514,7 @@ class TeamGenApp(ctk.CTk):
         for col, (key, label) in enumerate([("lean", "Lean"), ("spread", "Spread"), ("pattern", "Pattern")]):
             ctk.CTkLabel(left, text=label, font=FONT_SMALL, text_color=C_MUTED, anchor="w", width=150).grid(
                 row=0, column=col, sticky="w")
-            val = ctk.CTkLabel(left, text="—", font=FONT_BODY, text_color=C_TEXT, anchor="w", width=150)
+            val = ctk.CTkLabel(left, text="—", font=FONT_MONO, text_color=C_TEXT, anchor="w", width=150)
             val.grid(row=1, column=col, sticky="w")
             self.stat_labels[key] = val
 
@@ -405,7 +523,7 @@ class TeamGenApp(ctk.CTk):
 
         ctk.CTkLabel(right, text="Distribution", font=FONT_SMALL, text_color=C_MUTED, anchor="e").grid(
             row=0, column=0, sticky="e")
-        dist_val = ctk.CTkLabel(right, text="—", font=FONT_BODY, text_color=C_TEXT, anchor="e")
+        dist_val = ctk.CTkLabel(right, text="—", font=FONT_MONO, text_color=C_TEXT, anchor="e")
         dist_val.grid(row=1, column=0, sticky="e")
         self.stat_labels["distribution"] = dist_val
 
@@ -419,47 +537,45 @@ class TeamGenApp(ctk.CTk):
         frame = ctk.CTkFrame(
             parent,
             fg_color=C_PANEL,
-            corner_radius=8,
+            corner_radius=5,
             border_width=1,
             border_color=C_ACCENT2,
         )
         frame.grid_columnconfigure(1, weight=1)
-        frame.grid_rowconfigure(0, weight=1)   # top spacer
-        frame.grid_rowconfigure(1, weight=0)   # name
-        frame.grid_rowconfigure(2, weight=0)   # types
-        frame.grid_rowconfigure(3, weight=0)   # bst
-        frame.grid_rowconfigure(4, weight=0)   # acq
-        frame.grid_rowconfigure(5, weight=1)   # bottom spacer
+        frame.grid_rowconfigure(0, weight=0)   # name
+        frame.grid_rowconfigure(1, weight=0)   # types
+        frame.grid_rowconfigure(2, weight=0)   # bst
+        frame.grid_rowconfigure(3, weight=0)   # acq
+        frame.grid_rowconfigure(4, weight=1)   # bottom spacer
         frame.grid_propagate(False)
 
-        # Sprite slot — CTkLabel so it can hold a CTkImage; blank bg when empty
-        # rowspan=6 + sticky="w" (no n/s) centers it vertically in the card
+        # Sprite spans all rows, pinned top-left so its top edge aligns with the name
         sprite = ctk.CTkLabel(
             frame,
             text="",
             image=None,
             fg_color=C_ENTRY_BG,
-            corner_radius=4,
-            width=96,
-            height=96,
+            corner_radius=5,
+            width=112,
+            height=112,
         )
-        sprite.grid(row=0, column=0, rowspan=6, padx=(10, 8), pady=0, sticky="w")
+        sprite.grid(row=0, column=0, rowspan=5, padx=(10, 8), pady=(8, 0), sticky="nw")
 
-        name_lbl = ctk.CTkLabel(frame, text="—", font=FONT_HEADER, text_color=C_MUTED, anchor="w")
-        name_lbl.grid(row=1, column=1, padx=(0, 10), pady=(0, 1), sticky="sew")
+        name_lbl = ctk.CTkLabel(frame, text="—", font=FONT_MONO_HEADER, text_color=C_TEXT, anchor="w")
+        name_lbl.grid(row=0, column=1, padx=(0, 10), pady=(8, 2), sticky="nw")
 
         # plain tk.Frame avoids CTkFrame canvas overpainting the card border
         types_frame = tk.Frame(frame, bg=C_PANEL)
-        types_frame.grid(row=2, column=1, padx=(0, 10), pady=(0, 2), sticky="nw")
+        types_frame.grid(row=1, column=1, padx=(0, 10), pady=(0, 2), sticky="nw")
 
         bst_lbl = ctk.CTkLabel(frame, text="", font=FONT_SMALL, text_color=C_MUTED, anchor="nw")
-        bst_lbl.grid(row=3, column=1, padx=(0, 10), pady=(0, 2), sticky="nw")
+        bst_lbl.grid(row=2, column=1, padx=(0, 10), pady=(0, 2), sticky="nw")
 
         acq_lbl = ctk.CTkLabel(
             frame, text="", font=FONT_SMALL, text_color=C_MUTED,
             anchor="nw", justify="left", wraplength=240,
         )
-        acq_lbl.grid(row=4, column=1, padx=(0, 10), pady=(0, 0), sticky="nw")
+        acq_lbl.grid(row=3, column=1, padx=(0, 10), pady=(0, 0), sticky="nw")
 
         return {"frame": frame, "name": name_lbl, "acq": acq_lbl, "sprite": sprite,
                 "types_frame": types_frame, "bst": bst_lbl}
@@ -552,7 +668,7 @@ class TeamGenApp(ctk.CTk):
             fg_color=C_ACCENT,
             hover_color=C_ACCENT2,
             text_color=C_BTN_TEXT,
-            font=("Courier New", 15, "bold"),
+            font=("Roboto", 15, "bold"),
             height=38,
             width=160,
         ).grid(row=0, column=0, padx=(0, 12))
@@ -576,6 +692,26 @@ class TeamGenApp(ctk.CTk):
         cd = self.config_data
         row = 0
 
+        def _icon_canvas(parent):
+            """Draw a circle-i icon on a Canvas — avoids Unicode glyph rendering issues."""
+            c = tk.Canvas(parent, width=15, height=15, bg=C_PANEL,
+                          highlightthickness=0, cursor="question_arrow")
+            c.create_oval(1, 1, 14, 14, outline=C_MUTED, width=1)
+            c.create_text(8, 8, text="i", fill=C_MUTED, font=("Roboto", 8))
+            return c
+
+        def label_with_tip(key, text, font=FONT_BODY, text_color=C_TEXT):
+            """Return a frame with the label text and a circle-i icon tacked on if a tooltip exists."""
+            f = tk.Frame(scroll, bg=C_PANEL)
+            ctk.CTkLabel(f, text=text, font=font, text_color=text_color,
+                         fg_color=C_PANEL, anchor="w").pack(side="left")
+            tip = self.tooltips.get(key, "")
+            if tip:
+                icon = _icon_canvas(f)
+                icon.pack(side="left", padx=(5, 0), anchor="center")
+                _Tooltip(icon, tip)
+            return f
+
         def section_label(text):
             nonlocal row
             ctk.CTkLabel(
@@ -590,12 +726,19 @@ class TeamGenApp(ctk.CTk):
             nonlocal row
             var = tk.BooleanVar(value=bool(cd.get(key, False)))
             self.config_vars[key] = var
+            f = tk.Frame(scroll, bg=C_PANEL)
             ctk.CTkCheckBox(
-                scroll, text=label, variable=var,
+                f, text=label, variable=var,
                 text_color=C_TEXT, font=FONT_BODY,
                 fg_color=C_ACCENT, hover_color=C_ACCENT2,
                 checkmark_color=C_TEXT,
-            ).grid(row=row, column=0, columnspan=2, padx=28, pady=3, sticky="w")
+            ).pack(side="left")
+            tip = self.tooltips.get(key, "")
+            if tip:
+                icon = _icon_canvas(f)
+                icon.pack(side="left", padx=(5, 0), anchor="center")
+                _Tooltip(icon, tip)
+            f.grid(row=row, column=0, columnspan=2, padx=28, pady=3, sticky="w")
             row += 1
 
         def int_row(key, label, nullable=False):
@@ -607,12 +750,11 @@ class TeamGenApp(ctk.CTk):
             else:
                 var = tk.StringVar(value=str(current_val if current_val is not None else ""))
             self.config_vars[key] = var
-            ctk.CTkLabel(scroll, text=label, font=FONT_BODY, text_color=C_TEXT, anchor="w").grid(
-                row=row, column=0, padx=28, pady=4, sticky="w")
+            label_with_tip(key, label).grid(row=row, column=0, padx=28, pady=4, sticky="w")
             ctk.CTkEntry(
                 scroll, textvariable=var, width=100,
                 fg_color=C_ENTRY_BG, text_color=C_TEXT,
-                border_color=C_ACCENT2, font=FONT_BODY,
+                border_color=C_ACCENT2, font=FONT_MONO,
                 placeholder_text="none" if nullable else "",
             ).grid(row=row, column=1, padx=(0, 28), pady=4, sticky="w")
             row += 1
@@ -628,8 +770,7 @@ class TeamGenApp(ctk.CTk):
             field = cd.get(key, {}) or {}
             current_values = field.get("value", []) or []
             options = field.get("options", []) or []
-            ctk.CTkLabel(scroll, text=label, font=FONT_BODY, text_color=C_TEXT, anchor="w").grid(
-                row=row, column=0, columnspan=2, padx=28, pady=(6, 2), sticky="w")
+            label_with_tip(key, label).grid(row=row, column=0, columnspan=2, padx=28, pady=(6, 2), sticky="w")
             row += 1
             var_dict = {"__list__": True}  # sentinel: _save_config writes value as a plain list
             for option in options:
@@ -637,7 +778,7 @@ class TeamGenApp(ctk.CTk):
                 var_dict[option] = var
                 ctk.CTkCheckBox(
                     scroll, text=option, variable=var,
-                    text_color=C_MUTED, font=FONT_SMALL,
+                    text_color=C_TEXT, font=FONT_MONO,
                     fg_color=C_ACCENT2, hover_color=C_ACCENT,
                     checkmark_color=C_TEXT,
                 ).grid(row=row, column=0, columnspan=2, padx=44, pady=2, sticky="w")
@@ -651,8 +792,7 @@ class TeamGenApp(ctk.CTk):
             """
             nonlocal row
             current_dict = cd.get(parent_key, {}) or {}
-            ctk.CTkLabel(scroll, text=label, font=FONT_BODY, text_color=C_TEXT, anchor="w").grid(
-                row=row, column=0, columnspan=2, padx=28, pady=(6, 2), sticky="w")
+            label_with_tip(parent_key, label).grid(row=row, column=0, columnspan=2, padx=28, pady=(6, 2), sticky="w")
             row += 1
             var_dict = {}
             for option in options:
@@ -660,7 +800,7 @@ class TeamGenApp(ctk.CTk):
                 var_dict[option] = var
                 ctk.CTkCheckBox(
                     scroll, text=option, variable=var,
-                    text_color=C_MUTED, font=FONT_SMALL,
+                    text_color=C_TEXT, font=FONT_MONO,
                     fg_color=C_ACCENT2, hover_color=C_ACCENT,
                     checkmark_color=C_TEXT,
                 ).grid(row=row, column=0, columnspan=2, padx=44, pady=2, sticky="w")
@@ -682,12 +822,11 @@ class TeamGenApp(ctk.CTk):
                 current_val = options[0]
             var = tk.StringVar(value=current_val)
             self.config_vars[key] = var
-            ctk.CTkLabel(scroll, text=label, font=FONT_BODY, text_color=C_TEXT, anchor="w").grid(
-                row=row, column=0, padx=28, pady=4, sticky="w")
+            label_with_tip(key, label).grid(row=row, column=0, padx=28, pady=4, sticky="w")
             ctk.CTkOptionMenu(
                 scroll, variable=var, values=options if options else [current_val],
                 fg_color=C_ENTRY_BG, button_color=C_ACCENT2,
-                button_hover_color=C_ACCENT, text_color=C_TEXT, font=FONT_BODY,
+                button_hover_color=C_ACCENT, text_color=C_TEXT, font=FONT_MONO,
                 width=200,
             ).grid(row=row, column=1, padx=(0, 28), pady=4, sticky="w")
             row += 1
@@ -696,47 +835,48 @@ class TeamGenApp(ctk.CTk):
             nonlocal row
             current_val = cd.get(key, []) or []
             display_val = ", ".join(current_val) if isinstance(current_val, list) else str(current_val)
-            var = tk.StringVar(value=display_val)
-            self.config_vars[key] = var
-            ctk.CTkLabel(scroll, text=label, font=FONT_BODY, text_color=C_TEXT, anchor="w").grid(
-                row=row, column=0, padx=28, pady=4, sticky="w")
-            ctk.CTkEntry(
-                scroll, textvariable=var, width=320,
+            label_with_tip(key, label).grid(row=row, column=0, padx=28, pady=4, sticky="w")
+            entry = ctk.CTkEntry(
+                scroll, width=320,
                 fg_color=C_ENTRY_BG, text_color=C_TEXT,
-                border_color=C_ACCENT2, font=FONT_BODY,
+                border_color=C_ACCENT2, font=FONT_MONO,
                 placeholder_text=placeholder,
-            ).grid(row=row, column=1, padx=(0, 28), pady=4, sticky="w")
+            )
+            if display_val:
+                entry.insert(0, display_val)
+            entry.grid(row=row, column=1, padx=(0, 28), pady=4, sticky="w")
+            self.config_vars[key] = entry
             row += 1
 
-        section_label("Balancing")
-        multi_check_row("allowed_balancing", "Allowed balancing modes:")
-        multi_check_row("allowed_spreads", "Allowed spreads:")
-        multi_check_row("allowed_patterns", "Allowed patterns:")
+        section_label("Party Balancing")
+        multi_check_row("allowed_balancing", "Allowed balancing")
+        multi_check_row("allowed_spreads", "Allowed spreads")
+        multi_check_row("allowed_patterns", "Allowed patterns")
 
         section_label("Pokémon Details")
-        bool_row("force_starter",           "Force a random starter in the party")
-        bool_row("allow_not_fully_evolved", "Allow not fully evolved Pokémon")
+        bool_row("force_starter",           "Force a random starter")
+        bool_row("allow_not_fully_evolved", "Allow not-fully-evolved Pokémon")
         bool_row("allow_legendaries",       "Allow legendary Pokémon")
         bool_row("allow_duplicate_species", "Allow duplicate species")
-        int_row("max_evo_stage", "Max evolution stage:")
-        int_row("bst_max", "BST maximum (none = no limit):", nullable=True)
-        int_row("bst_min", "BST minimum (none = no limit):", nullable=True)
-        text_row("species_blacklist", "Species blacklist (comma-separated):", placeholder="e.g. RATTATA, PIDGEY")
+        int_row("max_evo_stage", "Max evolution stage")
+        int_row("bst_max", "BST maximum", nullable=True)
+        int_row("bst_min", "BST minimum", nullable=True)
+        text_row("species_blacklist", "Species blacklist (comma-separated stage 1s)", placeholder="e.g. EEVEE, MAGMAR, NIDORAN_M")
         evo_methods = list(cd.get("allowed_evo_methods", {}).keys())
-        nested_bool_row("allowed_evo_methods", "Allowed evolution methods:", evo_methods)
+        nested_bool_row("allowed_evo_methods", "Allowed evolution methods", evo_methods)
 
         section_label("Type Restrictions")
         bool_row("allow_dual_type", "Allow dual-type Pokémon")
-        dropdown_row("type_distribution", "Type distribution:")
-        dropdown_row("prescribed_type", "Prescribed type (for all_share_one_type):")
+        dropdown_row("type_distribution", "Type distribution")
+        dropdown_row("prescribed_type", "Prescribed type (for all_share_one_type)")
 
-        section_label("HM Coverage")
+        section_label("Learnsets")
         hm_options = list(cd.get("ensure_hm_coverage", {}).keys())
-        nested_bool_row("ensure_hm_coverage", "Require these HMs in party move pool:", hm_options)
+        nested_bool_row("ensure_hm_coverage", "Required learnable HMs (in party move pool)", hm_options)
 
         section_label("Acquisition Methods")
         acq_options = list(cd.get("allowed_acquisition_methods", {}).keys())
-        nested_bool_row("allowed_acquisition_methods", "Allowed acquisition methods:", acq_options)
+        nested_bool_row("allowed_acquisition_methods", "Allowed acquisition methods", acq_options)
 
 
     # =========================================================================
@@ -817,7 +957,7 @@ class TeamGenApp(ctk.CTk):
                 elif isinstance(var, tk.BooleanVar):
                     data[key] = var.get()
 
-                elif isinstance(var, tk.StringVar):
+                elif isinstance(var, (tk.StringVar, ctk.CTkEntry)):
                     raw = var.get().strip()
 
                     # int-or-none fields
@@ -940,8 +1080,8 @@ class TeamGenApp(ctk.CTk):
 
             sprite_path = os.path.join(sprite_dir, f"{mon_obj.nat_dex_number}.png")
             try:
-                pil_img = Image.open(sprite_path).resize((96, 96), Image.NEAREST)
-                ctk_img = ctk.CTkImage(light_image=pil_img, dark_image=pil_img, size=(96, 96))
+                pil_img = Image.open(sprite_path).resize((112, 112), Image.NEAREST)
+                ctk_img = ctk.CTkImage(light_image=pil_img, dark_image=pil_img, size=(112, 112))
                 self._sprite_images[i] = ctk_img
                 card["sprite"].configure(image=ctk_img)
             except (FileNotFoundError, OSError):

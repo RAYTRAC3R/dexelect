@@ -19,11 +19,12 @@ C_SUCCESS   = "#6abf7b"   # same as accent for success messages
 C_WARNING   = "#c8a96e"   # muted amber — kept for warnings only
 C_ENTRY_BG  = "#0e0e0e"   # input field background (slightly darker than C_BG)
 
-FONT_TITLE  = ("Courier New", 24, "bold")
-FONT_HEADER = ("Courier New", 15, "bold")
-FONT_BODY   = ("Courier New", 13)
-FONT_SMALL  = ("Courier New", 13)
-FONT_MONO   = ("Courier New", 13)
+FONT_TITLE  = ("Roboto", 24, "bold")
+FONT_HEADER = ("Roboto", 15, "bold")
+FONT_BODY   = ("Roboto", 13)
+FONT_SMALL  = ("Roboto", 11)
+FONT_MONO        = ("Courier New", 13)
+FONT_MONO_HEADER = ("Courier New", 15, "bold")
 
 TYPE_COLORS = {
     "normal":   "#9a9a78",

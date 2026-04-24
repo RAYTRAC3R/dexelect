@@ -82,4 +82,11 @@
 
 - add Claude skill file which acts as instructions for Claude to help guide users when adding a new romhack from the command line (Claude code). e.g. it knows the structure of the pokedex and locations files, it knows the data it needs and where to get it (Serebii or something), and it knows how to add all that to the repo, but it asks user questions along the way, like "does this romhack have custom pokemon or can I use an existing pokedex file?". It needs context about whole project structure.
 
+- add hoverable tooltips to everything in the config tab
+
+- move to 1.0.0 after config file schemas / system is finished (so users can keep config files and it can be `.gitignore`ed in the repo)
+  - an "update" button in the standalone binary GUI would also be nice so users can update in-app
+  
+- dynamic color theme matching game? (GUI)
+- add the subtitle (progressin-viable party generator) to the GUI under title?
 

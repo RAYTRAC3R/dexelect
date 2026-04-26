@@ -232,7 +232,7 @@ def ui_loop(all_pools, all_pokemon, config_data, meta_data, mappings, global_set
         print(f"Press {BRIGHT_CYAN}ENTER{RESET} to generate a party.")
         print(f"{BRIGHT_CYAN}M{RESET} - Toggle [M]ode")
         print(f"{BRIGHT_CYAN}G{RESET} - Set [G]ame")
-        print(f"{BRIGHT_CYAN}R{RESET} - [R]eload config")
+        print(f"{BRIGHT_CYAN}R{RESET} - [R]eload config from disk")
         print(f"{BRIGHT_CYAN}H{RESET} - [H]elp")
         print(f"{BRIGHT_CYAN}Q{RESET} - [Q]uit")
         print("")

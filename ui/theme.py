@@ -12,6 +12,7 @@ C_PANEL     = "#171717"   # slightly lifted panel background
 C_SIDEBAR   = "#141414"   # sidebar (subtle distinction from main)
 C_ACCENT    = "#6abf7b"   # soft green — sole accent colour
 C_ACCENT2   = "#2a3d2e"   # dark green — hover states, dividers, secondary fills
+C_ACCENT_DIM = "#1f2d22"  # very subtle green tint — secondary button faces
 C_TEXT      = "#e0e0e0"   # primary text (off-white, not harsh)
 C_MUTED     = "#b8b8b8"   # secondary / muted text
 C_BTN_TEXT  = "#0f1f14"   # dark text for use on green (accent) buttons
@@ -21,6 +22,7 @@ C_ENTRY_BG  = "#0e0e0e"   # input field background (slightly darker than C_BG)
 
 FONT_TITLE  = ("Roboto", 24, "bold")
 FONT_HEADER = ("Roboto", 15, "bold")
+FONT_BTN    = ("Roboto", 15)
 FONT_BODY   = ("Roboto", 13)
 FONT_SMALL  = ("Roboto", 11)
 FONT_MONO        = ("Courier New", 13)

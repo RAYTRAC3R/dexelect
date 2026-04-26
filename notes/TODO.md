@@ -98,3 +98,9 @@
 - add bug report link / template
 
 - change sample_gui_output screenshot in readme
+- "report a bug" button in the GUI
+
+- wacky idea: "prescribed poke ball" option that displays the type of ball u should catch something in, like a ball png for the specific ball in the top right of the card. can be in the "Display" toggles. Would require some additional progression/config data because certain balls are not available till later in game.
+
+- Press Enter to generate in GUI as well? (then update the "Click Generate Party to begin" message)
+- Get the Gen 3 "? in circle" sprite for not-yet-generated party members

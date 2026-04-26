@@ -31,7 +31,7 @@ import threading
 import time
 import os
 import webbrowser
-from PIL import Image
+from PIL import Image, ImageDraw, ImageFont, ImageTk
 from core import generate_final_party, generate_fully_randomized_party
 from data.loader import build_all_data_structures
 from util import resource_path
@@ -43,9 +43,9 @@ from version import __version__
 # =============================================================================
 
 from ui.theme import (
-    C_BG, C_PANEL, C_SIDEBAR, C_ACCENT, C_ACCENT2,
+    C_BG, C_PANEL, C_SIDEBAR, C_ACCENT, C_ACCENT2, C_ACCENT_DIM,
     C_TEXT, C_MUTED, C_BTN_TEXT, C_SUCCESS, C_WARNING, C_ENTRY_BG,
-    FONT_TITLE, FONT_HEADER, FONT_BODY, FONT_SMALL, FONT_MONO, FONT_MONO_HEADER,
+    FONT_TITLE, FONT_HEADER, FONT_BTN, FONT_BODY, FONT_SMALL, FONT_MONO, FONT_MONO_HEADER,
     TYPE_COLORS,
 )
 
@@ -187,6 +187,38 @@ class _Tooltip:
         self._do_hide()
 
 
+def _circle_glyph_image(glyph: str, color_hex: str, bg_hex: str,
+                        size: int, font_size: int) -> ImageTk.PhotoImage:
+    """Render a circle with a centered glyph via PIL — font-metric-independent."""
+    def h(s):
+        s = s.lstrip("#")
+        return tuple(int(s[i:i+2], 16) for i in (0, 2, 4))
+    img  = Image.new("RGB", (size, size), h(bg_hex))
+    draw = ImageDraw.Draw(img)
+    draw.ellipse([1, 1, size - 2, size - 2], outline=h(color_hex), width=1)
+    try:
+        font = ImageFont.load_default(size=font_size)
+    except TypeError:
+        font = ImageFont.load_default()
+    bbox = draw.textbbox((0, 0), glyph, font=font)
+    x = (size - (bbox[2] - bbox[0])) // 2 - bbox[0]
+    y = (size - (bbox[3] - bbox[1])) // 2 - bbox[1]
+    draw.text((x, y), glyph, fill=h(color_hex), font=font)
+    return ImageTk.PhotoImage(img)
+
+
+def _icon_canvas(parent, bg=C_PANEL):
+    """Return a tk.Label with a PIL-rendered circle-i icon."""
+    img = _circle_glyph_image("i", C_MUTED, bg, size=15, font_size=9)
+    lbl = tk.Label(parent, image=img, bg=bg, cursor="question_arrow", bd=0)
+    lbl._img = img  # prevent GC
+    return lbl
+
+
+def _circle_q_image(color_hex: str, bg_hex: str, size: int = 20) -> ImageTk.PhotoImage:
+    return _circle_glyph_image("?", color_hex, bg_hex, size=size, font_size=11)
+
+
 # =============================================================================
 # MAIN APP CLASS
 # =============================================================================
@@ -255,6 +287,11 @@ class DexelectApp(ctk.CTk):
          self.global_settings) = build_all_data_structures()
         self._populate_ui_from_state()
         self._set_status("Config reloaded.", color=C_SUCCESS)
+
+    def _on_reload_from_disk(self):
+        game = self.var_game.get()
+        self._reload_data()
+        self._set_config_status("Config reloaded from disk.", color=C_SUCCESS)
 
 
     # =========================================================================
@@ -370,22 +407,6 @@ class DexelectApp(ctk.CTk):
             checkmark_color=C_TEXT,
         ).grid(row=12, column=0, padx=24, pady=3, sticky="w")
 
-        ctk.CTkFrame(sf, height=1, fg_color=C_ACCENT2).grid(
-            row=13, column=0, padx=16, pady=(16, 0), sticky="ew")
-
-        # ---- Reload config button ----
-        ctk.CTkButton(
-            sf,
-            text="Reload Config",
-            command=self._reload_data,
-            fg_color=C_ACCENT,
-            hover_color=C_ACCENT2,
-            text_color=C_BTN_TEXT,
-            font=FONT_BODY,
-            height=34,
-            width=200,
-        ).grid(row=14, column=0, padx=20, pady=(20, 8), sticky="w")
-
         # ---- Copyright (pinned to bottom) ----
         footer = tk.Frame(sf, bg=C_SIDEBAR)
         footer.grid(row=99, column=0, padx=20, pady=20, sticky="sw")
@@ -393,26 +414,44 @@ class DexelectApp(ctk.CTk):
 
         ctk.CTkLabel(
             footer,
-            text="© 2025 Derek Andersen\nMIT License",
-            font=FONT_SMALL,
+            text="© 2025 Derek Andersen",
+            font=FONT_BODY,
             text_color=C_MUTED,
             justify="left",
             fg_color=C_SIDEBAR,
-        ).grid(row=0, column=0, sticky="w")
+        ).grid(row=0, column=0, columnspan=3, sticky="w")
+
+        links = tk.Frame(footer, bg=C_SIDEBAR)
+        links.grid(row=1, column=0, sticky="w")
 
         kofi_lbl = ctk.CTkLabel(
-            footer,
-            text="☕ Support on Ko-fi",
-            font=FONT_SMALL,
+            links,
+            text="☕ Ko-fi",
+            font=FONT_BODY,
             text_color=C_ACCENT,
-            justify="left",
             fg_color=C_SIDEBAR,
             cursor="hand2",
         )
-        kofi_lbl.grid(row=1, column=0, pady=(2, 0), sticky="w")
+        kofi_lbl.pack(side="left")
         kofi_lbl.bind("<Button-1>", lambda e: webbrowser.open("https://ko-fi.com/dechrissen"))
         kofi_lbl.bind("<Enter>", lambda e: kofi_lbl.configure(text_color=C_TEXT))
         kofi_lbl.bind("<Leave>", lambda e: kofi_lbl.configure(text_color=C_ACCENT))
+
+        ctk.CTkLabel(links, text="·", font=FONT_BODY, text_color=C_MUTED,
+                     fg_color=C_SIDEBAR).pack(side="left", padx=(4, 4))
+
+        gh_lbl = ctk.CTkLabel(
+            links,
+            text="GitHub",
+            font=FONT_BODY,
+            text_color=C_ACCENT,
+            fg_color=C_SIDEBAR,
+            cursor="hand2",
+        )
+        gh_lbl.pack(side="left")
+        gh_lbl.bind("<Button-1>", lambda e: webbrowser.open("https://github.com/Dechrissen/dexelect"))
+        gh_lbl.bind("<Enter>", lambda e: gh_lbl.configure(text_color=C_TEXT))
+        gh_lbl.bind("<Leave>", lambda e: gh_lbl.configure(text_color=C_ACCENT))
 
 
     # =========================================================================
@@ -461,6 +500,111 @@ class DexelectApp(ctk.CTk):
         self._build_gen_tab(self.tabview.tab("Generate"))
         self._build_config_tab(self.tabview.tab("Config"))
 
+        # ---- Help button (top-right corner, anchored inside tab strip) ----
+        self._help_img_normal = _circle_q_image(C_MUTED, C_PANEL)
+        self._help_img_hover  = _circle_q_image(C_TEXT,  C_PANEL)
+        help_btn = tk.Label(
+            self.main_frame, image=self._help_img_normal,
+            bg=C_PANEL, cursor="hand2", bd=0,
+        )
+        help_btn.place(relx=1.0, rely=0.0, anchor="ne", x=-20, y=38)
+        help_btn.bind("<Button-1>", lambda e: self._toggle_help())
+        help_btn.bind("<Enter>", lambda e: help_btn.configure(image=self._help_img_hover))
+        help_btn.bind("<Leave>", lambda e: help_btn.configure(image=self._help_img_normal))
+        self._help_overlay = None
+
+
+    # =========================================================================
+    # HELP OVERLAY
+    # =========================================================================
+
+    def _toggle_help(self):
+        if self._help_overlay and self._help_overlay.winfo_exists():
+            self._close_help()
+        else:
+            self._show_help()
+
+    def _show_help(self):
+        overlay = tk.Frame(self, bg=C_BG, highlightthickness=2,
+                           highlightbackground=C_ACCENT)
+        overlay.place(x=14, y=14, relwidth=1.0, relheight=1.0, width=-28, height=-28)
+        overlay.lift()
+        self._help_overlay = overlay
+
+        # Title bar
+        title_bar = tk.Frame(overlay, bg=C_BG)
+        title_bar.pack(fill="x")
+        tk.Label(title_bar, text="Help", bg=C_BG, fg=C_TEXT,
+                 font=FONT_HEADER, padx=14, pady=8).pack(side="left")
+        close = tk.Label(title_bar, text="  ✕  ", bg=C_BG, fg=C_MUTED,
+                         font=FONT_BODY, cursor="hand2")
+        close.pack(side="right")
+        close.bind("<Button-1>", lambda e: self._close_help())
+        close.bind("<Enter>", lambda e: close.configure(fg=C_TEXT))
+        close.bind("<Leave>", lambda e: close.configure(fg=C_MUTED))
+
+        # Separator
+        tk.Frame(overlay, bg=C_ACCENT, height=1).pack(fill="x")
+
+        # Scrollable text area
+        text = tk.Text(
+            overlay, bg=C_BG, fg=C_MUTED,
+            font=FONT_BODY, wrap="word",
+            padx=20, pady=14,
+            relief="flat", highlightthickness=0,
+            state="normal",
+        )
+        scrollbar = ctk.CTkScrollbar(overlay, command=text.yview,
+                                     fg_color=C_BG, button_color=C_ACCENT2,
+                                     button_hover_color=C_ACCENT)
+        text.configure(yscrollcommand=scrollbar.set)
+        scrollbar.pack(side="right", fill="y")
+        text.pack(side="left", fill="both", expand=True)
+
+        self._render_help_text(text)
+        text.configure(state="disabled")
+
+        self.bind("<Escape>", lambda e: self._close_help())
+
+    def _close_help(self):
+        if self._help_overlay:
+            try:
+                self._help_overlay.destroy()
+            except tk.TclError:
+                pass
+            self._help_overlay = None
+        self.unbind("<Escape>")
+
+    def _render_help_text(self, text_widget):
+        text_widget.tag_configure("h1",  font=("Roboto", 16, "bold"), foreground=C_ACCENT,
+                                         spacing1=2, spacing3=8)
+        text_widget.tag_configure("h2",  font=("Roboto", 13, "bold"), foreground=C_TEXT,
+                                         spacing1=12, spacing3=2)
+        text_widget.tag_configure("h3",  font=("Roboto", 12, "bold"), foreground=C_MUTED,
+                                         spacing1=8, spacing3=1)
+        text_widget.tag_configure("body", font=FONT_BODY, foreground=C_MUTED)
+
+        try:
+            path = resource_path("ui/gui-help.md")
+            with open(path, "r") as f:
+                lines = f.readlines()
+        except Exception:
+            text_widget.insert("end", "Help file not found.", "body")
+            return
+
+        for line in lines:
+            line = line.rstrip("\n")
+            if line.startswith("### "):
+                text_widget.insert("end", line[4:] + "\n", "h3")
+            elif line.startswith("## "):
+                text_widget.insert("end", line[3:] + "\n", "h2")
+            elif line.startswith("# "):
+                text_widget.insert("end", line[2:] + "\n", "h1")
+            elif line == "":
+                text_widget.insert("end", "\n", "body")
+            else:
+                text_widget.insert("end", line + "\n", "body")
+
 
     # =========================================================================
     # GENERATE TAB
@@ -478,7 +622,7 @@ class DexelectApp(ctk.CTk):
 
         # ---- Top bar ----
         top_bar = ctk.CTkFrame(parent, fg_color="transparent")
-        top_bar.grid(row=0, column=0, sticky="ew", padx=16, pady=(16, 8))
+        top_bar.grid(row=0, column=0, sticky="ew", padx=16, pady=(24, 8))
         top_bar.grid_columnconfigure(1, weight=1)
 
         self.generate_btn = ctk.CTkButton(
@@ -488,7 +632,7 @@ class DexelectApp(ctk.CTk):
             fg_color=C_ACCENT,
             hover_color=C_ACCENT2,
             text_color=C_BTN_TEXT,
-            font=("Roboto", 15, "bold"),
+            font=FONT_BTN,
             height=42,
             width=180,
             corner_radius=5,
@@ -532,18 +676,32 @@ class DexelectApp(ctk.CTk):
 
         self.stat_labels = {}
         for col, (key, label) in enumerate([("lean", "Lean"), ("spread", "Spread"), ("pattern", "Pattern")]):
-            ctk.CTkLabel(left, text=label, font=FONT_SMALL, text_color=C_MUTED, anchor="w", width=150).grid(
-                row=0, column=col, sticky="w")
-            val = ctk.CTkLabel(left, text="—", font=FONT_MONO, text_color=C_TEXT, anchor="w", width=150)
+            hdr = tk.Frame(left, bg=C_PANEL)
+            hdr.grid(row=0, column=col, sticky="w", padx=(0, 20))
+            ctk.CTkLabel(hdr, text=label, font=FONT_BODY, text_color=C_TEXT,
+                         fg_color=C_PANEL, anchor="w").pack(side="left")
+            tip = self.tooltips.get(key, "")
+            if tip:
+                icon = _icon_canvas(hdr)
+                icon.pack(side="left", padx=(5, 0), anchor="center")
+                _Tooltip(icon, tip)
+            val = ctk.CTkLabel(left, text="—", font=FONT_MONO, text_color=C_MUTED, anchor="w", width=150)
             val.grid(row=1, column=col, sticky="w")
             self.stat_labels[key] = val
 
         right = ctk.CTkFrame(stats_frame, fg_color=C_PANEL, corner_radius=0)
         right.grid(row=0, column=1, padx=(0, 16), pady=10, sticky="e")
 
-        ctk.CTkLabel(right, text="Distribution", font=FONT_SMALL, text_color=C_MUTED, anchor="e").grid(
-            row=0, column=0, sticky="e")
-        dist_val = ctk.CTkLabel(right, text="—", font=FONT_MONO, text_color=C_TEXT, anchor="e")
+        hdr = tk.Frame(right, bg=C_PANEL)
+        hdr.grid(row=0, column=0, sticky="e")
+        ctk.CTkLabel(hdr, text="Distribution", font=FONT_BODY, text_color=C_TEXT,
+                     fg_color=C_PANEL, anchor="e").pack(side="left")
+        tip = self.tooltips.get("distribution", "")
+        if tip:
+            icon = _icon_canvas(hdr)
+            icon.pack(side="left", padx=(5, 0), anchor="center")
+            _Tooltip(icon, tip)
+        dist_val = ctk.CTkLabel(right, text="—", font=FONT_MONO, text_color=C_MUTED, anchor="e")
         dist_val.grid(row=1, column=0, sticky="e")
         self.stat_labels["distribution"] = dist_val
 
@@ -582,7 +740,7 @@ class DexelectApp(ctk.CTk):
         )
         sprite.grid(row=0, column=0, rowspan=4, padx=(8, 8), pady=(10, 0), sticky="nw")
 
-        name_lbl = ctk.CTkLabel(frame, text="—", font=FONT_MONO_HEADER, text_color=C_TEXT, anchor="w")
+        name_lbl = ctk.CTkLabel(frame, text="Empty", font=FONT_MONO_HEADER, text_color=C_MUTED, anchor="w")
         name_lbl.grid(row=0, column=1, padx=(0, 10), pady=(4, 2), sticky="nw")
 
         # plain tk.Frame avoids CTkFrame canvas overpainting the card border
@@ -608,7 +766,7 @@ class DexelectApp(ctk.CTk):
     def _clear_cards(self):
         """Reset all party cards to their empty placeholder state."""
         for i, card in enumerate(self.party_cards):
-            card["name"].configure(text="—", text_color=C_MUTED)
+            card["name"].configure(text="Empty", text_color=C_MUTED)
             card["acq"].configure(text="")
             card["sep"].grid_remove()
             card["bst"].configure(text="")
@@ -618,7 +776,7 @@ class DexelectApp(ctk.CTk):
             for w in card["types_frame"].winfo_children():
                 w.destroy()
         for lbl in self.stat_labels.values():
-            lbl.configure(text="—", text_color=C_TEXT)
+            lbl.configure(text="—", text_color=C_MUTED)
         self.last_party_blob = None
 
     def _render_type_badges(self, types_frame, types: list[str]):
@@ -654,7 +812,7 @@ class DexelectApp(ctk.CTk):
         parent.grid_rowconfigure(0, weight=1)
 
         scroll = ctk.CTkScrollableFrame(parent, fg_color=C_PANEL, scrollbar_button_color=C_ACCENT2)
-        scroll.grid(row=0, column=0, sticky="nsew")
+        scroll.grid(row=0, column=0, sticky="nsew", pady=(8, 0))
         scroll.grid_columnconfigure(0, weight=1)
         scroll.grid_columnconfigure(1, weight=1)
         self.config_scroll = scroll
@@ -689,12 +847,12 @@ class DexelectApp(ctk.CTk):
 
         ctk.CTkButton(
             save_bar,
-            text="💾  Save Config",
+            text="💾 Save Config",
             command=self._save_config,
             fg_color=C_ACCENT,
             hover_color=C_ACCENT2,
             text_color=C_BTN_TEXT,
-            font=("Roboto", 15, "bold"),
+            font=FONT_BTN,
             height=38,
             width=160,
         ).grid(row=0, column=0, padx=(0, 12))
@@ -702,6 +860,22 @@ class DexelectApp(ctk.CTk):
         self.config_status_label = ctk.CTkLabel(
             save_bar, text="", font=FONT_BODY, text_color=C_MUTED, anchor="w")
         self.config_status_label.grid(row=0, column=1, sticky="w")
+
+        ctk.CTkButton(
+            save_bar,
+            text="Reload from disk",
+            command=self._on_reload_from_disk,
+            fg_color=C_ACCENT_DIM,
+            hover_color=C_ACCENT2,
+            text_color=C_MUTED,
+            font=FONT_BTN,
+            height=38,
+            width=160,
+        ).grid(row=0, column=2, padx=(0, 12))
+
+        self.config_file_label = ctk.CTkLabel(
+            save_bar, text="", font=FONT_MONO, text_color=C_MUTED, anchor="e")
+        self.config_file_label.grid(row=0, column=3, sticky="e", padx=(0, 4))
 
 
     def _populate_config_controls(self):
@@ -711,20 +885,16 @@ class DexelectApp(ctk.CTk):
         """
         scroll = self.config_scroll
 
+        game = self.var_game.get()
+        config_path = self.mappings[game]["config"]
+        self.config_file_label.configure(text=os.path.basename(config_path))
+
         for widget in scroll.winfo_children():
             widget.destroy()
         self.config_vars.clear()
 
         cd = self.config_data
         row = 0
-
-        def _icon_canvas(parent):
-            """Draw a circle-i icon on a Canvas — avoids Unicode glyph rendering issues."""
-            c = tk.Canvas(parent, width=15, height=15, bg=C_PANEL,
-                          highlightthickness=0, cursor="question_arrow")
-            c.create_oval(1, 1, 14, 14, outline=C_MUTED, width=1)
-            c.create_text(8, 8, text="i", fill=C_MUTED, font=("Roboto", 8))
-            return c
 
         def label_with_tip(key, text, font=FONT_BODY, text_color=C_TEXT):
             """Return a frame with the label text and a circle-i icon tacked on if a tooltip exists."""
@@ -937,7 +1107,7 @@ class DexelectApp(ctk.CTk):
         self._patch_global_setting("game", selected_game)
         self._reload_data()
         self._set_status(f"Game set to {selected_game}.", color=C_SUCCESS)
-        self._set_config_status(f"Loaded config for {selected_game}.")
+        self._set_config_status(f"Config loaded for {selected_game}.")
 
     def _on_mode_changed(self):
         new_mode = self.var_gen_mode.get()
@@ -1070,7 +1240,7 @@ class DexelectApp(ctk.CTk):
             self._set_status("Could not generate a party. Try adjusting settings.", color=C_WARNING)
             return
 
-        self._set_status(f"Done! (Took {duration:.2f}s)", color=C_SUCCESS)
+        self._set_status(f"Done. (Took {duration:.2f}s)", color=C_SUCCESS)
         self.last_party_blob = party_blob
         self._populate_cards(party_blob)
 
@@ -1121,9 +1291,9 @@ class DexelectApp(ctk.CTk):
                 earliest_pool = pokemon["earliest_pool"]
                 card["acq"].configure(
                     text=(
-                        f"acquire as {earliest_form.name}\n"
+                        f"Acquire as {earliest_form.name}\n"
                         f"via {method} at {location}\n"
-                        f"(Sphere {earliest_pool})"
+                        f"(Sphere {earliest_pool})."
                     )
                 )
                 card["sep"].grid()
@@ -1132,14 +1302,14 @@ class DexelectApp(ctk.CTk):
                 card["sep"].grid_remove()
 
         if show_balance and party_blob.get("lean") is not None:
-            self.stat_labels["lean"].configure(text=str(party_blob.get("lean", "—")), text_color=C_TEXT)
-            self.stat_labels["spread"].configure(text=str(party_blob.get("spread", "—")), text_color=C_TEXT)
+            self.stat_labels["lean"].configure(text=str(party_blob.get("lean", "—")), text_color=C_MUTED)
+            self.stat_labels["spread"].configure(text=str(party_blob.get("spread", "—")), text_color=C_MUTED)
             pattern = party_blob.get("pattern")
-            self.stat_labels["pattern"].configure(text=str(pattern) if pattern else "—", text_color=C_TEXT)
+            self.stat_labels["pattern"].configure(text=str(pattern) if pattern else "—", text_color=C_MUTED)
             dist = party_blob.get("party_distribution")
             if dist:
                 dist_str = "  ".join(f"S{s}: {dist[s]}" for s in dist)
-                self.stat_labels["distribution"].configure(text=dist_str, text_color=C_TEXT)
+                self.stat_labels["distribution"].configure(text=dist_str, text_color=C_MUTED)
             else:
                 self.stat_labels["distribution"].configure(text="—", text_color=C_MUTED)
         else:

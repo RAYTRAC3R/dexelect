@@ -102,3 +102,5 @@
 
 - Press Enter to generate in GUI as well? (then update the "Click Generate Party to begin" message)
 - Get the Gen 3 "? in circle" sprite for not-yet-generated party members
+
+- click something (spheres at bottom in Distribution?) to go to a page that lists all the maps in each sphere for current game

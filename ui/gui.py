@@ -57,7 +57,7 @@ from ui.gui_theme import (
 GLOBAL_SETTINGS_PATH = "config/global_settings.yaml"
 
 def read_yaml(path: str) -> dict:
-    with open(resource_path(path), "r") as f:
+    with open(resource_path(path), "r", encoding="utf-8") as f:
         return yaml.safe_load(f)
 
 class _InlineListDumper(yaml.Dumper):
@@ -70,7 +70,7 @@ class _InlineListDumper(yaml.Dumper):
         return super().represent_sequence(tag, sequence, flow_style=True)
 
 def write_yaml(path: str, data: dict):
-    with open(resource_path(path), "w") as f:
+    with open(resource_path(path), "w", encoding="utf-8") as f:
         yaml.dump(data, f, Dumper=_InlineListDumper, default_flow_style=False, allow_unicode=True, sort_keys=False)
 
 
@@ -595,7 +595,7 @@ class DexelectApp(ctk.CTk):
 
         try:
             path = resource_path("ui/gui-help.md")
-            with open(path, "r") as f:
+            with open(path, "r", encoding="utf-8") as f:
                 lines = f.readlines()
         except Exception:
             text_widget.insert("end", "Help file not found.", "body")
@@ -829,14 +829,18 @@ class DexelectApp(ctk.CTk):
         # Mouse-wheel scrolling: activate globally while cursor is inside the frame.
         # Using enter/leave avoids accumulating duplicate bindings on every rebuild.
         canvas = scroll._parent_canvas
+        # CTkScrollableFrame sets yscrollincrement=1 on Windows; set it on Linux too
+        # so that 1 unit = 1 pixel on every platform and SCROLL_PX is always exact.
+        canvas.configure(yscrollincrement=1)
+        SCROLL_PX = 60  # pixels per scroll notch
 
         def _on_config_scroll(event):
-            if event.num == 4:
-                canvas.yview_scroll(-1, "units")
-            elif event.num == 5:
-                canvas.yview_scroll(1, "units")
-            else:
-                canvas.yview_scroll(-int(event.delta / 40), "units")
+            if event.num == 4:                        # Linux scroll-up
+                canvas.yview_scroll(-SCROLL_PX, "units")
+            elif event.num == 5:                      # Linux scroll-down
+                canvas.yview_scroll(SCROLL_PX, "units")
+            else:                                     # Windows <MouseWheel> (delta=±120/notch)
+                canvas.yview_scroll(int(-event.delta / 120) * SCROLL_PX, "units")
 
         scroll.bind("<Enter>", lambda e: [
             self.bind_all("<MouseWheel>", _on_config_scroll),

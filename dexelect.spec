@@ -10,6 +10,7 @@ datas = [
     ('config',         'config'),
     ('data',           'data'),
     ('assets/sprites', 'assets/sprites'),
+    ('ui/gui-help.md', 'ui'),
 ] + ctk_datas
 
 a = Analysis(

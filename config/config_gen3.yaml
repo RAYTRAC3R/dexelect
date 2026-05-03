@@ -1,4 +1,4 @@
-require_one_sphere_one: true
+require_one_sphere_one: false
 allowed_balancing:
   value: [balanced, early_game_heavy, late_game_heavy]
   options: [balanced, early_game_heavy, late_game_heavy]
@@ -47,7 +47,7 @@ prescribed_type:
   options: [none, normal, fire, water, grass, electric, flying, fighting, ice, psychic,
     ground, rock, poison, bug, dragon, ghost, steel, dark]
 type_blacklist:
-  value: [normal, water, ground, rock, bug]
+  value: []
   options: [normal, fire, water, grass, electric, flying, fighting, ice, psychic,
     ground, rock, poison, bug, dragon, ghost, steel, dark]
 ensure_hm_coverage:

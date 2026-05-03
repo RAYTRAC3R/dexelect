@@ -95,6 +95,6 @@
 
 - change "selected_sphere_mode"s in meta file to be numbered instead, so they can be selected from config file regardless of name (to allow customizing this setting)
 
-- add 'type_blacklist' to pytests
-- add new 'party_size' global config setting to pytests?
+- add general user warings about certain combinations of config settings resulting in no output
+  - HM coverage with small party sizes, and balance grade validation being hard to satisfy with small parties
 

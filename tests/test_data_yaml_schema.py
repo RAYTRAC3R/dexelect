@@ -160,6 +160,7 @@ def test_config_required_fields(yaml_files):
         "allow_dual_type",
         "type_distribution",
         "prescribed_type",
+        "type_blacklist",
         "species_blacklist",
         "allowed_evo_methods",
         "bst_max",
@@ -182,9 +183,12 @@ def test_config_data_types(yaml_files):
         config = load_yaml(path)
 
         assert isinstance(config['require_one_sphere_one'], bool), f"{path}: 'require_one_sphere_one' must be a bool"
-        assert isinstance(config['allowed_balancing']['value'], list), f"{path}: 'allowed_balancing' must be a list"
-        assert isinstance(config['allowed_spreads']['value'], list), f"{path}: 'allowed_spreads' must be a list"
-        assert isinstance(config['allowed_patterns']['value'], list), f"{path}: 'allowed_patterns' must be a list"
+        assert isinstance(config['allowed_balancing']['value'], list), f"{path}: 'allowed_balancing' value must be a list"
+        assert isinstance(config['allowed_balancing']['options'], list), f"{path}: 'allowed_balancing' options must be a list"
+        assert isinstance(config['allowed_spreads']['value'], list), f"{path}: 'allowed_spreads' value must be a list"
+        assert isinstance(config['allowed_spreads']['options'], list), f"{path}: 'allowed_spreads' options must be a list"
+        assert isinstance(config['allowed_patterns']['value'], list), f"{path}: 'allowed_patterns' value must be a list"
+        assert isinstance(config['allowed_patterns']['options'], list), f"{path}: 'allowed_patterns' options must be a list"
         assert isinstance(config['force_starter'], bool), f"{path}: 'force_starter' must be a bool"
         assert isinstance(config['allow_not_fully_evolved'], bool), f"{path}: 'allow_not_fully_evolved' must be a bool"
         assert isinstance(config['max_evo_stage'], int), f"{path}: 'max_evo_stage' must be an int"
@@ -192,10 +196,20 @@ def test_config_data_types(yaml_files):
         assert isinstance(config['allow_duplicate_species'], bool), f"{path}: 'allow_duplicate_species' must be a bool"
         assert isinstance(config['allow_dual_type'], bool), f"{path}: 'allow_dual_type' must be a bool"
 
-        assert isinstance(config['type_distribution']['value'], str), f"{path}: 'type_distribution' must be a str"
-        assert config['type_distribution']['value'] in valid_type_distributions, f"{path}: 'type_distribution' must be one of: {valid_type_distributions}"
+        assert isinstance(config['type_distribution']['value'], str), f"{path}: 'type_distribution' value must be a str"
+        assert config['type_distribution']['value'] in valid_type_distributions, f"{path}: 'type_distribution' value must be one of: {valid_type_distributions}"
+        assert isinstance(config['type_distribution']['options'], list), f"{path}: 'type_distribution' options must be a list"
+        assert all(t in valid_type_distributions for t in config['type_distribution']['options']), f"{path}: 'type_distribution' options must contain only valid type distributions: {valid_type_distributions}"
 
-        assert config['prescribed_type']['value'] in (valid_types | {'none'}), f"{path}: 'prescribed_type' must be one of: {valid_types | {'none'}}"
+        assert isinstance(config['prescribed_type']['value'], str), f"{path}: 'prescribed_type' value must be a str"
+        assert config['prescribed_type']['value'] in (valid_types | {'none'}), f"{path}: 'prescribed_type' value must be one of: {valid_types | {'none'}}"
+        assert isinstance(config['prescribed_type']['options'], list), f"{path}: 'prescribed_type' options must be a list"
+        assert all(t in (valid_types | {'none'}) for t in config['prescribed_type']['options']), f"{path}: 'type_distribution' options must contain only valid types: {valid_types | {'none'}}"
+
+        assert isinstance(config['type_blacklist']['value'], list), f"{path}: 'type_blacklist' value must be a list"
+        assert all(t in valid_types for t in config['type_blacklist']['value']), f"{path}: 'type_blacklist' value must contain only valid types: {valid_types}"
+        assert isinstance(config['type_blacklist']['options'], list), f"{path}: 'type_blacklist' options must be a list"
+        assert all(t in valid_types for t in config['type_blacklist']['options']), f"{path}: 'type_blacklist' options must contain only valid types: {valid_types}"
 
         assert isinstance(config['species_blacklist'], list), f"{path}: 'species_blacklist' must be a list"
         assert isinstance(config['allowed_evo_methods'], dict), f"{path}: 'allowed_evo_methods' must be a dict"

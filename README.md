@@ -121,7 +121,7 @@ Save the file and then, if the app was running, use the `R` option in the app to
 
 
 ## Credits
-- [Quadrixis](https://github.com/Quadrixis), for assistance with progression data planning and testing
+- [Quadrixis](https://github.com/Quadrixis), for assistance with progression data planning and general testing
 
 
 ## Support Dexelect

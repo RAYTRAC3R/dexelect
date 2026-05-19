@@ -10,6 +10,8 @@ import random
 #DEBUG = True
 DEBUG = False
 
+GEN_RANGES = {1: (1, 151), 2: (152, 251), 3: (252, 386)}
+
 def generate_final_party(all_pools: dict, all_pokemon: dict, config_data: dict, meta_data: dict, n: int = 6,
                          retry: int = 0, max_retries: int = 300, max_iterations: int = 10000):
     """
@@ -165,6 +167,7 @@ def is_party_valid(party, is_party_full, config_data, meta_data) -> bool:
     bst_max = config_data["bst_max"]
     bst_min = config_data["bst_min"]
     ensure_hm_coverage = set([hm for hm in config_data["ensure_hm_coverage"] if config_data["ensure_hm_coverage"][hm] == True])
+    generation_filter = config_data["generation_filter"]["value"]
 
     # ---------------------------------------
     # immediate False if these checks fail
@@ -254,6 +257,12 @@ def is_party_valid(party, is_party_full, config_data, meta_data) -> bool:
             if mon.base_stat_total < bst_min:
                 if DEBUG:
                     print("party", [mon.name for mon in party], "contains", mon.name,"which violates config option bst_min =", bst_min)
+                return False
+        if generation_filter:
+            dex_num = int(mon.nat_dex_number)
+            if not any(GEN_RANGES[g][0] <= dex_num <= GEN_RANGES[g][1] for g in generation_filter):
+                if DEBUG:
+                    print("party", [mon.name for mon in party], "contains", mon.name, "which violates config option generation_filter =", generation_filter)
                 return False
 
     return True

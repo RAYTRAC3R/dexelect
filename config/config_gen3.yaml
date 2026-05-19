@@ -80,3 +80,6 @@ allowed_acquisition_methods:
   devon_scope: true
   sealed_chamber_puzzle: true
   mirage_island: false
+generation_filter:
+  value: []
+  options: [1, 2, 3]

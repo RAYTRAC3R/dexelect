@@ -166,7 +166,8 @@ def test_config_required_fields(yaml_files):
         "bst_max",
         "bst_min",
         "ensure_hm_coverage",
-        "allowed_acquisition_methods"
+        "allowed_acquisition_methods",
+        "generation_filter"
     }
     for path, category in filter_yaml(yaml_files, "config"):
         config = load_yaml(path)
@@ -219,4 +220,10 @@ def test_config_data_types(yaml_files):
 
         assert isinstance(config['ensure_hm_coverage'], dict), f"{path}: 'ensure_hm_coverage' must be a dict"
         assert isinstance(config['allowed_acquisition_methods'], dict), f"{path}: 'allowed_acquisition_methods' must be a dict"
+
+        assert isinstance(config['generation_filter']['value'], list), f"{path}: 'generation_filter' value must be a list"
+        assert isinstance(config['generation_filter']['options'], list), f"{path}: 'generation_filter' options must be a list"
+        assert all(isinstance(g, int) for g in config['generation_filter']['value']), f"{path}: 'generation_filter' value must contain only integers"
+        assert all(isinstance(g, int) for g in config['generation_filter']['options']), f"{path}: 'generation_filter' options must contain only integers"
+        assert all(g in config['generation_filter']['options'] for g in config['generation_filter']['value']), f"{path}: 'generation_filter' value entries must be a subset of options"
 

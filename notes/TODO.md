@@ -51,7 +51,6 @@
     - same with other evo items
 
 
-
 - actually remove these mostly useless ones from all games.
 - add 'Milk Drink' as field moves (HMs) in Gen 2 and 3?
 - add 'Secret Power' as field move (HM) in gen 3?
@@ -71,7 +70,8 @@
 - add Claude skill file which acts as instructions for Claude to help guide users when adding a new romhack from the command line (Claude code). e.g. it knows the structure of the pokedex and locations files, it knows the data it needs and where to get it (Serebii or something), and it knows how to add all that to the repo, but it asks user questions along the way, like "does this romhack have custom pokemon or can I use an existing pokedex file?". It needs context about whole project structure.
 
 - move to 1.0.0 after config file schemas / system is finished (so users can keep config files and it can be `.gitignore`ed in the repo)
-  - an "update" button in the standalone binary GUI would also be nice so users can update in-app
+
+- an "update" button in the standalone binary GUI, so users can update in-app
   
 - dynamic color theme matching game? (GUI)
 
@@ -91,8 +91,3 @@
 - add honey tree calcs - https://www.dragonflycave.com/sinnoh/honey-trees/
 
 - add a web ui option that can be selected via command line and open locally in browser, but also be the entry point for "standalone hosting" of the web app served on my site
-
-- toggle for "gen 2 or gen 1 pokemon only" in gen 2 generation? and onward
-  - or not a toggle, but a list of 'allowed generations' e.g. [1,2,3]
-  - will need to add a field for every pokemon in every pokedex file "gen_introduced"
-  - additional possibile field: "in_regional_dex" (bool)

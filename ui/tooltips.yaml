@@ -25,3 +25,4 @@ prescribed_type: "The type all party members must share when 'Type distribution'
 type_blacklist: "Types to exclude from the generated party (types checked will not be included)."
 ensure_hm_coverage: "Set of HMs which must be learnable by at least one party member. Enabling an HM guarantees the party can use it in the field."
 allowed_acquisition_methods: "Permitted acquisition methods for party members. Pokémon acquired exclusively via unchecked methods will not be included in the pool."
+generation_filter: "Whitelist of enabled generations (to restrict the party to Pokémon introduced in specific generations). Leave all unchecked for no restriction."

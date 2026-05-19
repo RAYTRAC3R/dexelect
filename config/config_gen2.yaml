@@ -80,3 +80,6 @@ allowed_acquisition_methods:
   roaming: true
   rainbow_wing: true
   silver_wing: true
+generation_filter:
+  value: []
+  options: [1, 2]

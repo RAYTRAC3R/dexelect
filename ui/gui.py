@@ -1045,11 +1045,11 @@ class DexelectApp(ctk.CTk):
         if self._hm_strip_inner:
             self._hm_strip_inner.destroy()
         inner = tk.Frame(self.hm_strip_frame, bg=C_PANEL)
-        inner.pack(side="left", padx=16, pady=10)
+        inner.pack(fill="both", expand=True, padx=16, pady=10)
         self._hm_strip_inner = inner
         self.hm_labels = {}
         hdr = tk.Frame(inner, bg=C_PANEL)
-        hdr.pack(side="left", padx=(0, 16))
+        hdr.pack(side="top", anchor="w", pady=(0, 4))
         ctk.CTkLabel(hdr, text="HM Coverage", font=FONT_BODY, text_color=C_TEXT,
                      fg_color=C_PANEL).pack(side="left")
         tip = self.tooltips.get("hm_coverage", "")
@@ -1058,17 +1058,41 @@ class DexelectApp(ctk.CTk):
             icon.pack(side="left", padx=(5, 0), anchor="center")
             _Tooltip(icon, tip)
 
-        # Individual HM labels (shown when toggle on)
+        # Individual HM labels (shown when toggle on); labels are positioned via
+        # place() in _reflow_hm_list so they wrap to a new row when space is tight.
         hm_list = tk.Frame(inner, bg=C_PANEL)
         self._hm_list_frame = hm_list
         for hm_name in self.config_data.get("ensure_hm_coverage", {}):
             lbl = ctk.CTkLabel(hm_list, text=hm_name, font=FONT_MONO, text_color=C_MUTED, fg_color=C_PANEL)
-            lbl.pack(side="left", padx=(0, 12))
             self.hm_labels[hm_name] = lbl
+        hm_list.bind("<Configure>", lambda e: self._reflow_hm_list())
 
         # Single dash (shown when toggle off)
         self._hm_dash_label = ctk.CTkLabel(inner, text="—", font=FONT_MONO,
                                             text_color=C_MUTED, fg_color=C_PANEL)
+
+    def _reflow_hm_list(self):
+        """Position HM labels in a wrapping flow; adjusts frame height to fit all rows."""
+        frame = self._hm_list_frame
+        if not frame or not self.hm_labels:
+            return
+        frame.update_idletasks()
+        available = frame.winfo_width()
+        if available <= 1:
+            return
+        PAD_X, PAD_Y = 12, 2
+        x = y = row_h = 0
+        for lbl in self.hm_labels.values():
+            lbl.update_idletasks()
+            w, h = lbl.winfo_reqwidth(), lbl.winfo_reqheight()
+            if x + w > available and x > 0:
+                x = 0
+                y += row_h + PAD_Y
+                row_h = 0
+            lbl.place(x=x, y=y)
+            x += w + PAD_X
+            row_h = max(row_h, h)
+        frame.configure(height=max(1, y + row_h))
 
     def _refresh_hm_labels(self, party_coverage):
         """Update HM strip based on toggle state and optional coverage set.
@@ -1079,12 +1103,13 @@ class DexelectApp(ctk.CTk):
             if self._hm_list_frame:
                 self._hm_list_frame.pack_forget()
             if self._hm_dash_label:
-                self._hm_dash_label.pack(side="left")
+                self._hm_dash_label.pack(side="top", anchor="w")
             return
         if self._hm_dash_label:
             self._hm_dash_label.pack_forget()
         if self._hm_list_frame:
-            self._hm_list_frame.pack(side="left")
+            self._hm_list_frame.pack(side="top", fill="x")
+            self._reflow_hm_list()
         for hm_name, lbl in self.hm_labels.items():
             covered = party_coverage is not None and hm_name in party_coverage
             lbl.configure(text_color=C_ACCENT if covered else C_MUTED)
@@ -1304,12 +1329,13 @@ class DexelectApp(ctk.CTk):
             ).grid(row=row, column=1, padx=(0, 28), pady=4, sticky="w")
             row += 1
 
-        def multi_check_row(key, label):
+        def multi_check_row(key, label, label_map=None):
             """
-            List-of-strings config key. Config format:
+            List config key. Config format:
               key:
                 value: [balanced, late_game_heavy]
                 options: [balanced, early_game_heavy, late_game_heavy]
+            label_map: optional dict mapping option values to display strings.
             """
             nonlocal row
             field = cd.get(key, {}) or {}
@@ -1321,8 +1347,9 @@ class DexelectApp(ctk.CTk):
             for option in options:
                 var = tk.BooleanVar(value=(option in current_values))
                 var_dict[option] = var
+                display = label_map.get(option, str(option)) if label_map else str(option)
                 ctk.CTkCheckBox(
-                    scroll, text=option, variable=var,
+                    scroll, text=display, variable=var,
                     text_color=C_TEXT, font=FONT_MONO,
                     fg_color=C_ACCENT2, hover_color=C_ACCENT,
                     checkmark_color=C_TEXT,
@@ -1423,6 +1450,10 @@ class DexelectApp(ctk.CTk):
         int_row("bst_max", "BST maximum", nullable=True)
         int_row("bst_min", "BST minimum", nullable=True)
         text_row("species_blacklist", "Species blacklist (comma-separated stage 1s)", placeholder="e.g. EEVEE, MAGMAR, NIDORAN_M")
+        multi_check_row("generation_filter", "Generation filter (empty = no filter)",
+                        label_map={1: "Gen 1 (National Dex #1–151)",
+                                   2: "Gen 2 (National Dex #152–251)",
+                                   3: "Gen 3 (National Dex #252–386)"})
         evo_methods = list(cd.get("allowed_evo_methods", {}).keys())
         nested_bool_row("allowed_evo_methods", "Allowed evolution methods", evo_methods)
 

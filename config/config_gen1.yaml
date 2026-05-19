@@ -60,3 +60,6 @@ allowed_acquisition_methods:
   purchase: true
   fossil_restore: true
   prize_window: true
+generation_filter:
+  value: []
+  options: [1]
